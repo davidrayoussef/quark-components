@@ -1,0 +1,35 @@
+{
+  "name": "react-reusable-components",
+  "version": "1.0.0",
+  "description": "A library of React reusable UI components.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js --progress"
+  },
+  "repository": "davidrayoussef/react-reusable-components",
+  "homepage": "https://github.com/davidrayoussef/react-reusable-components",
+  "author": "David Ra Youssef (davidradeveloper@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.1.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.2.0",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
