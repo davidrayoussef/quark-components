@@ -1,8 +1,9 @@
 import React from 'react';
+import './Docs.style.css';
 
 const Docs = ({ children }) => {
   return (
-    <div>{children}</div>
+    <div className="wrapper">{children}</div>
   );
 };
 
