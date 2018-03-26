@@ -1,14 +1,14 @@
 {
-  "name": "react-reusable-components",
+  "name": "react-simple-ui-components",
   "version": "1.0.0",
   "description": "A library of React reusable UI components.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js --progress"
+    "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
+    "build": "webpack --mode production --config webpack.config.prod.js --progress"
   },
-  "repository": "davidrayoussef/react-reusable-components",
-  "homepage": "https://github.com/davidrayoussef/react-reusable-components",
+  "repository": "davidrayoussef/react-simple-ui-components",
+  "homepage": "https://github.com/davidrayoussef/react-simple-ui-components",
   "author": "David Ra Youssef (davidradeveloper@gmail.com)",
   "license": "MIT",
   "devDependencies": {
@@ -30,6 +30,7 @@
     "react-hot-loader": "^4.0.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"
   }
 }
