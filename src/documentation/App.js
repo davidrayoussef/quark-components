@@ -1,17 +1,15 @@
 import React from 'react';
 import Docs from '../components/Docs/Docs';
 import Fetcher from '../components/Fetcher/Fetcher';
+import List from '../components/List/List';
+import componentList from './data.js';
 
 const App = () => {
   return (
     <Docs>
       <aside>
         <nav>
-          <li>Component 1</li>
-          <li>Component 2</li>
-          <li>Component 3</li>
-          <li>Component 4</li>
-          <li>Component 5</li>
+          <List title="Components" data={componentList} />
         </nav>
       </aside>
 
