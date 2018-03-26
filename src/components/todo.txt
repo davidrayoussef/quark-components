@@ -5,6 +5,7 @@ Menu
 Loader
 Slider
 Swiper
+Fetcher
 Modal
 Filter
 Share
@@ -14,4 +15,3 @@ Button
 Gallery
 Icon
 Article
-Card
