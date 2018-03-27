@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import './List.style.css';
 
-const List = ({ title, data }) => {
+const List = ({ listTitle, data }) => {
   return (
     <Fragment>
-      <h2>{title}</h2>
+      <h2>{listTitle}</h2>
       <ul>
         {
           data.map(item => {
