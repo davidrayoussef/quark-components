@@ -1,8 +1,7 @@
 import React from 'react';
-import Docs from '../../../components/Docs/Docs';
 
 const DocsExample = () => (
-  <Docs>Docs Example</Docs>
+  <div>This page.</div>
 );
 
 export default DocsExample;

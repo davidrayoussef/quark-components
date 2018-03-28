@@ -5,9 +5,9 @@ import { componentList, routes } from './data.js';
 const App = () => {
   return (
     <Docs
-      headerTitle="React Simple UI Components"
-      listTitle="Components"
       data={componentList}
+      headerTitle="React Simple UI Components"
+      menuTitle="Components"
     >
       <main>
         <section className="examples">

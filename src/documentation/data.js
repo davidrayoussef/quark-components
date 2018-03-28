@@ -1,20 +1,34 @@
-import React, { Fragment } from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import DocsExample from './componentExamples/DocsExample/DocsExample';
 import FetcherExample from './componentExamples/FetcherExample/FetcherExample';
 import HeaderBarExample from './componentExamples/HeaderBarExample/HeaderBarExample';
 import ListExample from './componentExamples/ListExample/ListExample';
 
-const componentList = ['Docs', 'Fetcher', 'HeaderBar', 'List'];
+const componentList = [
+  {
+    name: 'Docs'
+  },
+  {
+    name: 'Fetcher'
+  },
+  {
+    name: 'HeaderBar'
+  },
+  {
+    name: 'List'
+  }
+];
 
 const routes = () => {
   return (
-    <Fragment>
-      <Route exact path={'/docs'} component={DocsExample} />
-      <Route exact path={'/fetcher'} component={FetcherExample} />
-      <Route exact path={'/header-bar'} component={HeaderBarExample} />
-      <Route exact path={'/list'} component={ListExample} />
-    </Fragment>
+    <Switch>
+      <Route path={'/docs'} component={DocsExample} />
+      <Route path={'/fetcher'} component={FetcherExample} />
+      <Route path={'/headerbar'} component={HeaderBarExample} />
+      <Route path={'/list'} component={ListExample} />
+      <Route render={() => <p>Not Found</p>} />
+    </Switch>
   );
 };
 

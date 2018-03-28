@@ -1,10 +1,26 @@
 import React from 'react';
 import List from '../../../components/List/List';
 
-const ListExample = ({ listTitle, data }) => (
+const ListExample = () => (
   <List
-    listTitle="List of Things"
-    data={["Thing 1", "Thing 2", "Thing 3", "Thing 4", "Thing 5"]}
+    listTitle="List Items"
+    data={[
+      {
+        name: 'List Item 1'
+      },
+      {
+        name: 'List Item 2'
+      },
+      {
+        name: 'List Item 3'
+      },
+      {
+        name: 'List Item 4'
+      },
+      {
+        name: 'List Item 5'
+      }
+    ]}
   />
 );
 

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import './List.style.css';
+import './List.css';
 
 const List = ({ listTitle, data }) => {
   return (
@@ -8,9 +8,9 @@ const List = ({ listTitle, data }) => {
       <h2>{listTitle}</h2>
       <ul>
         {
-          data.map(item => {
-            return <li key={item}>{item}</li>
-          })
+          data.map(({name}) => (
+            <li key={name}>{name}</li>
+          ))
         }
       </ul>
     </Fragment>

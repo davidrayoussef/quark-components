@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router } from 'react-router-dom';
 import HeaderBar from '../HeaderBar/HeaderBar';
-import List from '../List/List';
-import './Docs.style.css';
+import NavMenu from '../NavMenu/NavMenu';
+import './Docs.css';
 
 const Docs = ({ children, headerTitle, data, ...props }) => {
   return (
@@ -12,9 +12,7 @@ const Docs = ({ children, headerTitle, data, ...props }) => {
         <HeaderBar title={headerTitle} />
         <div className="wrapper">
           <aside>
-            <nav>
-              <List {...props} data={data} />
-            </nav>
+            <NavMenu {...props} linkType='routerLink' data={data} />
           </aside>
           { children }
         </div>
