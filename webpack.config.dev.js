@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	devtool: 'eval',
@@ -27,13 +28,10 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ['babel-loader']
 			},
-      {
+			{
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
+				use: [ MiniCssExtractPlugin.loader, 'css-loader']
+			}
 		]
 	},
 	resolve: {
@@ -50,6 +48,10 @@ module.exports = {
       template: __dirname + '/src/index.html',
       filename: 'index.html',
       inject: 'body'
-    })
+    }),
+		new MiniCssExtractPlugin({
+			filename: 'style.css',
+			chunkFilename: '[id].css'
+		})
 	]
 };
