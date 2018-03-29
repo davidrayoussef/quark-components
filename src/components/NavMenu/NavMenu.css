@@ -1,15 +1,15 @@
-h2 {
+.menuTitle {
   margin: 0 0 5px 15px;
   font-size: 1rem;
 }
 
-nav {
+.nav {
   margin-left: 15px;
   display: flex;
   flex-direction: column;
 }
 
-a {
+.nav a {
   text-decoration: none;
   margin-bottom: 5px;
 }

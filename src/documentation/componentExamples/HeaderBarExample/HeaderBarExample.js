@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderBar from '../../../components/HeaderBar/HeaderBar';
 
 const HeaderBarExample = () => (
-  <HeaderBar>HeaderBar Example</HeaderBar>
+  <HeaderBar title="HeaderBar Example">HeaderBar Example</HeaderBar>
 );
 
 export default HeaderBarExample;

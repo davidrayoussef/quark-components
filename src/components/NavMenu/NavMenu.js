@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import './NavMenu.css';
+import style from './NavMenu.css';
 
 const NavMenu = ({ data, linkColor, linkType,  menuTitle }) => {
-  console.log(data);
   const renderListItems = () => {
     if (linkType === 'routerLink') {
       return data.map(({name}) => (
@@ -32,8 +31,8 @@ const NavMenu = ({ data, linkColor, linkType,  menuTitle }) => {
 
   return (
     <Fragment>
-      <h2>{menuTitle}</h2>
-      <nav>
+      <h2 className={style.menuTitle}>{menuTitle}</h2>
+      <nav className={style.nav}>
         { renderListItems() }
       </nav>
     </Fragment>

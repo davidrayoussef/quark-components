@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './HeaderBar.css';
+import style from './HeaderBar.css';
 
 const HeaderBar = ({ title }) => {
   return (
-    <header>{title}</header>
+    <header className={style.header}>{title}</header>
   );
 };
 

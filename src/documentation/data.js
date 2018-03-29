@@ -4,6 +4,7 @@ import DocsExample from './componentExamples/DocsExample/DocsExample';
 import FetcherExample from './componentExamples/FetcherExample/FetcherExample';
 import HeaderBarExample from './componentExamples/HeaderBarExample/HeaderBarExample';
 import ListExample from './componentExamples/ListExample/ListExample';
+import NavMenuExample from './componentExamples/NavMenuExample/NavMenuExample';
 
 const componentList = [
   {
@@ -17,6 +18,9 @@ const componentList = [
   },
   {
     name: 'List'
+  },
+  {
+    name: 'NavMenu'
   }
 ];
 
@@ -27,6 +31,7 @@ const routes = () => {
       <Route path={'/fetcher'} component={FetcherExample} />
       <Route path={'/headerbar'} component={HeaderBarExample} />
       <Route path={'/list'} component={ListExample} />
+      <Route path={'/navmenu'} component={NavMenuExample} />
       <Route render={() => <p>Not Found</p>} />
     </Switch>
   );

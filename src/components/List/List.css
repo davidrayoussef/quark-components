@@ -1,9 +1,9 @@
-h2 {
+.listTitle {
   margin: 0;
   font-size: 1rem;
 }
 
-ul {
+.list {
   margin-top: 0;
   padding: 0;
 }
