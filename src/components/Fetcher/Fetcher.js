@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class Fetcher extends Component {
   static proptypes = {
     render: PropTypes.func.isRequired,
+    loader: PropTypes.element,
     url: PropTypes.string.isRequired
   };
 
@@ -33,7 +34,11 @@ class Fetcher extends Component {
   }
 
   render() {
-    if (this.state.data) return this.props.render(this.state.data);
+    const { data } = this.state;
+    const { loader } = this.props;
+
+    if (data) return this.props.render(data);
+    else if (loader) return loader;
     return null;
   }
 }

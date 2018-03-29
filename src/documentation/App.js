@@ -11,7 +11,7 @@ const App = () => {
     >
       <main>
         <section className="examples">
-          { routes() }
+          { routes }
         </section>
         <section className="editor">
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import Fetcher from '../../../components/Fetcher/Fetcher';
+import Loader from '../../../components/Loader/Loader';
 
 const FetcherExample = () => (
   <Fetcher
+    loader={<Loader />}
     url="https://api.github.com/users/davidrayoussef"
     render={({ name, avatar_url, location, html_url }) => (
       <div>
