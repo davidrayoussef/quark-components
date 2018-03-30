@@ -6,6 +6,7 @@ import HeaderBarExample from './componentExamples/HeaderBarExample/HeaderBarExam
 import ListExample from './componentExamples/ListExample/ListExample';
 import NavMenuExample from './componentExamples/NavMenuExample/NavMenuExample';
 import LoaderExample from './componentExamples/LoaderExample/LoaderExample';
+import CardExample from './componentExamples/CardExample/CardExample';
 
 const componentList = [
   {
@@ -25,7 +26,10 @@ const componentList = [
   },
   {
     name: 'Loader'
-  }
+  },
+  {
+    name: 'Card'
+  },
 ];
 
 const routes = (
@@ -36,6 +40,7 @@ const routes = (
     <Route path={'/list'} component={ListExample} />
     <Route path={'/navmenu'} component={NavMenuExample} />
     <Route path={'/loader'} component={LoaderExample} />
+    <Route path={'/card'} component={CardExample} />
     <Route render={() => <p>Not Found</p>} />
   </Switch>
 );
