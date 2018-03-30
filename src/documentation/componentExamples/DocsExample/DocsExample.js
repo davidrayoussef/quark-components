@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const DocsExample = () => (
-  <div>This page.</div>
+  <Fragment>
+    <section className="examples">
+      This page.
+    </section>
+    <section className="editor">
+
+    </section>
+  </Fragment>
 );
 
 export default DocsExample;

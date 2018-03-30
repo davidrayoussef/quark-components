@@ -14,7 +14,9 @@ const Docs = ({ children, headerTitle, data, ...props }) => {
           <aside>
             <NavMenu {...props} linkType='routerLink' data={data} />
           </aside>
-          { children }
+          <main className={style.main}>
+            { children }
+          </main>
         </div>
       </Fragment>
     </Router>

@@ -9,14 +9,7 @@ const App = () => {
       headerTitle="React Simple UI Components"
       menuTitle="Components"
     >
-      <main>
-        <section className="examples">
-          { routes }
-        </section>
-        <section className="editor">
-
-        </section>
-      </main>
+      { routes }
     </Docs>
   );
 };

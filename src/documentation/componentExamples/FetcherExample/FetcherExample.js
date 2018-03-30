@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Fetcher from '../../../components/Fetcher/Fetcher';
 import Loader from '../../../components/Loader/Loader';
+import Card from '../../../components/Card/Card';
 
 const FetcherExample = () => (
-  <Fetcher
-    loader={<Loader />}
-    url="https://api.github.com/users/davidrayoussef"
-    render={({ name, avatar_url, location, html_url }) => (
-      <div>
-        <div>{name}</div>
-        <div><img src={avatar_url} alt={name} style={{height: 100}}/></div>
-        <div>{location}</div>
-        <div><a href={html_url}>{html_url}</a></div>
-      </div>
-    )}
-  />
+  <Fragment>
+    <section className="examples">
+      <Fetcher
+        loader={<Loader />}
+        url="https://api.github.com/users/davidrayoussef"
+        render={(data) => (
+          <Card {...data} />
+        )}
+      />
+    </section>
+    <section className="editor">
+
+    </section>
+  </Fragment>
 );
 
 export default FetcherExample;

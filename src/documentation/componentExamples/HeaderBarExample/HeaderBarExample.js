@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import HeaderBar from '../../../components/HeaderBar/HeaderBar';
 
 const HeaderBarExample = () => (
-  <HeaderBar title="HeaderBar Example">HeaderBar Example</HeaderBar>
+  <Fragment>
+    <section className="examples">
+      <HeaderBar title="HeaderBar Example">HeaderBar Example</HeaderBar>
+    </section>
+    <section className="editor">
+
+    </section>
+  </Fragment>
 );
 
 export default HeaderBarExample;
