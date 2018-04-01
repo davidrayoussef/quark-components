@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Card from '../../../components/Card/Card';
+import CardCode from './CardCode';
 
 const CardExample = () => (
   <Fragment>
@@ -11,9 +12,7 @@ const CardExample = () => (
         html_url="https://reactjs.org/"
       />
     </section>
-    <section className="editor">
-
-    </section>
+    <CardCode />
   </Fragment>
 );
 
