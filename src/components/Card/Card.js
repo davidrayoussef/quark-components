@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './Card.css';
 
-const Card = ({ name, avatar_url, description, html_url }) => {
+const Card = ({ avatar_url, name, description, linkSrc }) => {
+  const styles = {
+    borderRadius: !avatar_url.endsWith('svg') ? '50%' : 0
+  };
+
   return (
-    <div>
-      {avatar_url && <div><img src={avatar_url} alt={name} style={{height: 100}}/></div>}
-      <div>{name}</div>
+    <div className={style.card}>
+      { avatar_url && <div><img src={avatar_url} alt={name} style={styles}/></div> }
+      <h3>{name}</h3>
       {description && <div>{description}</div>}
-      {html_url && <div><a href={html_url}>{html_url}</a></div>}
+      {linkSrc && <div><a href={linkSrc}>{linkSrc.replace(/https?:\/\//, '')}</a></div>}
     </div>
   );
 };
 
 Card.proptypes = {
-  name: PropTypes.string.isRequired,
   avatar_url: PropTypes.string,
+  name: PropTypes.string.isRequired,
   location: PropTypes.string,
-  html_url: PropTypes.string
+  linkSrc: PropTypes.string
 };
 
 export default Card;
