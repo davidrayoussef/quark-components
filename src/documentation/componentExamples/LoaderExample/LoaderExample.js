@@ -1,15 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Loader from '../../../components/Loader/Loader';
 
 const LoaderExample = () => (
-  <Fragment>
-    <section className="examples">
-      <Loader />
-    </section>
-    <section className="editor">
-
-    </section>
-  </Fragment>
+  <Loader />
 );
 
 export default LoaderExample;

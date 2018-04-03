@@ -4,6 +4,11 @@
   padding: 0 25px;
 }
 
+.wrapper h1 {
+  margin: 0;
+  font-weight: 100;
+}
+
 .main {
   display: grid;
   grid-template-columns: 40% 60%;

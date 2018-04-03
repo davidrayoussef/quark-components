@@ -1,11 +1,12 @@
 import React from 'react';
 import Docs from '../components/Docs/Docs';
-import { componentList, routes } from './data.js';
+import { componentData } from './componentData.js';
+import { routes } from './routes.js';
 
 const App = () => {
   return (
     <Docs
-      data={componentList}
+      data={componentData}
       headerTitle="React Simple UI Components"
       menuTitle="Components"
     >
