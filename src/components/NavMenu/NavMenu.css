@@ -1,10 +1,9 @@
 .menuTitle {
-  margin: 0 0 5px 15px;
+  margin: 0 0 5px;
   font-size: 1rem;
 }
 
 .nav {
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
 }

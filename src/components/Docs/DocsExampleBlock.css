@@ -1,0 +1,12 @@
+.examples > h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.examples > h2 {
+  font-weight: 400;
+}
+
+.example {
+  margin-right: 20px;
+}

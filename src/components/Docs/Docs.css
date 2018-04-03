@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 250px 1fr;
   padding: 0 25px;
 }
 
@@ -12,4 +12,5 @@
 .main {
   display: grid;
   grid-template-columns: 40% 60%;
+  min-width: 0;
 }
