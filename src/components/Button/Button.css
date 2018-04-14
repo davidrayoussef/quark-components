@@ -1,10 +1,12 @@
 .button {
+  position: relative;
   font-size: 1rem;
   color: #faf9f9;
   padding: 15px 20px;
   cursor: pointer;
   border: none;
   transition: .2s;
+  overflow: hidden;
 }
 
 .primary {
@@ -26,7 +28,7 @@
 .reverse {
   background: rgba(0, 0, 0, .025);
   color: rgba(2, 60, 149, 1);
-  box-shadow: inset 0 0 0 1px rgba(2, 60, 149, 1);
+  box-shadow: inset 0 0 0 1.5px rgba(2, 60, 149, 1);
 }
 
 .reverse:hover {
@@ -45,4 +47,42 @@
 .button[disabled] {
   background: #cccccc;
   pointer-events: none;
+}
+
+/* For ripple effect */
+.button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, .15);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.button.reverse:after {
+  background: rgba(0, 0, 0, .1);
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(12, 12);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(25, 25);
+  }
+}
+
+.button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
 }

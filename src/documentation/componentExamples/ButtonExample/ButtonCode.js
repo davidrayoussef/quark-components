@@ -5,7 +5,12 @@ const code = `
 import React from 'react';
 import Button from '{yourpath}/Button';
 
-<Button>Primary</Button>
+<div>
+  <Button type="primary">Primary</Button>
+  <Button type="secondary">Secondary</Button>
+  <Button type="reverse">Reverse</Button>
+  <Button type="danger">Danger</Button>
+</div>
 `;
 
 const ButtonCode = () => (

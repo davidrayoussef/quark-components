@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Button.css';
 
-const Button = ({ children, type, size, ripple }) => {
-  const renderTypeStyle = (type, style) => `
+const Button = ({ children, type, size }) => {
+  const getTypeStyle = (type, style) => `
     ${
       type === 'secondary' ? style.secondary :
       type === 'reverse' ? style.reverse :
@@ -13,7 +13,10 @@ const Button = ({ children, type, size, ripple }) => {
   `;
 
   return (
-    <button className={`${style.button} ${renderTypeStyle(type, style)}`}>
+    <button className={`
+      ${style.button}
+      ${getTypeStyle(type, style)}
+    `}>
       { children }
     </button>
   );
