@@ -1,3 +1,5 @@
+import ButtonExample from './componentExamples/ButtonExample/ButtonExample';
+import ButtonCode from './componentExamples/ButtonExample/ButtonCode';
 import CardExample from './componentExamples/CardExample/CardExample';
 import CardCode from './componentExamples/CardExample/CardCode';
 import FetcherExample from './componentExamples/FetcherExample/FetcherExample';
@@ -12,6 +14,11 @@ import NavMenuExample from './componentExamples/NavMenuExample/NavMenuExample';
 import NavMenuCode from './componentExamples/NavMenuExample/NavMenuCode';
 
 const componentData = [
+  {
+    name: 'Button',
+    component: ButtonExample,
+    code: ButtonCode
+  },
   {
     name: 'Card',
     component: CardExample,

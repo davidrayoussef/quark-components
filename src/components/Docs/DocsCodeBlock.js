@@ -10,7 +10,7 @@ const DocsCodeBlock = ({ children }) => (
         padding: '5px 20px 25px',
         margin: 0,
         fontSize: '1.35em',
-        background: '#282938'
+        background: 'var(--primary)'
       }}
     >
       {children}
