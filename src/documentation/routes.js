@@ -23,7 +23,7 @@ const renderRoutes = () => {
 const routes = (
   <Switch>
     <Route exact path={'/'} render={() => <h1>Getting Started</h1>} />
-    { renderRoutes() }
+      { renderRoutes() }
     <Route render={() => <p>Not Found</p>} />
   </Switch>
 );

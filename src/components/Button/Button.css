@@ -18,11 +18,11 @@
 }
 
 .secondary {
-  background: rgba(2, 60, 149, 1);
+  background: rgba(0, 0, 0, .3);
 }
 
 .secondary:hover {
-  background: rgba(2, 60, 149, .8);
+  background: rgba(0, 0, 0, .4);
 }
 
 .reverse {

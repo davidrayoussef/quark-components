@@ -10,6 +10,8 @@ import ListExample from './componentExamples/ListExample/ListExample';
 import ListCode from './componentExamples/ListExample/ListCode';
 import LoaderExample from './componentExamples/LoaderExample/LoaderExample';
 import LoaderCode from './componentExamples/LoaderExample/LoaderCode';
+import ModalExample from './componentExamples/ModalExample/ModalExample';
+import ModalCode from './componentExamples/ModalExample/ModalCode';
 import NavMenuExample from './componentExamples/NavMenuExample/NavMenuExample';
 import NavMenuCode from './componentExamples/NavMenuExample/NavMenuCode';
 
@@ -43,6 +45,11 @@ const componentData = [
     name: 'Loader',
     component: LoaderExample,
     code: LoaderCode
+  },
+  {
+    name: 'Modal',
+    component: ModalExample,
+    code: ModalCode
   },
   {
     name: 'NavMenu',

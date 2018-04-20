@@ -9,7 +9,7 @@ class Fetcher extends Component {
   };
 
   state = {
-    data: undefined
+    data: null
   };
 
   constructor() {

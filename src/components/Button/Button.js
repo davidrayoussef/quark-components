@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Button.css';
 
-const Button = ({ children, type, size }) => {
+const Button = ({ children, type, size, ...props }) => {
   const getTypeStyle = (type, style) => `
     ${
       type === 'secondary' ? style.secondary :
@@ -13,10 +13,13 @@ const Button = ({ children, type, size }) => {
   `;
 
   return (
-    <button className={`
-      ${style.button}
-      ${getTypeStyle(type, style)}
-    `}>
+    <button
+      className={`
+        ${style.button}
+        ${getTypeStyle(type, style)}
+      `}
+      {...props}
+    >
       { children }
     </button>
   );
