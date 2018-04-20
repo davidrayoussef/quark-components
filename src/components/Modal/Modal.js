@@ -41,7 +41,7 @@ class Modal extends Component {
           {this.props.children}
           <div className={style.buttonContainer}>
             <span onClick={this.handleClose} onKeyUp={this.handleEsc}>
-              <Button type="secondary">Close</Button>
+              <Button type="secondary">OK</Button>
             </span>
           </div>
         </div>

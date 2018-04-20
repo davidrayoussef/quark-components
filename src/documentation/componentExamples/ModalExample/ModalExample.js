@@ -21,7 +21,7 @@ class AppExample extends Component {
           title="Modal Title"
           isOpen={this.state.open}
         >
-          OK
+          Modal Content
         </Modal>
       </Fragment>
     );
