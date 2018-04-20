@@ -5,7 +5,7 @@ import Card from '../../../components/Card/Card';
 
 const FetcherExample = () => (
   <Fetcher
-    loader={<Loader />}
+    loader={Loader}
     url="https://api.github.com/users/davidrayoussef"
     render={({ html_url, location, ...data }) => (
       <Card {...data} linkSrc={html_url} description={location} />

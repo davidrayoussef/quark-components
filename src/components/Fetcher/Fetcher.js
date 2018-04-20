@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Fetcher extends Component {
@@ -38,7 +38,7 @@ class Fetcher extends Component {
     const { loader } = this.props;
 
     if (data) return this.props.render(data);
-    else if (loader) return loader;
+    else if (loader) return React.createElement(loader);
     return null;
   }
 }

@@ -1,16 +1,18 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { tomorrowNight } from 'react-syntax-highlighter/styles/hljs';
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { atomDark } from 'react-syntax-highlighter/styles/prism';
 
 const DocsCodeBlock = ({ children }) => (
   <section className="editor">
     <SyntaxHighlighter
-      style={tomorrowNight}
+      language='jsx'
+      style={atomDark}
       customStyle={{
-        padding: '5px 20px 25px',
+        fontSize: '1.1rem',
+        padding: '0 30px 30px',
         margin: 0,
-        fontSize: '1.35em',
-        background: 'var(--primary)'
+        background: 'var(--primary)',
+        borderRadius: 0
       }}
     >
       {children}

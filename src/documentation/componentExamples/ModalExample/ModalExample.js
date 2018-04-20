@@ -8,7 +8,6 @@ class AppExample extends Component {
   };
 
   handleClick = () => {
-    console.log(this);
     this.setState({
       open: true
     });
@@ -22,7 +21,7 @@ class AppExample extends Component {
           title="Modal Title"
           isOpen={this.state.open}
         >
-          Modal Content
+          OK
         </Modal>
       </Fragment>
     );

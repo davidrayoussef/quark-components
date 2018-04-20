@@ -15,13 +15,11 @@ class Modal extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState, prevProps) {
-    console.log('nextProps: ', nextProps, 'prevState: ', prevState, 'prevProps: ', prevProps);
     if (prevProps === null || nextProps.isOpen !== prevState.isOpen) {
       return {
         isOpen: nextProps.isOpen
       };
     }
-
     return null;
   };
 
