@@ -1,11 +1,12 @@
 import React from 'react';
 import style from './DocsExampleBlock.css';
 
-const DocsExampleBlock = ({ name, children }) => (
+const DocsExampleBlock = ({ name, description, children }) => (
   <section className={style.examples}>
-    <h1>{ name }</h1>
+    <h1>{name}</h1>
+    <p className={style.description}>{description}</p>
     <div className={style.example}>
-      { children }
+      {children}
     </div>
     <h2>Props</h2>
   </section>

@@ -4,13 +4,13 @@ import DocsExampleBlock from '../components/Docs/DocsExampleBlock';
 import { componentData } from './componentData';
 
 const renderRoutes = () => {
-  return componentData.map(({ name, component, code }) => (
+  return componentData.map(({ name, description, component, code }) => (
     <Route
       key={name}
       path={'/' + name.toLowerCase()}
       render={() => (
         <Fragment>
-          <DocsExampleBlock name={name}>
+          <DocsExampleBlock name={name} description={description}>
             { component() }
           </DocsExampleBlock>
           { code() }
