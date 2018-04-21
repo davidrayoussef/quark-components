@@ -41,6 +41,11 @@ module.exports = {
     }
   },
 
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended'
+  ],
+
   settings: {
     'import/ignore': [
       'node_modules',
@@ -59,7 +64,7 @@ module.exports = {
     'array-callback-return': 'warn',
     'default-case': ['warn', { commentPattern: '^no default$' }],
     'dot-location': ['warn', 'property'],
-    eqeqeq: ['warn', 'allow-null'],
+    'eqeqeq': ['warn', 'allow-null'],
     'guard-for-in': 'warn',
     'new-parens': 'warn',
     'no-array-constructor': 'warn',

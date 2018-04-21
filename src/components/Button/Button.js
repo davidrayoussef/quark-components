@@ -25,7 +25,8 @@ const Button = ({ children, type, size, ...props }) => {
   );
 };
 
-Button.proptypes = {
+Button.propTypes = {
+  children: PropTypes.node,
   type: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool

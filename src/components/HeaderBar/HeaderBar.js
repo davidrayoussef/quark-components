@@ -8,7 +8,7 @@ const HeaderBar = ({ title }) => {
   );
 };
 
-HeaderBar.proptypes = {
+HeaderBar.propTypes = {
   title: PropTypes.string
 };
 

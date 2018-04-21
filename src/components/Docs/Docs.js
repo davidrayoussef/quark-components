@@ -23,8 +23,10 @@ const Docs = ({ children, headerTitle, data, ...props }) => {
   );
 };
 
-Docs.proptypes = {
-  children: PropTypes.node.isRequired
+Docs.propTypes = {
+  children: PropTypes.node.isRequired,
+  headerTitle: PropTypes.string,
+  data: PropTypes.array
 };
 
 export default Docs;

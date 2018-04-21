@@ -17,7 +17,7 @@ const List = ({ listTitle, data }) => {
   );
 };
 
-List.proptypes = {
+List.propTypes = {
   listTitle: PropTypes.string,
   data: PropTypes.array.isRequired
 };

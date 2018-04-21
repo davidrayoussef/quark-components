@@ -8,7 +8,7 @@ class Modal extends Component {
     isOpen: false
   };
 
-  static proptypes = {
+  static propTypes = {
     children: PropTypes.node,
     title: PropTypes.string,
     content: PropTypes.string
@@ -21,7 +21,7 @@ class Modal extends Component {
       };
     }
     return null;
-  };
+  }
 
   handleClose = () => {
     this.setState({
@@ -30,7 +30,7 @@ class Modal extends Component {
   };
 
   handleEsc = (e) => {
-    console.log(e.which);
+    // console.log(e.which);
   };
 
   render() {
@@ -48,6 +48,6 @@ class Modal extends Component {
       </div>
     ) : null;
   }
-};
+}
 
 export default Modal;

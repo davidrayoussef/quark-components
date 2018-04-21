@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Fetcher extends Component {
-  static proptypes = {
+  static propTypes = {
     render: PropTypes.func.isRequired,
     loader: PropTypes.element,
     url: PropTypes.string.isRequired
@@ -30,7 +30,7 @@ class Fetcher extends Component {
           data: data
         })
       })
-      .catch(err => console.log(err));
+      // .catch(err => console.error(err));
   }
 
   render() {

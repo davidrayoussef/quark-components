@@ -44,7 +44,7 @@ NavMenu.defaultProps = {
   linkType: 'anchorLink'
 };
 
-NavMenu.proptypes = {
+NavMenu.propTypes = {
   data: PropTypes.array.isRequired,
   linkColor: PropTypes.string,
   linkType: PropTypes.string,

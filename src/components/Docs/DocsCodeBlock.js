@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { atomDark } from 'react-syntax-highlighter/styles/prism';
 
@@ -19,5 +20,9 @@ const DocsCodeBlock = ({ children }) => (
     </SyntaxHighlighter>
   </section>
 );
+
+DocsCodeBlock.propTypes = {
+  children: PropTypes.node
+};
 
 export default DocsCodeBlock;

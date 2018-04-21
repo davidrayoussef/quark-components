@@ -17,10 +17,10 @@ const Card = ({ avatar_url, name, description, linkSrc }) => {
   );
 };
 
-Card.proptypes = {
+Card.propTypes = {
   avatar_url: PropTypes.string,
   name: PropTypes.string.isRequired,
-  location: PropTypes.string,
+  description: PropTypes.string,
   linkSrc: PropTypes.string
 };
 

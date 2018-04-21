@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './DocsExampleBlock.css';
 
 const DocsExampleBlock = ({ name, description, children }) => (
@@ -11,5 +12,11 @@ const DocsExampleBlock = ({ name, description, children }) => (
     <h2>Props</h2>
   </section>
 );
+
+DocsExampleBlock.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.node
+};
 
 export default DocsExampleBlock;
