@@ -17,10 +17,8 @@ import List from '{yourpath}/List';
 />
 `;
 
-const ListCode = () => (
+export const ListCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default ListCode;

@@ -33,10 +33,8 @@ class ModalExample extends Component {
 }
 `;
 
-const ModalCode = () => (
+export const ModalCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default ModalCode;

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavMenu from '../../../components/NavMenu/NavMenu';
 
-const NavMenuExample = () => (
+export const NavMenuExample = () => (
   <NavMenu
     menuTitle="NavMenu Items"
     linkColor="red"
@@ -15,5 +15,3 @@ const NavMenuExample = () => (
     ]}
   />
 );
-
-export default NavMenuExample;

@@ -8,10 +8,8 @@ import Loader from '{yourpath}/Loader';
 <Loader />
 `;
 
-const LoaderCode = () => (
+export const LoaderCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default LoaderCode;

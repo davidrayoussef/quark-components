@@ -8,10 +8,8 @@ import HeaderBar from '{yourpath}/HeaderBar';
 <HeaderBar title="HeaderBar Title" />
 `;
 
-const HeaderBarCode = () => (
+export const HeaderBarCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default HeaderBarCode;

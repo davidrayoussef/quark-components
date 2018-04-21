@@ -1,8 +1,6 @@
 import React from 'react';
 import Loader from '../../../components/Loader/Loader';
 
-const LoaderExample = () => (
+export const LoaderExample = () => (
   <Loader />
 );
-
-export default LoaderExample;

@@ -13,10 +13,8 @@ import Card from '{yourpath}/Card';
 />
 `;
 
-const CardCode = () => (
+export const CardCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default CardCode;

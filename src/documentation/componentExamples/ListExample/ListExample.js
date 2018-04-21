@@ -1,7 +1,7 @@
 import React from 'react';
 import List from '../../../components/List/List';
 
-const ListExample = () => (
+export const ListExample = () => (
   <List
     listTitle="List Items"
     data={[
@@ -13,5 +13,3 @@ const ListExample = () => (
     ]}
   />
 );
-
-export default ListExample;

@@ -3,7 +3,7 @@ import Fetcher from '../../../components/Fetcher/Fetcher';
 import Loader from '../../../components/Loader/Loader';
 import Card from '../../../components/Card/Card';
 
-const FetcherExample = () => (
+export const FetcherExample = () => (
   <Fetcher
     loader={Loader}
     url="https://api.github.com/users/davidrayoussef"
@@ -12,5 +12,3 @@ const FetcherExample = () => (
     )}
   />
 );
-
-export default FetcherExample;

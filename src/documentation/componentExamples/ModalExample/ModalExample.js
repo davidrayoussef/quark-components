@@ -28,8 +28,6 @@ class AppExample extends Component {
   }
 }
 
-const ModalExample = () => (
+export const ModalExample = () => (
   <AppExample />
 );
-
-export default ModalExample;

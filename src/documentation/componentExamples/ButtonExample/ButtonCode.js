@@ -13,10 +13,8 @@ import Button from '{yourpath}/Button';
 </div>
 `;
 
-const ButtonCode = () => (
+export const ButtonCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default ButtonCode;

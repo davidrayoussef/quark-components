@@ -15,10 +15,8 @@ import Loader from '{yourpath}/Loader';
 />
 `;
 
-const FetcherCode = () => (
+export const FetcherCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default FetcherCode;

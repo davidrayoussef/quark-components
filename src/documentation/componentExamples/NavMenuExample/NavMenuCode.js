@@ -19,10 +19,8 @@ import NavMenu from '{yourpath}/NavMenu';
 />
 `;
 
-const NavMenuCode = () => (
+export const NavMenuCode = () => (
   <DocsCodeBlock>
     {code}
   </DocsCodeBlock>
 );
-
-export default NavMenuCode;
