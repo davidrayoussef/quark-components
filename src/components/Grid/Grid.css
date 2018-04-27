@@ -1,0 +1,4 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--col-repeat), minmax(200px, 1fr));
+}
