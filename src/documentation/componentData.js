@@ -20,6 +20,12 @@ const componentData = [
     code: Modules.FetcherCode
   },
   {
+    name: 'Grid',
+    description: 'A wrapper component that renders its children using CSS Grid.',
+    component: Modules.GridExample,
+    code: Modules.GridCode
+  },
+  {
     name: 'HeaderBar',
     description: 'A horizontal bar at the top of a page, used to present branding, a search box, and/or a navigation menu.',
     component: Modules.HeaderBarExample,
