@@ -6,6 +6,8 @@ export * from './componentExamples/FetcherExample/FetcherExample';
 export * from './componentExamples/FetcherExample/FetcherCode';
 export * from './componentExamples/HeaderBarExample/HeaderBarExample';
 export * from './componentExamples/HeaderBarExample/HeaderBarCode';
+export * from './componentExamples/IconExample/IconExample';
+export * from './componentExamples/IconExample/IconCode';
 export * from './componentExamples/ListExample/ListExample';
 export * from './componentExamples/ListExample/ListCode';
 export * from './componentExamples/LoaderExample/LoaderExample';

@@ -26,6 +26,12 @@ const componentData = [
     code: Modules.HeaderBarCode
   },
   {
+    name: 'Icon',
+    description: 'An inline svg rendering of one of a set of commonly used icons.',
+    component: Modules.IconExample,
+    code: Modules.IconCode
+  },
+  {
     name: 'List',
     description: 'A list of multiple items, presented either vertically or horizontally.',
     component: Modules.ListExample,
