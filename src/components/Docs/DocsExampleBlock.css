@@ -1,3 +1,8 @@
+.examples {
+  padding: 25px;
+  background: #fbfbff;
+}
+
 .examples > h1 {
   font-size: 2em;
   margin-bottom: 20px;

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import icons from './IconModule';
-import style from './Icon.css';
 
 const Icon = ({ value, color }) => {
   return (
-    <svg fill={color}>
+    <svg fill={color} x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60">
       {icons[value]}
     </svg>
   );

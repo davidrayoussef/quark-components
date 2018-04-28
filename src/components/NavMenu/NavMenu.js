@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import style from './NavMenu.css';
 
-const NavMenu = ({ data, linkColor, linkType,  menuTitle }) => {
+const NavMenu = ({ data, linkColor, linkType, menuTitle }) => {
   const renderListItems = () => {
     if (linkType === 'routerLink') {
       return data.map(({name}) => (
@@ -31,7 +31,7 @@ const NavMenu = ({ data, linkColor, linkType,  menuTitle }) => {
 
   return (
     <Fragment>
-      <h2 className={style.menuTitle}>{menuTitle}</h2>
+      <h2 className={style.menuTitle}>{menuTitle.toUpperCase()}</h2>
       <nav className={style.nav}>
         { renderListItems() }
       </nav>
@@ -40,7 +40,7 @@ const NavMenu = ({ data, linkColor, linkType,  menuTitle }) => {
 };
 
 NavMenu.defaultProps = {
-  linkColor: '#03a9f4',
+  linkColor: 'rgb(52, 88, 226)',
   linkType: 'anchorLink'
 };
 

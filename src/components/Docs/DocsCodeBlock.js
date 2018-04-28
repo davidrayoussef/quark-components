@@ -10,6 +10,7 @@ const DocsCodeBlock = ({ children }) => (
       style={atomDark}
       customStyle={{
         fontSize: '1.1rem',
+        height: '100%',
         padding: '0 30px 30px',
         margin: 0,
         background: 'var(--primary)',

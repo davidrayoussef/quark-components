@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Fetcher extends Component {
   static propTypes = {
     render: PropTypes.func.isRequired,
-    loader: PropTypes.element,
+    loader: PropTypes.func,
     url: PropTypes.string.isRequired
   };
 

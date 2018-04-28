@@ -9,7 +9,7 @@ const Grid = ({ children, cols, rows }) => {
       <style>
         {`
           :root {
-            --col-repeat: ${cols};
+            --cols: ${cols};
           }
         `}
       </style>
@@ -18,7 +18,7 @@ const Grid = ({ children, cols, rows }) => {
 };
 
 Grid.defaultProps = {
-  cols: 'auto-fit'
+  cols: 'repeat(auto-fit, minmax(200px, 1fr))'
 };
 
 Grid.propTypes = {

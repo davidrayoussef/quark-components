@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  padding: 0 25px;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
 }
 
 .wrapper h1 {
@@ -9,8 +9,13 @@
   font-weight: 100;
 }
 
+.wrapper aside {
+  padding: 25px;
+  background: #F4F4FD;
+}
+
 .main {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 15% 40% 45%;
   min-width: 0;
 }
