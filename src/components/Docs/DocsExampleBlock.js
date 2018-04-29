@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DocsPropTable from './DocsPropTable';
 import style from './DocsExampleBlock.css';
 
 const DocsExampleBlock = ({ name, description, children }) => (
@@ -10,6 +11,7 @@ const DocsExampleBlock = ({ name, description, children }) => (
       {children}
     </div>
     <h2>Props</h2>
+    <DocsPropTable />
   </section>
 );
 
