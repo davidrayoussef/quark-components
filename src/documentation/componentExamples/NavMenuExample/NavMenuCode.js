@@ -7,7 +7,7 @@ import NavMenu from '{yourpath}/NavMenu';
 
 <NavMenu
   menuTitle="NavMenu Items"
-  linkColor="red"
+  linkColor="rgb(33, 150, 243)"
   linkType="anchorLink"
   data={[
     { name: 'NavMenu Item 1' },

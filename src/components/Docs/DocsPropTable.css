@@ -5,16 +5,20 @@
 }
 
 .propTable th, .propTable td {
+  font-size: .9rem;
   text-align: left;
-  padding: 6px;
+  padding: 15px 0 15px 15px;
   vertical-align: top;
+}
+
+.propTable th:first-child, .propTable td:first-child {
+  padding-left: 0;
 }
 
 .propTable th {
   color: rgba(52, 88, 226, .9);
-  font-size: .9rem;
 }
 
 .propTable tr {
-  border-bottom: 1px solid rgba(52, 88, 226, .5);
+  border-bottom: 1px solid rgba(52, 88, 226, .4);
 }

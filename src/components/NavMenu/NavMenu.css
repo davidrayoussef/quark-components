@@ -1,5 +1,5 @@
 .menuTitle {
-  margin: 0 0 10px;
+  margin: 25px 25px 10px;
   font-size: 1.2rem;
   font-weight: 100;
 }
@@ -7,9 +7,11 @@
 .nav {
   display: flex;
   flex-direction: column;
+  max-width: 250px;
 }
 
 .nav a {
-  margin-bottom: 10px;
   text-decoration: none;
+  padding: 10px 25px;
+  transition: background-color .2s;
 }

@@ -28,8 +28,7 @@ const Button = ({ children, type, size, ...props }) => {
 Button.propTypes = {
   children: PropTypes.node,
   type: PropTypes.string,
-  size: PropTypes.string,
-  disabled: PropTypes.bool
+  size: PropTypes.string
 };
 
 export default Button;

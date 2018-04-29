@@ -40,7 +40,7 @@ const NavMenu = ({ data, linkColor, linkType, menuTitle }) => {
 };
 
 NavMenu.defaultProps = {
-  linkColor: 'rgb(52, 88, 226)',
+  linkColor: 'rgb(33, 150, 243)',
   linkType: 'anchorLink'
 };
 

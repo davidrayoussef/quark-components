@@ -4,13 +4,7 @@
   height: 100vh;
 }
 
-.wrapper h1 {
-  margin: 0;
-  font-weight: 100;
-}
-
 .wrapper aside {
-  padding: 25px;
   background: #F4F4FD;
 }
 

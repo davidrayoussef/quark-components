@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './DocsPropTable.css';
 
-const DocsPropTable = () => (
+const DocsPropTable = ({ propDescriptions }) => (
   <table className={style.propTable}>
     <thead>
       <tr>
@@ -13,17 +13,31 @@ const DocsPropTable = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>prop name</td>
-        <td>prop type</td>
-        <td>prop default</td>
-        <td>prop description</td>
-      </tr>
+      {
+        propDescriptions.map(({ propName, propType, propDefault, propDescription }) => {
+          return (
+            <tr key={propName}>
+              <td>{propName}</td>
+              <td>{propType}</td>
+              <td>{propDefault}</td>
+              <td>{propDescription}</td>
+            </tr>
+          );
+        })
+      }
     </tbody>
   </table>
 );
 
 DocsPropTable.propTypes = {
+  propDescriptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      propName: PropTypes.string.isRequired,
+      propType: PropTypes.string.isRequired,
+      propDefault: PropTypes.string,
+      propDescription: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 export default DocsPropTable;

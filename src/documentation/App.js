@@ -9,6 +9,8 @@ const App = () => {
       data={componentData}
       headerTitle="React Simple UI Components"
       menuTitle="Components"
+      linkColor="rgb(52, 88, 226)"
+      linkType="routerLink" 
     >
       { routes }
     </Docs>

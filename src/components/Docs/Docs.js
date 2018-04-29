@@ -5,14 +5,14 @@ import HeaderBar from '../HeaderBar/HeaderBar';
 import NavMenu from '../NavMenu/NavMenu';
 import style from './Docs.css';
 
-const Docs = ({ children, headerTitle, data, ...props }) => {
+const Docs = ({ children, headerTitle, ...props }) => {
   return (
     <Router>
       <div className={style.wrapper}>
         <HeaderBar title={headerTitle} />
         <main className={style.main}>
           <aside>
-            <NavMenu {...props} linkType='routerLink' data={data} />
+            <NavMenu {...props} />
           </aside>
           { children }
         </main>
@@ -23,8 +23,7 @@ const Docs = ({ children, headerTitle, data, ...props }) => {
 
 Docs.propTypes = {
   children: PropTypes.node.isRequired,
-  headerTitle: PropTypes.string,
-  data: PropTypes.array
+  headerTitle: PropTypes.string
 };
 
 export default Docs;

@@ -10,8 +10,7 @@ class Modal extends Component {
 
   static propTypes = {
     children: PropTypes.node,
-    title: PropTypes.string,
-    content: PropTypes.string
+    title: PropTypes.string
   };
 
   static getDerivedStateFromProps(nextProps, prevState, prevProps) {

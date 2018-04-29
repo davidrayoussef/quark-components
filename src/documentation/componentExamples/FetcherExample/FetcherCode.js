@@ -9,8 +9,13 @@ import Loader from '{yourpath}/Loader';
 <Fetcher
   loader={Loader}
   url="https://api.github.com/users/davidrayoussef"
-  render={({ html_url, location, ...data }) => (
-    <Card {...data} linkSrc={html_url} description={location} />
+  render={({ name, avatar_url, location, html_url }) => (
+    <Card
+      name={name}
+      avatarSrc={avatar_url}
+      description={location}
+      linkSrc={html_url}
+    />
   )}
 />
 `;

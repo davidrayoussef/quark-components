@@ -5,7 +5,7 @@ import style from './List.css';
 const List = ({ listTitle, data }) => {
   return (
     <Fragment>
-      <h2 className={style.listTitle}>{listTitle}</h2>
+      <h3 className={style.listTitle}>{listTitle}</h3>
       <ul className={style.list}>
         {
           data.map(({name}) => (

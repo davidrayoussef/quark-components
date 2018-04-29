@@ -4,7 +4,9 @@ import style from './HeaderBar.css';
 
 const HeaderBar = ({ title }) => {
   return (
-    <header className={style.header}>{title}</header>
+    <header className={style.header}>
+      <h1>{title}</h1>
+    </header>
   );
 };
 

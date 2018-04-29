@@ -10,6 +10,10 @@ const Icon = ({ value, color }) => {
   );
 };
 
+Icon.defaultProps = {
+  color: 'gray'
+};
+
 Icon.propTypes = {
   value: PropTypes.string.isRequired,
   color: PropTypes.string
