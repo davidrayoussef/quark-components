@@ -1,54 +1,66 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import style from './NavMenu.css';
+import { computeHoverColor } from '../../utils/computeHoverColor';
 
-const NavMenu = ({ data, linkColor, linkType, menuTitle }) => {
-  const renderListItems = () => {
-    if (linkType === 'routerLink') {
-      return data.map(({name}) => (
-        <NavLink
-          key={name}
-          to={'/' + name.toLowerCase()}
-          style={{color: linkColor}}
-          activeClassName="active"
-        >
-          {name}
-        </NavLink>
-      ));
-    }
-
-    return data.map(({name}) => (
-      <a
-        key={name}
-        href={'/' + name.toLowerCase()}
-        style={{color: linkColor}}
-      >
-        {name}
-      </a>
-    ));
+class NavMenu extends Component {
+  static defaultProps = {
+    linkColor: 'rgb(33, 150, 243)',
+    linkType: 'anchorLink',
+    linkDisabled: false
   };
 
-  return (
-    <Fragment>
-      <h2 className={style.menuTitle}>{menuTitle.toUpperCase()}</h2>
-      <nav className={style.nav}>
-        { renderListItems() }
-      </nav>
-    </Fragment>
-  );
-};
+  static propTypes = {
+    data: PropTypes.array.isRequired,
+    linkColor: PropTypes.string,
+    linkType: PropTypes.string,
+    linkDisabled: PropTypes.bool,
+    menuTitle: PropTypes.string
+  };
 
-NavMenu.defaultProps = {
-  linkColor: 'rgb(33, 150, 243)',
-  linkType: 'anchorLink'
-};
+  handleClick = (e) => {
+    if (this.props.linkDisabled) e.preventDefault();
+  };
 
-NavMenu.propTypes = {
-  data: PropTypes.array.isRequired,
-  linkColor: PropTypes.string,
-  linkType: PropTypes.string,
-  menuTitle: PropTypes.string
-};
+  render() {
+    const { data, linkColor, linkType, menuTitle } = this.props;
+    const renderListItems = () => {
+      if (linkType === 'routerLink') {
+        return data.map(({name}) => (
+          <NavLink
+            key={name}
+            to={'/' + name.toLowerCase()}
+            style={{color: linkColor}}
+            activeClassName="active"
+            onClick={this.handleClick}
+          >
+            {name}
+          </NavLink>
+        ));
+      }
+      return data.map(({name}) => (
+        <a
+          key={name}
+          href={'/' + name.toLowerCase()}
+          style={{color: linkColor}}
+          onClick={this.handleClick}
+        >
+          {name}
+        </a>
+      ));
+    };
+
+    return (
+      <Fragment>
+        <h2 className={style.menuTitle}>{menuTitle.toUpperCase()}</h2>
+        <nav className={style.nav}>
+          { renderListItems() }
+        </nav>
+        <style>{ computeHoverColor(linkColor) }</style>
+      </Fragment>
+    );
+  }
+}
 
 export default NavMenu;

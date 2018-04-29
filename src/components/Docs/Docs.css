@@ -10,6 +10,6 @@
 
 .main {
   display: grid;
-  grid-template-columns: 15% 40% 45%;
+  grid-template-columns: 200px 1fr 1fr;
   min-width: 0;
 }

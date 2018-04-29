@@ -1,5 +1,5 @@
 .examples {
-  padding: 25px;
+  padding: 25px 25px 75px;
 }
 
 .examples > h2 {
@@ -15,7 +15,7 @@
 }
 
 .example {
-  padding: 30px 25px;
+  padding: 20px 25px;
   margin: 0 -25px;
 }
 

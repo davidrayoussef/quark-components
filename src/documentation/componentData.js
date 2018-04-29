@@ -216,6 +216,12 @@ export const componentData = [
         propDescription: 'A standard anchor link or a React Router link.'
       },
       {
+        propName: 'linkDisabled',
+        propType: 'boolean',
+        propDefault: 'false',
+        propDescription: 'A boolean that specifies whether the links should be disabled with preventDefault().'
+      },
+      {
         propName: 'data',
         propType: 'array',
         propDefault: null,

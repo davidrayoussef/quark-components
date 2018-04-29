@@ -6,6 +6,7 @@ export const NavMenuExample = () => (
     menuTitle="NavMenu Items"
     linkColor="rgb(33, 150, 243)"
     linkType="anchorLink"
+    linkDisabled={true}
     data={[
       { name: 'NavMenu Item 1' },
       { name: 'NavMenu Item 2' },

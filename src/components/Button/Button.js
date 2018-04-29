@@ -1,17 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Button.css';
+import { getTypeStyle } from '../../utils/getButtonStyles';
+console.log(getTypeStyle);
 
 const Button = ({ children, type, size, ...props }) => {
-  const getTypeStyle = (type, style) => `
-    ${
-      type === 'secondary' ? style.secondary :
-      type === 'reverse' ? style.reverse :
-      type === 'danger' ? style.danger :
-      style.primary
-    }
-  `;
-
   return (
     <button
       className={`
