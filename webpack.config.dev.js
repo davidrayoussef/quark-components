@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	devtool: 'eval',
@@ -23,9 +24,8 @@ module.exports = {
         ]
       },
 			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: ['babel-loader']
+				test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+				loader: 'file-loader?name=images/[name].[hash].[ext]'
 			},
 			{
         test: /\.css$/,
@@ -61,6 +61,12 @@ module.exports = {
       template: __dirname + '/src/index.html',
       filename: 'index.html',
       inject: 'body'
-    })
+    }),
+		new CopyWebpackPlugin([
+			{
+				from: 'src/documentation/images',
+				to: 'images'
+			}
+		])
 	]
 };
