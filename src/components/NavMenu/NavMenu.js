@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import style from './NavMenu.css';
-import { computeHoverColor } from '../../utils/computeHoverColor';
+import { computeHoverColor, computeActiveColor } from '../../utils/computeHoverColor';
 
 class NavMenu extends Component {
   static defaultProps = {
-    linkColor: 'rgb(33, 150, 243)',
+    linkColor: 'rgb(52, 88, 226)',
     linkType: 'anchorLink',
     linkDisabled: false
   };
@@ -31,19 +31,19 @@ class NavMenu extends Component {
           <NavLink
             key={name}
             to={'/' + name.toLowerCase()}
-            style={{color: linkColor}}
-            activeClassName="active"
+            style={{ color: linkColor }}
+            activeStyle={{ borderColor: linkColor, background: computeActiveColor(linkColor) }}
             onClick={this.handleClick}
           >
             {name}
           </NavLink>
         ));
       }
-      return data.map(({name}) => (
+      return data.map(({ name }) => (
         <a
           key={name}
           href={'/' + name.toLowerCase()}
-          style={{color: linkColor}}
+          style={{ color: linkColor }}
           onClick={this.handleClick}
         >
           {name}

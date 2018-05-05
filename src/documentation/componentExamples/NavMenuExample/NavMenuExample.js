@@ -4,7 +4,6 @@ import NavMenu from '../../../components/NavMenu/NavMenu';
 export const NavMenuExample = () => (
   <NavMenu
     menuTitle="NavMenu Items"
-    linkColor="rgb(33, 150, 243)"
     linkType="anchorLink"
     linkDisabled={true}
     data={[

@@ -27,8 +27,8 @@
 
 .reverse {
   background: rgba(0, 0, 0, .025);
-  color: rgba(52,88,226,.9);
-  box-shadow: inset 0 0 0 1.5px rgba(52,88,226,.9);
+  color: rgba(52, 88, 226, .9);
+  box-shadow: inset 0 0 0 1.5px rgba(52, 88, 226, .9);
 }
 
 .reverse:hover {

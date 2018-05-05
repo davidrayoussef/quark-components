@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Button.css';
 import { getTypeStyle } from '../../utils/getButtonStyles';
-console.log(getTypeStyle);
 
 const Button = ({ children, type, size, ...props }) => {
   return (
