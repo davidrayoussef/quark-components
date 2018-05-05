@@ -3,8 +3,9 @@ import * as Modules from './modules';
 export const componentData = [
   {
     name: 'Button',
-    component: Modules.ButtonExample,
     description: 'A customizable button used to trigger an action.',
+    component: Modules.ButtonExample,
+    code: Modules.ButtonCode,
     propDescriptions: [
       {
         propName: 'children',
@@ -24,13 +25,13 @@ export const componentData = [
         propDefault: 'normal',
         propDescription: 'The size of the button (small, normal, large).'
       }
-    ],
-    code: Modules.ButtonCode
+    ]
   },
   {
     name: 'Card',
-    component: Modules.CardExample,
     description: 'A block containing a short summary, such as a person\'s profile, usually used as a grid item.',
+    component: Modules.CardExample,
+    code: Modules.CardCode,
     propDescriptions: [
       {
         propName: 'avatarSrc',
@@ -56,13 +57,27 @@ export const componentData = [
         propDefault: null,
         propDescription: 'The url for a link on the card.'
       }
-    ],
-    code: Modules.CardCode
+    ]
+  },
+  {
+    name: 'Carousel',
+    description: '',
+    component: Modules.CarouselExample,
+    code: Modules.CarouselCode,
+    propDescriptions: [
+      {
+        propName: '',
+        propType: '',
+        propDefault: null,
+        propDescription: ''
+      }
+    ]
   },
   {
     name: 'Fetcher',
-    component: Modules.FetcherExample,
     description: 'A container component used to call an API.',
+    component: Modules.FetcherExample,
+    code: Modules.FetcherCode,
     propDescriptions: [
       {
         propName: 'render',
@@ -82,13 +97,13 @@ export const componentData = [
         propDefault: 'normal',
         propDescription: 'The url to fetch.'
       }
-    ],
-    code: Modules.FetcherCode
+    ]
   },
   {
     name: 'Grid',
-    component: Modules.GridExample,
     description: 'A wrapper component that lays out its children using CSS Grid.',
+    component: Modules.GridExample,
+    code: Modules.GridCode,
     propDescriptions: [
       {
         propName: 'children',
@@ -108,13 +123,13 @@ export const componentData = [
         propDefault: null,
         propDescription: 'The value for the grid-template-rows property.'
       }
-    ],
-    code: Modules.GridCode
+    ]
   },
   {
     name: 'HeaderBar',
-    component: Modules.HeaderBarExample,
     description: 'A horizontal bar at the top of a page, used to present branding, a search box, and/or a navigation menu.',
+    component: Modules.HeaderBarExample,
+    code: Modules.HeaderBarCode,
     propDescriptions: [
       {
         propName: 'title',
@@ -122,13 +137,13 @@ export const componentData = [
         propDefault: null,
         propDescription: 'The title text of the header.'
       }
-    ],
-    code: Modules.HeaderBarCode
+    ]
   },
   {
     name: 'Icon',
-    component: Modules.IconExample,
     description: 'An inline svg rendering of one of a set of commonly used icons.',
+    component: Modules.IconExample,
+    code: Modules.IconCode,
     propDescriptions: [
       {
         propName: 'value',
@@ -142,13 +157,13 @@ export const componentData = [
         propDefault: 'gray',
         propDescription: 'A hex value, rgb value, or name for the fill color of the icon.'
       }
-    ],
-    code: Modules.IconCode
+    ]
   },
   {
     name: 'List',
-    component: Modules.ListExample,
     description: 'A list of multiple items, presented either vertically or horizontally.',
+    component: Modules.ListExample,
+    code: Modules.ListCode,
     propDescriptions: [
       {
         propName: 'listTitle',
@@ -162,20 +177,20 @@ export const componentData = [
         propDefault: null,
         propDescription: 'An array of the list items to render.'
       }
-    ],
-    code: Modules.ListCode
+    ]
   },
   {
     name: 'Loader',
-    component: Modules.LoaderExample,
     description: 'An animated spinner used to indicate that content is loading.',
-    propDescriptions: [],
-    code: Modules.LoaderCode
+    component: Modules.LoaderExample,
+    code: Modules.LoaderCode,
+    propDescriptions: []
   },
   {
     name: 'Modal',
-    component: Modules.ModalExample,
     description: 'A pop-in box used to present information center-screen.',
+    component: Modules.ModalExample,
+    code: Modules.ModalCode,
     propDescriptions: [
       {
         propName: 'title',
@@ -189,13 +204,13 @@ export const componentData = [
         propDefault: null,
         propDescription: 'The content of the modal.'
       }
-    ],
-    code: Modules.ModalCode
+    ]
   },
   {
     name: 'NavMenu',
-    component: Modules.NavMenuExample,
     description: 'A list of navigation links, presented either vertically or horizontally.',
+    component: Modules.NavMenuExample,
+    code: Modules.NavMenuCode,
     propDescriptions: [
       {
         propName: 'menuTitle',
@@ -206,7 +221,7 @@ export const componentData = [
       {
         propName: 'linkColor',
         propType: 'string',
-        propDefault: 'rgb(33, 150, 243)',
+        propDefault: 'rgb(52, 88, 226)',
         propDescription: 'The type button (primary, secondary, reverse or danger).'
       },
       {
@@ -227,7 +242,6 @@ export const componentData = [
         propDefault: null,
         propDescription: 'An array of menu items to render.'
       }
-    ],
-    code: Modules.NavMenuCode
+    ]
   }
 ];
