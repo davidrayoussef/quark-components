@@ -17,6 +17,7 @@
 
 .propTable th {
   color: rgba(52, 88, 226, .9);
+  padding-bottom: 5px;
 }
 
 .propTable tr {

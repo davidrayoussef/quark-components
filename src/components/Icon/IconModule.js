@@ -1,4 +1,6 @@
 import React from 'react';
+import ArrowLeftIcon from './icons/ArrowLeftIcon';
+import ArrowRightIcon from './icons/ArrowRightIcon';
 import EmailIcon from './icons/EmailIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import GithubIcon from './icons/GithubIcon';
@@ -7,6 +9,8 @@ import TwitterIcon from './icons/TwitterIcon';
 import YoutubeIcon from './icons/YoutubeIcon';
 
 const icons = {
+  arrowLeft: <ArrowLeftIcon />,
+  arrowRight: <ArrowRightIcon />,
   email: <EmailIcon />,
   facebook: <FacebookIcon />,
   github: <GithubIcon />,
