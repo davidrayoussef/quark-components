@@ -1,15 +1,10 @@
-Grid
 Form - Form.Input Form.Select Form.Radio Form.CheckBox Form.Submit Form.TextArea Form.Switch Form.Uploader
-Slider
 Swiper
-Modal
 Filter
 Share
 Tabs
 AdRotater
-Button
 Gallery
-Icon
 Article
 Dropdown
 Autocomplete

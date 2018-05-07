@@ -61,15 +61,15 @@ export const componentData = [
   },
   {
     name: 'Carousel',
-    description: '',
+    description: 'A carousel/slider used to view images one at a time that slide horizontally into view.',
     component: Modules.CarouselExample,
     code: Modules.CarouselCode,
     propDescriptions: [
       {
-        propName: '',
-        propType: '',
+        propName: 'images',
+        propType: 'array',
         propDefault: null,
-        propDescription: ''
+        propDescription: 'An array of objects with a title property and an image src property.'
       }
     ]
   },
@@ -81,7 +81,7 @@ export const componentData = [
     propDescriptions: [
       {
         propName: 'render',
-        propType: 'func',
+        propType: 'function',
         propDefault: null,
         propDescription: 'The render function.'
       },

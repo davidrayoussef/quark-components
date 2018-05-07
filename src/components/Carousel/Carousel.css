@@ -6,9 +6,14 @@
   align-items: center;
 }
 
+.images {
+  overflow: hidden;
+}
+
 .image-container {
   display: flex;
-  overflow: hidden;
+  align-items: flex-start;
+  transition: transform .4s ease-in-out;
 }
 
 .wrapper img {

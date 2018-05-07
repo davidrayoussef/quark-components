@@ -5,43 +5,79 @@ import style from './Carousel.css';
 
 class Carousel extends Component {
   state = {
-    activeIndex: 0
-  };
-
-  static defaultProps = {
-    imgWidth: 900
+    activeIndex: 0,
+    translate: 0
   };
 
   static propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
-    imgWidth: PropTypes.number
+    images: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
-  handleLeftArrowClick = (e) => {
-    console.log(e.target);
+  constructor(props) {
+    super(props)
+    this.element = React.createRef();
+  }
+
+  componentDidMount() {
+    // Use setTimeout to get rendered image width after styles have loaded
+    setTimeout(() => {
+      this.imgWidth = this.element.current.clientWidth;
+    }, 0);
+  }
+
+  handleLeftArrowClick = () => {
+    const { activeIndex, translate } = this.state;
+    const imgCount = this.props.images.length;
+
+    this.setState({
+      translate: activeIndex === 0 ? translate - this.imgWidth * (imgCount - 1) : translate + this.imgWidth,
+      activeIndex: activeIndex === 0 ? imgCount - 1 : activeIndex - 1
+    });
   };
 
-  handleRightArrowClick = (e) => {
-    console.log(e.target);
+  handleRightArrowClick = () => {
+    const { activeIndex, translate } = this.state;
+    const imgCount = this.props.images.length;
+
+    this.setState({
+      translate: (translate - this.imgWidth) % (this.imgWidth * imgCount),
+      activeIndex: (activeIndex + 1) % imgCount
+    });
   };
 
   render() {
-    const { images, imgWidth } = this.props;
-
-    const renderedImages = images.map(img =>
-      <img key={img.title} src={img.src} alt={img.title} />
+    const renderedImages = this.props.images.map(img =>
+      <img
+        key={img.title}
+        src={img.src}
+        alt={img.title}
+      />
     );
 
     if (renderedImages.length) {
       return (
         <main className={style.wrapper}>
-          <Icon value="arrowLeft" onClick={this.handleLeftArrowClick} />
+          <Icon
+            value="arrowLeft"
+            style={{ cursor: 'pointer' }}
+            onClick={this.handleLeftArrowClick}
+          />
 
-          <div className={style['image-container']}>
-            { renderedImages }
+          <div className={style.images}>
+            <div
+              ref={this.element}
+              className={style['image-container']}
+              style={{ transform: `translateX(${this.state.translate}px)` }}
+            >
+              {renderedImages}
+            </div>
           </div>
 
-          <Icon value="arrowRight" onClick={this.handleRightArrowClick} />
+          <Icon
+            value="arrowRight"
+            style={{ cursor: 'pointer' }}
+            onClick={this.handleRightArrowClick}
+          />
         </main>
       );
     }
