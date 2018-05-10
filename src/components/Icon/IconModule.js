@@ -4,6 +4,7 @@ import ArrowRightIcon from './icons/ArrowRightIcon';
 import EmailIcon from './icons/EmailIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import GithubIcon from './icons/GithubIcon';
+import MenuIcon from './icons/MenuIcon';
 import RedditIcon from './icons/RedditIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import YoutubeIcon from './icons/YoutubeIcon';
@@ -14,6 +15,7 @@ const icons = {
   email: <EmailIcon />,
   facebook: <FacebookIcon />,
   github: <GithubIcon />,
+  menu: <MenuIcon />,
   reddit: <RedditIcon />,
   twitter: <TwitterIcon />,
   youtube: <YoutubeIcon />

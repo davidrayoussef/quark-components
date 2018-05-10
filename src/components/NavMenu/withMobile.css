@@ -1,0 +1,29 @@
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 12px;
+  right: 0;
+}
+
+.menu-icon path {
+  transition: .15s ease-in-out;
+}
+
+.menu-icon .close.line1 {
+  transform: rotate(45deg) translateX(6px) translateY(-6px);
+}
+
+.menu-icon .close.line2 {
+  transform: rotate(45deg) translateX(6px) translateY(-6px);
+}
+
+.menu-icon .close.line2 {
+  transform: rotate(45deg) translateX(6px) translateY(-6px);
+}
+
+@media (max-width: 800px) {
+  .menu-icon {
+    display: block;
+  }
+}

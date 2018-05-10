@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { BrowserRouter as Router } from 'react-router-dom';
 import HeaderBar from '../HeaderBar/HeaderBar';
 import NavMenu from '../NavMenu/NavMenu';
+import { withMobileMenu } from '../NavMenu/withMobileMenu';
 import style from './Docs.css';
+
+const NavMenuWithMobile = withMobileMenu(NavMenu);
 
 const Docs = ({ children, headerTitle, ...props }) => {
   return (
@@ -11,9 +14,7 @@ const Docs = ({ children, headerTitle, ...props }) => {
       <div className={style.wrapper}>
         <HeaderBar title={headerTitle} />
         <main className={style.main}>
-          <aside>
-            <NavMenu {...props} />
-          </aside>
+          <NavMenuWithMobile {...props} />
           { children }
         </main>
       </div>

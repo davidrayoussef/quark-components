@@ -2,6 +2,11 @@
   --border-width: 4px;
 }
 
+.sidebar {
+  background: #f4f4fd;
+  z-index: 1;
+}
+
 .menuTitle {
   margin: 25px 25px 10px;
   font-size: 1.2rem;
@@ -11,12 +16,17 @@
 .nav {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
-}
+  }
 
 .nav a {
   border-left: var(--border-width) solid transparent;
   text-decoration: none;
   padding: 10px calc(25px - var(--border-width));
   transition: background-color .2s;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    grid-row: 1 / 3;
+  }
 }
