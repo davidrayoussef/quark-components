@@ -28,6 +28,7 @@ class NavMenu extends Component {
     if (this.props.handleMobileLinkClick) this.props.handleMobileLinkClick();
   };
 
+
   render() {
     const { data, linkColor, linkType, menuTitle } = this.props;
     const renderListItems = () => {

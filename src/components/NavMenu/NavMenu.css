@@ -3,7 +3,6 @@
 }
 
 .sidebar {
-  background: #f4f4fd;
   z-index: 1;
 }
 
@@ -16,7 +15,7 @@
 .nav {
   display: flex;
   flex-direction: column;
-  }
+}
 
 .nav a {
   border-left: var(--border-width) solid transparent;

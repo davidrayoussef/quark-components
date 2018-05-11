@@ -8,18 +8,24 @@
 .main {
   background: #f4f4fd;
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 200px repeat(2, minmax(0, 1fr));
   min-width: 0;
 }
 
 @media (max-width: 1200px) {
   .main {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px minmax(0, 1fr);
   }
 }
 
 @media (max-width: 800px) {
+  .wrapper > header {
+    position: fixed;
+  }
+
   .main {
     display: block;
+    position: relative;
+    top: 57px;
   }
 }

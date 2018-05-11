@@ -5,7 +5,8 @@ import style from './withMobile.css';
 export const withMobileMenu = (Component) => {
   return class NavMenuWithMobile extends React.Component {
     state = {
-      isOpen: false
+      isOpen: false,
+      mobileStyles: {}
     };
 
     handleMenuIconClick = (e) => {
@@ -20,18 +21,45 @@ export const withMobileMenu = (Component) => {
       });
     };
 
+    handleResize = () => {
+      if (window.innerWidth < 800) {
+        this.setState({
+          mobileStyles: {
+            width: '100vw',
+            height: '100vh',
+            position: 'fixed'
+          }
+        })
+      }
+      else {
+        this.setState({
+          mobileStyles: {}
+        })
+      }
+    };
+
+    componentDidMount() {
+      window.addEventListener('resize', this.handleResize);
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.handleResize);
+    }
+
     render() {
+      const { isOpen } = this.state;
+
       return (
         <Fragment>
           <Icon
-            className={style['menu-icon']}
+            className={`${style['menu-icon']} ${isOpen ? style.close : ''}`}
             value="menu"
             onClick={this.handleMenuIconClick}
           />
           <Component
-            isOpen={this.state.isOpen}
+            isOpen={isOpen}
             handleMobileLinkClick={this.handleMobileLinkClick}
-            mobileStyles={{ width: '100vw', height: '100vh', position: 'fixed' }}
+            mobileStyles={this.state.mobileStyles}
             {...this.props}
           />
         </Fragment>
