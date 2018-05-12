@@ -62,7 +62,7 @@ class NavMenu extends Component {
         <aside
           className={style.sidebar}
           style={{
-            ...(isMobile() ? this.props.mobileStyles : {}),
+            ...(this.props.mobileStyles || {}),
             display: isMobile() && this.props.isOpen ? 'block' : !isMobile() || !this.props.hasOwnProperty('isOpen') ? 'block' : 'none'
           }}
         >
