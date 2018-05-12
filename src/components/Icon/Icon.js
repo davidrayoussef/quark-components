@@ -6,10 +6,8 @@ const Icon = ({ value, color, ...rest }) => {
   return (
     <svg
       fill={color}
-      x="0px"
-      y="0px"
-      width="60px"
-      height="60px"
+      x="0"
+      y="0"
       viewBox="0 0 60 60"
       {...rest}
     >
@@ -19,12 +17,17 @@ const Icon = ({ value, color, ...rest }) => {
 };
 
 Icon.defaultProps = {
-  color: 'gray'
+  color: 'gray',
+  width: 60
 };
 
 Icon.propTypes = {
   value: PropTypes.string.isRequired,
-  color: PropTypes.string
+  color: PropTypes.string,
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ])
 };
 
 export default Icon;

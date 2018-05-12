@@ -14,7 +14,7 @@ class Carousel extends Component {
   };
 
   constructor(props) {
-    super(props)
+    super(props);
     this.element = React.createRef();
   }
 
@@ -59,7 +59,8 @@ class Carousel extends Component {
         <main className={style.wrapper}>
           <Icon
             value="arrowLeft"
-            style={{ cursor: 'pointer' }}
+            width="5vw"
+            style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
             onClick={this.handleLeftArrowClick}
           />
 
@@ -75,7 +76,8 @@ class Carousel extends Component {
 
           <Icon
             value="arrowRight"
-            style={{ cursor: 'pointer' }}
+            width="5vw"
+            style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
             onClick={this.handleRightArrowClick}
           />
         </main>
