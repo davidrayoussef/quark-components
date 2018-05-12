@@ -28,4 +28,8 @@
     position: relative;
     top: 57px;
   }
+
+  .main > aside {
+    background: #f4f4fd;
+  }
 }
