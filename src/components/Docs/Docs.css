@@ -9,7 +9,6 @@
   background: #f4f4fd;
   display: grid;
   grid-template-columns: 200px repeat(2, minmax(0, 1fr));
-  min-width: 0;
 }
 
 @media (max-width: 1200px) {

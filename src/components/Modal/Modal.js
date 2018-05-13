@@ -33,19 +33,25 @@ class Modal extends Component {
   };
 
   render() {
-    return this.state.isOpen ? (
-      <div className={style.overlay}>
-        <div className={style.modal}>
-          <header>{this.props.title}</header>
-          {this.props.children}
-          <div className={style.buttonContainer}>
-            <span onClick={this.handleClose} onKeyUp={this.handleEsc}>
-              <Button type="secondary">OK</Button>
-            </span>
+    if (this.state.isOpen) {
+      return (
+        <div className={style.overlay}>
+          <div className={style.modal}>
+            <header>{this.props.title}</header>
+            {this.props.children}
+            <Button
+              type="secondary"
+              style={{ width: 100, margin: 'auto' }}
+              onClick={this.handleClose}
+              onKeyUp={this.handleEsc}
+            >
+              OK
+            </Button>
           </div>
         </div>
-      </div>
-    ) : null;
+      );
+    }
+    return null;
   }
 }
 

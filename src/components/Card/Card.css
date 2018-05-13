@@ -14,11 +14,11 @@
 }
 
 .card h3 {
-  margin: 0 0 10px 0;
+  margin: 10px 0;
   font-size: 1.5em;
   font-weight: 400;
 }
 
 .description {
-  margin-bottom: 10px;
+  margin: 5px 0 10px;
 }

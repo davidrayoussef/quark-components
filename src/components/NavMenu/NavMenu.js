@@ -24,13 +24,14 @@ class NavMenu extends Component {
   };
 
   handleLinkClick = (e) => {
-    if (this.props.linkDisabled) e.preventDefault();
-    if (this.props.handleMobileLinkClick) this.props.handleMobileLinkClick();
+    const { linkDisabled, handleMobileLinkClick } = this.props;
+
+    if (linkDisabled) e.preventDefault();
+    if (handleMobileLinkClick) handleMobileLinkClick();
   };
 
-
   render() {
-    const { data, linkColor, linkType, menuTitle } = this.props;
+    const { data, linkColor, linkType, menuTitle, linkDisabled } = this.props;
     const renderListItems = () => {
       if (linkType === 'routerLink') {
         return data.map(({ name }) => (
@@ -48,7 +49,7 @@ class NavMenu extends Component {
       return data.map(({ name }) => (
         <a
           key={name}
-          href={'/' + name.toLowerCase()}
+          href={linkDisabled ? '#' : '/' + name.toLowerCase()}
           style={{ color: linkColor }}
           onClick={this.handleLinkClick}
         >
@@ -66,7 +67,7 @@ class NavMenu extends Component {
             display: isMobile() && this.props.isOpen ? 'block' : !isMobile() || !this.props.hasOwnProperty('isOpen') ? 'block' : 'none'
           }}
         >
-          <h2 className={style.menuTitle}>{menuTitle.toUpperCase()}</h2>
+          { menuTitle && <h2 className={style.menuTitle}>{menuTitle.toUpperCase()}</h2> }
           <nav className={style.nav}>
             { renderListItems() }
           </nav>

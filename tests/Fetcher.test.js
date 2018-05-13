@@ -12,9 +12,16 @@ global.fetch = jest.fn().mockImplementation(() => {
   return promise;
 });
 
-describe('<Fetcher />', () => {
-  it('should render', () => {
-    const wrapper = shallow(<Fetcher render={(data) => <div>{data.name}</div>} />);
-    expect(wrapper);
-  });
+test('should render', () => {
+  const wrapper = shallow(
+    <Fetcher url="http://example.com" render={(data) => data} />
+  );
+  expect(wrapper);
+});
+
+test('should accept a url prop', () => {
+  const wrapper = shallow(
+    <Fetcher url="http://example.com" render={(data) => data}/>
+  );
+  expect(wrapper.instance().props.url).toBe('http://example.com');
 });
