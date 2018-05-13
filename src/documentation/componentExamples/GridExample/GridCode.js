@@ -5,7 +5,7 @@ const code = `
 import React from 'react';
 import Grid from '{yourpath}/Grid';
 
-<Grid cols={'repeat(auto-fit, minmax(150px, 1fr))'}>
+<Grid fluid>
   <div>Grid Item 1</div>
   <div>Grid Item 2</div>
   <div>Grid Item 3</div>

@@ -2,4 +2,10 @@
   display: grid;
   grid-gap: 10px;
   grid-template-columns: var(--cols);
+  grid-template-rows: var(--rows);
+}
+
+.grid.fluid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 50px;
 }

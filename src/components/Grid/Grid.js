@@ -1,33 +1,39 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import style from './Grid.css';
 
-const Grid = ({ children, cols, rows }) => {
+const Grid = ({ children, cols, rows, fluid }) => {
+  cols = typeof cols === 'string' ? cols : typeof cols === 'number' ? `repeat(${cols}, 1fr)` : null;
+  rows = typeof rows === 'string' ? rows : typeof rows === 'number' ? `repeat(${rows}, 1fr)` : null;
+
   return (
-    <div className={style.grid}>
-      {children}
+    <Fragment>
+      <div className={`${style.grid} ${fluid ? style.fluid : ''}`}>
+        {children}
+      </div>
       <style>
         {`
           :root {
-            --cols: ${cols};
+            ${cols ? '--cols: ' + cols : ''};
+            ${rows ? '--rows: ' + rows : ''};
           }
         `}
       </style>
-    </div>
+    </Fragment>
   );
-};
-
-Grid.defaultProps = {
-  cols: 'repeat(auto-fit, minmax(200px, 1fr))'
 };
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
   cols: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
+    PropTypes.number,
+    PropTypes.string
   ]),
-  rows: PropTypes.number
+  rows: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string
+  ]),
+  fluid: PropTypes.bool
 };
 
 export default Grid;
