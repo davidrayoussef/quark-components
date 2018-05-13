@@ -22,7 +22,7 @@ export const withMobileMenu = (Component) => {
     };
 
     handleResize = () => {
-      if (window.innerWidth < 800) {
+      if ( window.matchMedia('(max-width: 800px)').matches ) {
         this.setState({
           mobileStyles: {
             width: '100vw',
@@ -53,8 +53,8 @@ export const withMobileMenu = (Component) => {
       return (
         <Fragment>
           <Icon
-            className={`${style['menu-icon']} ${isOpen ? style.close : ''}`}
             value="menu"
+            className={`${style['menu-icon']} ${isOpen ? style.close : ''}`}
             onClick={this.handleMenuIconClick}
           />
           <Component

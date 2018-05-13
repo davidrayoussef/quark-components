@@ -1,3 +1,3 @@
 export function isMobile() {
-  return document.body.offsetWidth < 800;
+  return window.matchMedia('(max-width: 800px)').matches;
 }
