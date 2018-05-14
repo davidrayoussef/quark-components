@@ -6,7 +6,9 @@ import style from './Carousel.css';
 class Carousel extends Component {
   state = {
     activeIndex: 0,
-    translate: 0
+    translate: 0,
+    imgWidth: 0,
+    shouldAnimate: true
   };
 
   static propTypes = {
@@ -19,38 +21,64 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    // Use setTimeout to get rendered image width after styles have loaded
-    setTimeout(() => {
-      this.imgWidth = this.element.current.clientWidth;
-    }, 0);
+    this.setImageWidth();
+    window.addEventListener('resize', this.handleResize);
   }
 
-  handleLeftArrowClick = () => {
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  setImageWidth = () => {
+    this.setState({
+      imgWidth: this.element.current.offsetWidth
+    });
+  }
+
+  handleResize = () => {
     const { activeIndex, translate } = this.state;
-    const imgCount = this.props.images.length;
 
     this.setState({
-      translate: activeIndex === 0 ? translate - this.imgWidth * (imgCount - 1) : translate + this.imgWidth,
-      activeIndex: activeIndex === 0 ? imgCount - 1 : activeIndex - 1
+      imgWidth: this.element.current.offsetWidth,
+      translate: Math.sign(translate) * (activeIndex * this.element.current.offsetWidth),
+      shouldAnimate: false
     });
   };
 
-  handleRightArrowClick = () => {
+  slidePrev = () => {
     const { activeIndex, translate } = this.state;
     const imgCount = this.props.images.length;
+    const imgWidth = this.element.current.offsetWidth;
 
     this.setState({
-      translate: (translate - this.imgWidth) % (this.imgWidth * imgCount),
-      activeIndex: (activeIndex + 1) % imgCount
+      translate: activeIndex === 0 ? translate - imgWidth * (imgCount - 1) : translate + imgWidth,
+      activeIndex: activeIndex === 0 ? imgCount - 1 : activeIndex - 1,
+      shouldAnimate: true,
+      imgWidth
+    });
+  };
+
+  slideNext = () => {
+    const { activeIndex, translate } = this.state;
+    const imgCount = this.props.images.length;
+    const imgWidth = this.element.current.offsetWidth;
+
+    this.setState({
+      translate: (translate - imgWidth) % (imgWidth * imgCount),
+      activeIndex: (activeIndex + 1) % imgCount,
+      shouldAnimate: true,
+      imgWidth
     });
   };
 
   render() {
+    const { imgWidth, translate, shouldAnimate } = this.state;
     const renderedImages = this.props.images.map(img =>
       <img
         key={img.title}
         src={img.src}
         alt={img.title}
+        width={imgWidth}
       />
     );
 
@@ -59,16 +87,20 @@ class Carousel extends Component {
         <main className={style.wrapper}>
           <Icon
             value="arrowLeft"
+            color="lightgray"
             width="5vw"
             style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
-            onClick={this.handleLeftArrowClick}
+            onClick={this.slidePrev}
           />
 
           <div className={style.images}>
             <div
               ref={this.element}
               className={style['image-container']}
-              style={{ transform: `translateX(${this.state.translate}px)` }}
+              style={{
+                transform: `translateX(${translate}px)`,
+                transition: shouldAnimate ? 'transform .4s ease-in-out' : 'none'
+              }}
             >
               {renderedImages}
             </div>
@@ -76,9 +108,10 @@ class Carousel extends Component {
 
           <Icon
             value="arrowRight"
+            color="lightgray"
             width="5vw"
             style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
-            onClick={this.handleRightArrowClick}
+            onClick={this.slideNext}
           />
         </main>
       );
