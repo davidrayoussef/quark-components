@@ -74,6 +74,32 @@ export const componentData = [
     ]
   },
   {
+    name: 'Dropdown',
+    description: 'A hidden menu that appears on a button click, used for profile menus, additional settings, etc.',
+    component: Modules.DropdownExample,
+    code: Modules.DropdownCode,
+    propDescriptions: [
+      {
+        propName: 'label',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The text label for the dropdown button.'
+      },
+      {
+        propName: 'data',
+        propType: 'array',
+        propDefault: null,
+        propDescription: 'An array of objects with a name and url property for the menu links.'
+      },
+      {
+        propName: 'linksDisabled',
+        propType: 'boolean',
+        propDefault: 'false',
+        propDescription: 'Set to true to disable anchor links.'
+      }
+    ]
+  },
+  {
     name: 'Fetcher',
     description: 'A container component used to call an API.',
     component: Modules.FetcherExample,

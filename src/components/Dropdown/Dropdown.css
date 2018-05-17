@@ -1,0 +1,55 @@
+.dropdown {
+  position: relative;
+  color: #333;
+  width: max-content;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 15px;
+  background: #f3f3f3;
+}
+
+.label span {
+  margin-right: 10px;
+}
+
+.dropdown svg {
+  transition: fill .15s;
+}
+
+.dropdown:hover svg {
+  fill: gray;
+}
+
+.dropdown ul {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .1), -2px 2px 8px rgba(0, 0, 0, .1);
+}
+
+.dropdown .show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 12px 15px;
+  transition: background-color .15s;
+}
+
+.dropdown a:hover {
+  background: #f3f3f3;
+}

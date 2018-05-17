@@ -4,6 +4,8 @@ export * from './componentExamples/CardExample/CardExample';
 export * from './componentExamples/CardExample/CardCode';
 export * from './componentExamples/CarouselExample/CarouselExample';
 export * from './componentExamples/CarouselExample/CarouselCode';
+export * from './componentExamples/DropdownExample/DropdownExample';
+export * from './componentExamples/DropdownExample/DropdownCode';
 export * from './componentExamples/FetcherExample/FetcherExample';
 export * from './componentExamples/FetcherExample/FetcherCode';
 export * from './componentExamples/GridExample/GridExample';

@@ -1,6 +1,7 @@
 import React from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon';
 import ArrowRightIcon from './icons/ArrowRightIcon';
+import ArrowDownIcon from './icons/ArrowDownIcon';
 import EmailIcon from './icons/EmailIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import GithubIcon from './icons/GithubIcon';
@@ -12,6 +13,7 @@ import YoutubeIcon from './icons/YoutubeIcon';
 const icons = {
   arrowLeft: <ArrowLeftIcon />,
   arrowRight: <ArrowRightIcon />,
+  arrowDown: <ArrowDownIcon />,
   email: <EmailIcon />,
   facebook: <FacebookIcon />,
   github: <GithubIcon />,
