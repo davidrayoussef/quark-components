@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -15,13 +16,28 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel-loader'
 			},
-      {
+			{
+				test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+				loader: 'file-loader?name=images/[name].[hash].[ext]'
+			},
+			{
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-       })
-      }
+				use: [
+					{
+					  loader: 'style-loader'
+					},
+					{
+					  loader: 'css-loader',
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: '[name]_[local]_[hash:base64]',
+							sourceMap: true,
+							minimize: true
+						}
+					}
+				]
+			}
 		]
 	},
 	plugins: [
@@ -43,17 +59,11 @@ module.exports = {
 			}
 		}),
 		new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }),
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				screw_ie8: true
-			},
-			mangle: {
-				screw_ie8: true
-			},
-			output: {
-				comments: false,
-				screw_ie8: true
+		new CopyWebpackPlugin([
+			{
+				from: 'src/documentation/images',
+				to: 'images'
 			}
-		})
+		])
 	]
 };

@@ -20,7 +20,8 @@ class NavMenu extends Component {
     menuTitle: PropTypes.string,
     isOpen: PropTypes.bool,
     mobileStyles: PropTypes.object,
-    handleMobileLinkClick: PropTypes.func
+    handleMobileLinkClick: PropTypes.func,
+    path: PropTypes.string
   };
 
   handleLinkClick = (e) => {
@@ -31,13 +32,13 @@ class NavMenu extends Component {
   };
 
   render() {
-    const { data, linkColor, linkType, menuTitle, linkDisabled } = this.props;
+    const { data, linkColor, linkType, menuTitle, linkDisabled, path } = this.props;
     const renderListItems = () => {
       if (linkType === 'routerLink') {
         return data.map(({ name }) => (
           <NavLink
             key={name}
-            to={'/' + name.toLowerCase()}
+            to={(path || '') + name.toLowerCase()}
             style={{ color: linkColor }}
             activeStyle={{ borderColor: linkColor, background: computeActiveColor(linkColor) }}
             onClick={this.handleLinkClick}

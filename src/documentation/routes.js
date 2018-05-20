@@ -3,11 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import DocsExampleBlock from '../components/Docs/DocsExampleBlock';
 import { componentData } from './componentData';
 
+const rootPath = process.env.NODE_ENV === 'production' ? '/react-simple-ui-components/' : '/';
+
 const renderRoutes = () => {
   return componentData.map(({ name, component, description, propDescriptions, code }) => (
     <Route
       key={name}
-      path={'/' + name.toLowerCase()}
+      path={rootPath + name.toLowerCase()}
       render={() => (
         <Fragment>
           <DocsExampleBlock
@@ -26,9 +28,9 @@ const renderRoutes = () => {
 
 const routes = (
   <Switch>
-    <Route exact path={'/'} render={() => <h1 style={{padding: '25px'}}>Getting Started</h1>} />
-      { renderRoutes() }
-    <Route render={() => <p>Not Found</p>} />
+    { renderRoutes() }
+    <Route path={rootPath} render={() => <h1 style={{ padding: '25px' }}>Getting Started</h1>} />
+    <Route render={() => <p style={{ padding: '25px' }}>Not Found</p>} />
   </Switch>
 );
 
