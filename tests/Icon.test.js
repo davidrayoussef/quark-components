@@ -15,3 +15,10 @@ test('should render an svg', () => {
   );
   expect(wrapper.find('svg').length).toBe(1);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Icon value="email" />
+  );
+  expect(wrapper).toMatchSnapshot();
+});

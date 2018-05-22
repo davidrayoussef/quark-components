@@ -39,3 +39,10 @@ test('should correctly update activeIndex on right arrow click', () => {
   rightButton.simulate('click');
   expect(wrapper.state().activeIndex).toBe(1);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Carousel images={images} />
+  );
+  expect(wrapper).toMatchSnapshot();
+});

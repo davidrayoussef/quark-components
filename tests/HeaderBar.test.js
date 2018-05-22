@@ -13,3 +13,10 @@ test('should render a title', () => {
   );
   expect(wrapper.text()).toBe('HeaderBar Title');
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <HeaderBar title="HeaderBar Title" />
+  );
+  expect(wrapper).toMatchSnapshot();
+});

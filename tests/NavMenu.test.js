@@ -3,6 +3,10 @@ import { shallow, mount } from 'enzyme';
 import NavMenu from '../src/components/NavMenu/NavMenu';
 import { withMobileMenu } from '../src/components/NavMenu/withMobileMenu';
 
+Object.defineProperty(window, 'matchMedia', {
+  value: jest.fn(() => { return { matches: true } })
+});
+
 const data = [
   { name: 'nave menu item 1' },
   { name: 'nave menu item 2' },
@@ -43,4 +47,11 @@ test('should render svg (hamburger icon) if withMobileMenu HOC is used', () => {
     <NavMenuWithMobileMenu data={data} />
   );
   expect(wrapper.find('svg').length).toBe(1);
+});
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <NavMenu data={data} />
+  );
+  expect(wrapper).toMatchSnapshot();
 });

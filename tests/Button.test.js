@@ -50,3 +50,10 @@ test('should add .danger class if type="danger"', () => {
   );
   expect(wrapper.find('.danger').length).toBe(1);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Button type="primary">Button Text</Button>
+  );
+  expect(wrapper).toMatchSnapshot();
+});

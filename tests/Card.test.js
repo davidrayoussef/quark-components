@@ -36,3 +36,10 @@ test('should render an achor link of a url prop is passed', () => {
   );
   expect(wrapper.find('a').length).toBe(1);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Card name="Title" />
+  );
+  expect(wrapper).toMatchSnapshot();
+});

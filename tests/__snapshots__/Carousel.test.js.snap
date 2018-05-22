@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<main
+  className="wrapper"
+>
+  <Icon
+    color="lightgray"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "maxWidth": 50,
+        "minWidth": 35,
+      }
+    }
+    value="arrowLeft"
+    width={60}
+  />
+  <div
+    className="images"
+  >
+    <div
+      className="image-container"
+      style={
+        Object {
+          "transform": "translateX(0px)",
+          "transition": "transform .4s ease-in-out",
+        }
+      }
+    >
+      <img
+        alt="image 1"
+        key="image 1"
+        src="images/slide-1.jpg"
+        style={
+          Object {
+            "width": 0,
+          }
+        }
+      />
+      <img
+        alt="image 2"
+        key="image 2"
+        src="images/slide-2.jpg"
+        style={
+          Object {
+            "width": 0,
+          }
+        }
+      />
+      <img
+        alt="image 3"
+        key="image 3"
+        src="images/slide-3.jpg"
+        style={
+          Object {
+            "width": 0,
+          }
+        }
+      />
+    </div>
+  </div>
+  <Icon
+    color="lightgray"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "maxWidth": 50,
+        "minWidth": 35,
+      }
+    }
+    value="arrowRight"
+    width={60}
+  />
+</main>
+`;

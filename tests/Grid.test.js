@@ -37,3 +37,14 @@ test('should render correct amount of children', () => {
   );
   expect(wrapper.find('li').length).toBe(6);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Grid>
+      <div></div>
+      <div></div>
+      <div></div>
+    </Grid>
+  );
+  expect(wrapper).toMatchSnapshot();
+});

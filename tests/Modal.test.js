@@ -42,3 +42,12 @@ test('should set isOpen to false on close button click', () => {
   closeButton.simulate('click');
   expect(wrapper.state().isOpen).toBe(false);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Modal isOpen={true}>
+      <p>Modal Content</p>
+    </Modal>
+  );
+  expect(wrapper).toMatchSnapshot();
+});

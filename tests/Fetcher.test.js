@@ -25,3 +25,10 @@ test('should accept a url prop', () => {
   );
   expect(wrapper.instance().props.url).toBe('http://example.com');
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <Fetcher url="http://example.com" render={(data) => data} />
+  );
+  expect(wrapper).toMatchSnapshot();
+});

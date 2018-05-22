@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<svg
+  fill="gray"
+  viewBox="0 0 60 60"
+  width={60}
+  x="0"
+  y="0"
+>
+  <EmailIcon />
+</svg>
+`;

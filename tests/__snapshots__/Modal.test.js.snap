@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="overlay"
+>
+  <div
+    className="modal"
+  >
+    <header />
+    <p>
+      Modal Content
+    </p>
+    <Button
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      style={
+        Object {
+          "margin": "auto",
+          "width": 100,
+        }
+      }
+      type="secondary"
+    >
+      OK
+    </Button>
+  </div>
+</div>
+`;

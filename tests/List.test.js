@@ -28,3 +28,10 @@ test('should render 3 list items', () => {
   );
   expect(wrapper.find('li').length).toBe(3);
 });
+
+test('snapshot', () => {
+  const wrapper = shallow(
+    <List data={data}/>
+  );
+  expect(wrapper).toMatchSnapshot();
+});
