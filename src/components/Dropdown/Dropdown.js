@@ -31,7 +31,7 @@ class Dropdown extends Component {
     window.removeEventListener('click', this.handleClickOutside);
   }
 
-  toggleMenu = (e) => {
+  toggleMenu = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -41,15 +41,24 @@ class Dropdown extends Component {
     if ( this.state.isOpen && !this.dropdownElement.current.contains(e.target) ) {
       this.toggleMenu();
     }
-  }
+  };
 
   handleLinkClick = (e) => {
     if (this.props.linksDisabled) e.preventDefault();
-  }
+  };
 
   render() {
     const { isOpen } = this.state;
     const { label, data } = this.props;
+    const menuItems = data.map(({ name, url, linksDisabled }) => (
+      <a
+        key={name}
+        href={url && !linksDisabled ? url : '#'}
+        onClick={this.handleLinkClick}
+      >
+        {name}
+      </a>
+    ));
 
     return (
       <div className={style.dropdown} ref={this.dropdownElement}>
@@ -62,17 +71,7 @@ class Dropdown extends Component {
           />
         </div>
         <ul className={style[isOpen ? 'show' : '']}>
-          {
-            data.map(({ name, url, linksDisabled }) => (
-              <a
-                key={name}
-                href={url && !linksDisabled ? url : '#'}
-                onClick={this.handleLinkClick}
-              >
-                {name}
-              </a>
-            ))
-          }
+          {menuItems}
         </ul>
       </div>
     );

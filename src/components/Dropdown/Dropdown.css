@@ -1,7 +1,9 @@
 .dropdown {
   position: relative;
   color: #333;
-  width: max-content;
+  width: intrinsic;
+  width: -moz-max-content;
+  width: -webkit-max-content;
 }
 
 .label {
