@@ -70,6 +70,12 @@ export const componentData = [
         propType: 'array',
         propDefault: null,
         propDescription: 'An array of objects with a title property and an image src property.'
+      },
+      {
+        propName: 'showDots',
+        propType: 'boolean',
+        propDefault: 'false',
+        propDescription: 'Use to show navigation dots.'
       }
     ]
   },
@@ -267,6 +273,26 @@ export const componentData = [
         propType: 'array',
         propDefault: null,
         propDescription: 'An array of menu items to render.'
+      }
+    ]
+  },
+  {
+    name: 'Table',
+    description: 'A responsive table that displays vertically on small screens.',
+    component: Modules.TableExample,
+    code: Modules.TableCode,
+    propDescriptions: [
+      {
+        propName: 'tableHeads',
+        propType: 'array',
+        propDefault: null,
+        propDescription: 'An array of table column headings.'
+      },
+      {
+        propName: 'tableData',
+        propType: 'array',
+        propDefault: null,
+        propDescription: 'An array of objects, with each object representing a row containing cell data.'
       }
     ]
   }

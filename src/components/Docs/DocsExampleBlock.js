@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import DocsPropTable from './DocsPropTable';
+import Table from '../Table/Table';
 import style from './DocsExampleBlock.css';
 
 const DocsExampleBlock = ({ name, description, propDescriptions, children }) => (
@@ -14,7 +14,10 @@ const DocsExampleBlock = ({ name, description, propDescriptions, children }) => 
       propDescriptions.length > 0 &&
         <Fragment>
           <h3>Props</h3>
-          <DocsPropTable propDescriptions={propDescriptions}/>
+          <Table
+            tableHeads={['Name', 'Type', 'Default', 'Description']}
+            tableData={propDescriptions}
+          />
         </Fragment>
     }
   </section>
