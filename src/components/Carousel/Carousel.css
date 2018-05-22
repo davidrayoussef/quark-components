@@ -7,6 +7,7 @@
 }
 
 .images {
+  position: relative;
   overflow: hidden;
 }
 
@@ -15,7 +16,16 @@
   align-items: flex-start;
 }
 
+.wrapper svg {
+  transition: fill .15s;
+}
+
+.wrapper svg:hover {
+  fill: rgba(0, 0, 0, .4);
+}
+
 .wrapper img {
   width: 100%;
+  min-width: 100%;
   object-fit: contain;
 }

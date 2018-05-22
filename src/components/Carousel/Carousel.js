@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Dots from './Dots';
 import Icon from '../Icon/Icon';
 import style from './Carousel.css';
 
@@ -11,17 +12,22 @@ class Carousel extends Component {
     shouldAnimate: true
   };
 
+  static defaultProps = {
+    showDots: false
+  };
+
   static propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    showDots: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
-    this.element = React.createRef();
+    this.imageContainerElement = React.createRef();
   }
 
   componentDidMount() {
-    this.setImageWidth();
+    setTimeout(this.setImageWidth, 0);
     window.addEventListener('resize', this.handleResize);
   }
 
@@ -31,7 +37,7 @@ class Carousel extends Component {
 
   setImageWidth = () => {
     this.setState({
-      imgWidth: this.element.current.offsetWidth
+      imgWidth: this.imageContainerElement.current.offsetWidth
     });
   }
 
@@ -39,41 +45,49 @@ class Carousel extends Component {
     const { activeIndex, translate } = this.state;
 
     this.setState({
-      imgWidth: this.element.current.offsetWidth,
-      translate: Math.sign(translate) * (activeIndex * this.element.current.offsetWidth),
+      imgWidth: this.imageContainerElement.current.offsetWidth,
+      translate: Math.sign(translate) * (activeIndex * this.imageContainerElement.current.offsetWidth),
       shouldAnimate: false
     });
   };
 
   slidePrev = () => {
-    const { activeIndex, translate } = this.state;
+    const { activeIndex, translate, imgWidth } = this.state;
     const imgCount = this.props.images.length;
-    const imgWidth = this.element.current.offsetWidth;
 
     this.setState({
       translate: activeIndex === 0 ? translate - imgWidth * (imgCount - 1) : translate + imgWidth,
       activeIndex: activeIndex === 0 ? imgCount - 1 : activeIndex - 1,
-      shouldAnimate: true,
-      imgWidth
+      shouldAnimate: true
     });
   };
 
   slideNext = () => {
-    const { activeIndex, translate } = this.state;
+    const { activeIndex, translate, imgWidth } = this.state;
     const imgCount = this.props.images.length;
-    const imgWidth = this.element.current.offsetWidth;
 
     this.setState({
       translate: (translate - imgWidth) % (imgWidth * imgCount),
       activeIndex: (activeIndex + 1) % imgCount,
-      shouldAnimate: true,
-      imgWidth
+      shouldAnimate: true
     });
   };
 
+  slideToIndex = (index) => () => {
+    const { activeIndex, translate, imgWidth } = this.state;
+
+    this.setState({
+      translate: translate + (index > activeIndex ? -((index - activeIndex) * imgWidth) : ((activeIndex - index) * imgWidth)),
+      activeIndex: index,
+      shouldAnimate: true
+    }, () => console.log(this.state.translate));
+  };
+
   render() {
-    const { imgWidth, translate, shouldAnimate } = this.state;
-    const renderedImages = this.props.images.map(img =>
+    const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
+    const { images, showDots } = this.props;
+
+    const renderedImages = images.map(img =>
       <img
         key={img.title}
         src={img.src}
@@ -88,14 +102,13 @@ class Carousel extends Component {
           <Icon
             value="arrowLeft"
             color="lightgray"
-            width="5vw"
             style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
             onClick={this.slidePrev}
           />
 
           <div className={style.images}>
             <div
-              ref={this.element}
+              ref={this.imageContainerElement}
               className={style['image-container']}
               style={{
                 transform: `translateX(${translate}px)`,
@@ -104,12 +117,20 @@ class Carousel extends Component {
             >
               {renderedImages}
             </div>
+            { showDots
+              ? <Dots
+                  images={images}
+                  activeIndex={activeIndex}
+                  containerWidth={imgWidth}
+                  slideToIndex={this.slideToIndex}
+                />
+              : null
+            }
           </div>
 
           <Icon
             value="arrowRight"
             color="lightgray"
-            width="5vw"
             style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
             onClick={this.slideNext}
           />
