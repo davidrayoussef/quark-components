@@ -7,4 +7,12 @@ const getTypeStyle = (type, style) => `
   }
 `;
 
-export { getTypeStyle };
+const getSizeStyle = (size, style) => `
+  ${
+    size === 'small' ? style.small :
+    size === 'large' ? style.large :
+    style.normal
+  }
+`;
+
+export { getTypeStyle, getSizeStyle };

@@ -1,8 +1,6 @@
 .button {
   position: relative;
-  font-size: 1rem;
   color: #faf9f9;
-  padding: 15px 20px;
   cursor: pointer;
   border: none;
   transition: .2s;
@@ -41,6 +39,21 @@
 
 .danger:hover {
   background: rgba(244, 74, 56, .8);
+}
+
+.small {
+  font-size: .85rem;
+  padding: 10px;
+}
+
+.normal {
+  font-size: 1rem;
+  padding: 15px 20px;
+}
+
+.large {
+  font-size: 1.5rem;
+  padding: 15px 20px;
 }
 
 .button:disabled,
