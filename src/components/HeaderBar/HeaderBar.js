@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './HeaderBar.css';
 
-const HeaderBar = ({ title }) => {
+const HeaderBar = ({ children, title }) => {
   return (
     <header className={style.header}>
-      <h1>{title}</h1>
+      { title && <h1>{title}</h1> }
+      { children }
     </header>
   );
 };
 
 HeaderBar.propTypes = {
+  children: PropTypes.node,
   title: PropTypes.string
 };
 

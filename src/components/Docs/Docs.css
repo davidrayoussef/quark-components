@@ -11,6 +11,10 @@
   grid-template-columns: 200px repeat(2, minmax(0, 1fr));
 }
 
+.landing {
+  grid-template-columns: 200px 1fr;
+}
+
 @media (max-width: 1200px) {
   .main {
     grid-template-columns: 200px minmax(0, 1fr);
