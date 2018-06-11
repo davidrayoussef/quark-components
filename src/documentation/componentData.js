@@ -24,6 +24,12 @@ export const componentData = [
         propType: 'string',
         propDefault: 'normal',
         propDescription: 'The size of the button (small, normal, large).'
+      },
+      {
+        propName: 'component',
+        propType: 'string',
+        propDefault: 'button',
+        propDescription: 'The HTML element of the button, for example, if an anchor tag is needed rather than a button tag.'
       }
     ]
   },
