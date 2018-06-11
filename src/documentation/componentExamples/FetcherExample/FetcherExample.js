@@ -12,7 +12,7 @@ export const FetcherExample = () => (
         name={name}
         avatarSrc={avatar_url}
         description={location}
-        linkSrc={html_url}
+        url={html_url}
       />
     )}
   />
