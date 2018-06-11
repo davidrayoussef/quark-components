@@ -1,0 +1,18 @@
+.button-container {
+  margin-top: auto;
+}
+
+.button-container a {
+  display: block;
+  margin-top: 20px;
+}
+
+.icon svg {
+  width: 25px;
+  fill: rgba(0, 0, 0, .2);
+  transition: fill .2s;
+}
+
+.icon svg:hover {
+  fill: rgba(0, 0, 0, .4);
+}

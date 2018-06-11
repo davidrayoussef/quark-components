@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import HeaderBar from '../HeaderBar/HeaderBar';
 import NavMenu from '../NavMenu/NavMenu';
+import Icon from '../Icon/Icon';
 import { withMobileMenu } from '../NavMenu/withMobileMenu';
 import style from './Docs.css';
 
@@ -19,6 +20,7 @@ const Docs = ({ children, headerTitle, ...props }) => {
             {headerTitle}
           </Link>
         </h1>
+        <Icon value="github" style={{ fill: 'rgba(255, 255, 255, .6)', width: 30 }} />
       </HeaderBar>
       <main className={`${style.main} ${isHome ? style.landing : ''}`}>
         <NavMenuWithMobile {...props} />

@@ -2,13 +2,13 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import style from './Grid.css';
 
-const Grid = ({ children, cols, rows, fluid }) => {
+const Grid = ({ children, cols, rows, fluid, ...rest }) => {
   cols = typeof cols === 'string' ? cols : typeof cols === 'number' ? `repeat(${cols}, 1fr)` : null;
   rows = typeof rows === 'string' ? rows : typeof rows === 'number' ? `repeat(${rows}, 1fr)` : null;
 
   return (
     <Fragment>
-      <div className={`${style.grid} ${fluid ? style.fluid : ''}`}>
+      <div className={`${style.grid} ${fluid ? style.fluid : ''}`} {...rest} >
         {children}
       </div>
       <style>
