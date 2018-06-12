@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Grid from '../Grid/Grid';
 import Card from '../Card/Card';
-import Button from '../Button/Button';
+import RouterLinkButton from '../Button/RouterLinkButton';
 import Icon from '../Icon/Icon';
 import { componentData } from '../../documentation/componentData.js';
 import style from './DocsHome.css';
@@ -21,9 +20,7 @@ const cards = componentData.map(({ name, description }) => (
       >
         <Icon value="github" />
       </a>
-      <Link to={name.toLowerCase()}>
-        <Button size="small">View</Button>
-      </Link>
+      <RouterLinkButton to={name.toLowerCase()}>View</RouterLinkButton>
     </div>
   </Card>
 ));

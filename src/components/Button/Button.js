@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './Button.css';
 import { getTypeStyle, getSizeStyle } from '../../utils/getButtonStyles';
 
-const Button = ({ children, type, size, component, ...props }) => {
+const Button = ({ children, type, size, component, ...rest }) => {
   const Component = component ? component : 'button';
 
   return (
@@ -14,7 +14,7 @@ const Button = ({ children, type, size, component, ...props }) => {
         ${getTypeStyle(type, style)}
         ${getSizeStyle(size, style)}
       `}
-      {...props}
+      {...rest}
     >
       { children }
     </Component>
