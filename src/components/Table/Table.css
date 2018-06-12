@@ -57,7 +57,7 @@
     justify-content: flex-end;
     align-items: center;
     width: var(--first-column-spacing);
-    padding-right: 3%;
+    padding-right: 10px;
     overflow: hidden;
     position: absolute;
     top: 0;
