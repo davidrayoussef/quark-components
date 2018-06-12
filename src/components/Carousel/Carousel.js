@@ -52,8 +52,9 @@ class Carousel extends Component {
   };
 
   slidePrev = () => {
-    const { activeIndex, translate, imgWidth } = this.state;
+    const { activeIndex, translate } = this.state;
     const imgCount = this.props.images.length;
+    const imgWidth = this.imageContainerElement.current.offsetWidth;
 
     this.setState({
       translate: activeIndex === 0 ? translate - imgWidth * (imgCount - 1) : translate + imgWidth,
@@ -63,8 +64,9 @@ class Carousel extends Component {
   };
 
   slideNext = () => {
-    const { activeIndex, translate, imgWidth } = this.state;
+    const { activeIndex, translate } = this.state;
     const imgCount = this.props.images.length;
+    const imgWidth = this.imageContainerElement.current.offsetWidth;
 
     this.setState({
       translate: (translate - imgWidth) % (imgWidth * imgCount),
