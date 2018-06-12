@@ -9,7 +9,7 @@ import style from './Docs.css';
 
 const NavMenuWithMobile = withMobileMenu(NavMenu);
 
-const Docs = ({ children, headerTitle, ...props }) => {
+const Docs = ({ children, headerTitle, ...rest }) => {
   const isHome = window.location.hash === '#/';
 
   return (
@@ -20,10 +20,12 @@ const Docs = ({ children, headerTitle, ...props }) => {
             {headerTitle}
           </Link>
         </h1>
-        <Icon value="github" style={{ fill: 'rgba(255, 255, 255, .6)', width: 30 }} />
+        <a href="https://github.com/davidrayoussef/react-simple-ui-components">
+          <Icon value="github" style={{ fill: 'rgba(255, 255, 255, .6)', width: 30 }} />
+        </a>
       </HeaderBar>
       <main className={`${style.main} ${isHome ? style.landing : ''}`}>
-        <NavMenuWithMobile {...props} />
+        <NavMenuWithMobile {...rest} />
         { children }
       </main>
     </div>
