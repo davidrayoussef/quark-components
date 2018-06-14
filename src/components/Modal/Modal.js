@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 import style from './Modal.css';
 
 class Modal extends Component {
+  modalElement = React.createRef();
+
   static propTypes = {
     children: PropTypes.node,
     title: PropTypes.string,
@@ -25,13 +28,19 @@ class Modal extends Component {
     }
   };
 
+  handleClickOutside = (e) => {
+    if ( !this.modalElement.current.contains(e.target) ) {
+      this.props.handleClose();
+    }
+  };
+
   render() {
     const { isOpen, title, children, handleClose } = this.props;
 
     if (isOpen) {
       return (
-        <div className={style.overlay}>
-          <div className={style.modal}>
+        <div className={style.overlay} onClick={this.handleClickOutside}>
+          <div className={style.modal} ref={this.modalElement}>
             <header>{title}</header>
             {children}
             <Button
