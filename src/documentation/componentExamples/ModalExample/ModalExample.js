@@ -13,6 +13,12 @@ class AppExample extends Component {
     });
   };
 
+  handleClose = () => {
+    this.setState({
+      open: false
+    });
+  };
+
   render() {
     return (
       <Fragment>
@@ -20,6 +26,7 @@ class AppExample extends Component {
         <Modal
           title="Modal Title"
           isOpen={this.state.open}
+          handleClose={this.handleClose}
         >
           <p>Modal Content</p>
         </Modal>

@@ -241,6 +241,18 @@ export const componentData = [
         propType: 'node',
         propDefault: null,
         propDescription: 'The content of the modal.'
+      },
+      {
+        propName: 'isOpen',
+        propType: 'boolean',
+        propDefault: null,
+        propDescription: 'A boolean to open or close the modal.'
+      },
+      {
+        propName: 'handleClose',
+        propType: 'function',
+        propDefault: null,
+        propDescription: 'A function to close the modal.'
       }
     ]
   },

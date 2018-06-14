@@ -6,7 +6,7 @@ import React, { Component, Fragment } from 'react';
 import Modal from '{yourpath}/Modal';
 import Button from '{yourpath}/Button';
 
-class ModalExample extends Component {
+class AppExample extends Component {
   state = {
     open: false
   };
@@ -17,6 +17,12 @@ class ModalExample extends Component {
     });
   };
 
+  handleClose = () => {
+    this.setState({
+      open: false
+    });
+  };
+
   render() {
     return (
       <Fragment>
@@ -24,6 +30,7 @@ class ModalExample extends Component {
         <Modal
           title="Modal Title"
           isOpen={this.state.open}
+          handleClose={this.handleClose}
         >
           <p>Modal Content</p>
         </Modal>

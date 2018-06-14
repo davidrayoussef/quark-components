@@ -4,46 +4,40 @@ import Button from '../Button/Button';
 import style from './Modal.css';
 
 class Modal extends Component {
-  state = {
-    isOpen: false
-  };
-
   static propTypes = {
     children: PropTypes.node,
-    title: PropTypes.string
+    title: PropTypes.string,
+    isOpen: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired
   };
 
-  static getDerivedStateFromProps(nextProps, prevState, prevProps) {
-    if (prevProps === null || nextProps.isOpen !== prevState.isOpen) {
-      return {
-        isOpen: nextProps.isOpen
-      };
-    }
-    return null;
+  componentDidMount() {
+    window.addEventListener('keyup', this.handleEsc);
   }
 
-  handleClose = () => {
-    this.setState({
-      isOpen: false
-    });
-  };
+  componentWillUnMount() {
+    window.removeEventListener('keyup', this.handleEsc);
+  }
 
   handleEsc = (e) => {
-    // console.log(e.which);
+    if (e.which === 27) {
+      this.props.handleClose();
+    }
   };
 
   render() {
-    if (this.state.isOpen) {
+    const { isOpen, title, children, handleClose } = this.props;
+
+    if (isOpen) {
       return (
         <div className={style.overlay}>
           <div className={style.modal}>
-            <header>{this.props.title}</header>
-            {this.props.children}
+            <header>{title}</header>
+            {children}
             <Button
               type="secondary"
               style={{ width: 100, margin: 'auto' }}
-              onClick={this.handleClose}
-              onKeyUp={this.handleEsc}
+              onClick={handleClose}
             >
               OK
             </Button>
