@@ -12,6 +12,7 @@
 }
 
 .modal {
+  position: relative;
   display: grid;
   grid-gap: 35px;
   align-content: center;
@@ -19,13 +20,30 @@
   padding: 50px;
   width: 50%;
   height: auto;
-  background: #efefef;
+  background: #FFF;
   text-align: center;
 }
 
 .modal header {
   font-size: 2rem;
   font-weight: 100;
+}
+
+.x-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  width: 20px;
+  fill: rgba(0, 0, 0, .3);
+  stroke: rgba(0, 0, 0, .3);
+  stroke-width: 2;
+  transition: .2s;
+}
+
+.x-button:hover {
+  fill: rgba(0, 0, 0, .8);
+  stroke: rgba(0, 0, 0, .8);
 }
 
 @media (max-width: 800px) {

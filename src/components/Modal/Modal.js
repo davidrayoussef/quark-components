@@ -41,6 +41,11 @@ class Modal extends Component {
       return (
         <div className={style.overlay} onClick={this.handleClickOutside}>
           <div className={style.modal} ref={this.modalElement}>
+            <Icon
+              value="close"
+              className={style['x-button']}
+              onClick={handleClose}
+            />            
             <header>{title}</header>
             {children}
             <Button

@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowLeftIcon from './icons/ArrowLeftIcon';
 import ArrowRightIcon from './icons/ArrowRightIcon';
 import ArrowDownIcon from './icons/ArrowDownIcon';
+import CloseIcon from './icons/CloseIcon';
 import EmailIcon from './icons/EmailIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import GithubIcon from './icons/GithubIcon';
@@ -14,6 +15,7 @@ const icons = {
   arrowLeft: <ArrowLeftIcon />,
   arrowRight: <ArrowRightIcon />,
   arrowDown: <ArrowDownIcon />,
+  close: <CloseIcon />,
   email: <EmailIcon />,
   facebook: <FacebookIcon />,
   github: <GithubIcon />,
