@@ -41,8 +41,8 @@ const Table = ({ tableHeads, tableData }) => {
 };
 
 Table.propTypes = {
-  tableHeads: PropTypes.array,
-  tableData: PropTypes.array.isRequired
+  tableHeads: PropTypes.arrayOf(PropTypes.string),
+  tableData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Table;

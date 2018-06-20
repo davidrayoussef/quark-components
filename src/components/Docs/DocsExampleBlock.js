@@ -26,7 +26,14 @@ const DocsExampleBlock = ({ name, description, propDescriptions, children }) => 
 DocsExampleBlock.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  propDescriptions: PropTypes.array.isRequired,
+  propDescriptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      propDefault: PropTypes.string,
+      propDescription: PropTypes.string.isRequired,
+      propName: PropTypes.string.isRequired,
+      propType: PropTypes.string.isRequired
+    })
+  ).isRequired,
   children: PropTypes.node.isRequired
 };
 

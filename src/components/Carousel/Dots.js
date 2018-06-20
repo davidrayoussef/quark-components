@@ -19,7 +19,12 @@ const Dots = ({ images, activeIndex, containerWidth, slideToIndex }) => (
 );
 
 Dots.propTypes = {
-  images: PropTypes.array.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })
+  ).isRequired,
   activeIndex: PropTypes.number.isRequired,
   containerWidth: PropTypes.number.isRequired,
   slideToIndex: PropTypes.func.isRequired

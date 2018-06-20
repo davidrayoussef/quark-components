@@ -17,7 +17,12 @@ class Carousel extends Component {
   };
 
   static propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+      })
+    ).isRequired,
     showDots: PropTypes.bool
   };
 

@@ -12,17 +12,11 @@ class Fetcher extends Component {
     data: null
   };
 
-  constructor() {
-    super();
-
-    this.fetchData = this.fetchData.bind(this);
-  }
-
   componentDidMount() {
     this.fetchData();
   }
 
-  fetchData() {
+  fetchData = () => {
     fetch(this.props.url)
       .then(res => res.json())
       .then(data => {

@@ -4,6 +4,8 @@ import Icon from '../Icon/Icon';
 import style from './Dropdown.css';
 
 class Dropdown extends Component {
+  dropdownElement = React.createRef();
+  
   state = {
     isOpen: false
   };
@@ -17,11 +19,6 @@ class Dropdown extends Component {
     data: PropTypes.array.isRequired,
     linksDisabled: PropTypes.bool
   };
-
-  constructor(props) {
-    super(props);
-    this.dropdownElement = React.createRef();
-  }
 
   componentDidMount() {
     window.addEventListener('click', this.handleClickOutside);
