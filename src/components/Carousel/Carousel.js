@@ -5,6 +5,8 @@ import Icon from '../Icon/Icon';
 import style from './Carousel.css';
 
 class Carousel extends Component {
+  imageContainerElement = React.createRef();
+
   state = {
     activeIndex: 0,
     translate: 0,
@@ -25,11 +27,6 @@ class Carousel extends Component {
     ).isRequired,
     showDots: PropTypes.bool
   };
-
-  constructor(props) {
-    super(props);
-    this.imageContainerElement = React.createRef();
-  }
 
   componentDidMount() {
     setTimeout(this.setImageWidth, 0);
@@ -93,6 +90,11 @@ class Carousel extends Component {
   render() {
     const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
     const { images, showDots } = this.props;
+    const arrowIconStyle = { 
+      cursor: 'pointer', 
+      minWidth: 35, 
+      maxWidth: 50
+    };
 
     const renderedImages = images.map(img =>
       <img
@@ -109,7 +111,7 @@ class Carousel extends Component {
           <Icon
             value="arrowLeft"
             color="lightgray"
-            style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
+            style={arrowIconStyle}
             onClick={this.slidePrev}
           />
 
@@ -138,7 +140,7 @@ class Carousel extends Component {
           <Icon
             value="arrowRight"
             color="lightgray"
-            style={{ cursor: 'pointer', minWidth: 35, maxWidth: 50 }}
+            style={arrowIconStyle}
             onClick={this.slideNext}
           />
         </main>

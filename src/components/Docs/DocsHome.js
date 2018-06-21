@@ -18,7 +18,11 @@ const cards = componentData.map(({ name, description }) => (
         className={style.icon}
         href={`https://github.com/davidrayoussef/react-simple-ui-components/tree/master/src/components/${name}`}
       >
-        <Icon value="github" />
+        <Icon 
+          value="github"
+          width="25"
+          color="rgba(0, 0, 0, .2)"
+        />
       </a>
       <RouterLinkButton to={name.toLowerCase()}>View</RouterLinkButton>
     </div>

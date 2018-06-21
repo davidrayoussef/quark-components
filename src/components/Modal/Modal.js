@@ -43,6 +43,8 @@ class Modal extends Component {
           <div className={style.modal} ref={this.modalElement}>
             <Icon
               value="close"
+              width="20px"
+              color="rgba(0, 0, 0, .3)"
               className={style['x-button']}
               onClick={handleClose}
             />            

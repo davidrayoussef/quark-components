@@ -21,7 +21,11 @@ const Docs = ({ children, headerTitle, ...rest }) => {
           </Link>
         </h1>
         <a href="https://github.com/davidrayoussef/react-simple-ui-components">
-          <Icon value="github" style={{ fill: 'rgba(255, 255, 255, .6)', width: 30 }} />
+          <Icon 
+            value="github" 
+            color="rgba(255, 255, 255, .6)"
+            width="30"
+          />
         </a>
       </HeaderBar>
       <main className={`${style.main} ${isHome ? style.landing : ''}`}>

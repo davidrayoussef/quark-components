@@ -64,7 +64,7 @@ class Dropdown extends Component {
           <Icon
             value="arrowDown"
             color="#BBB"
-            style={{ width: 15 }}
+            width="15"
           />
         </div>
         <ul className={style[isOpen ? 'show' : '']}>
