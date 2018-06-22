@@ -9,7 +9,7 @@ const Icon = ({ value, color, width, ...rest }) => {
       x="0"
       y="0"
       viewBox="0 0 60 60"
-      style={{ width: width }}
+      width={width}
       {...rest}
     >
       {icons[value]}
