@@ -1,0 +1,41 @@
+.button-group {
+  font-size: 14px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+}
+
+.button-group a {
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .9);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.button-group svg {
+  margin-right: 7px;
+}
+
+.button-group a:hover svg {
+  fill: #efefef;
+}
+
+.button-group a:hover {
+  color: #efefef;
+}
+
+.twitter:hover {
+  background: #00aced;
+}
+
+.facebook:hover {
+  background: #33539a;
+}
+
+.email:hover {
+  background: rgba(0, 0, 0, .7);
+}

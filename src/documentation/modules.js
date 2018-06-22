@@ -22,5 +22,7 @@ export * from './componentExamples/ModalExample/ModalExample';
 export * from './componentExamples/ModalExample/ModalCode';
 export * from './componentExamples/NavMenuExample/NavMenuExample';
 export * from './componentExamples/NavMenuExample/NavMenuCode';
+export * from './componentExamples/ShareExample/ShareExample';
+export * from './componentExamples/ShareExample/ShareCode';
 export * from './componentExamples/TableExample/TableExample';
 export * from './componentExamples/TableExample/TableCode';

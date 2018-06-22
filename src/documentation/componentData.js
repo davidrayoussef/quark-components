@@ -252,7 +252,7 @@ export const componentData = [
         propName: 'handleClose',
         propType: 'function',
         propDefault: null,
-        propDescription: 'A function to close the modal.'
+        propDescription: 'Callback function to close the modal.'
       }
     ]
   },
@@ -291,6 +291,38 @@ export const componentData = [
         propType: 'array',
         propDefault: null,
         propDescription: 'An array of menu items to render.'
+      }
+    ]
+  },
+  {
+    name: 'Share',
+    description: 'A social sharing widget.',
+    component: Modules.ShareExample,
+    code: Modules.ShareCode,
+    propDescriptions: [
+      {
+        propName: 'shares',
+        propType: 'array',
+        propDefault: null,
+        propDescription: 'An array of social network names.'
+      },
+      {
+        propName: 'url',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The url to share.'
+      },
+      {
+        propName: 'title',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The subject for email shares.'
+      },
+      {
+        propName: 'text',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The text of the share.'
       }
     ]
   },
