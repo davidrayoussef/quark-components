@@ -3,17 +3,22 @@
 exports[`snapshot 1`] = `
 <div
   className="overlay"
+  onClick={[Function]}
 >
   <div
     className="modal"
   >
+    <Icon
+      className="x-button"
+      color="rgba(0, 0, 0, .3)"
+      value="close"
+      width="20px"
+    />
     <header />
     <p>
       Modal Content
     </p>
     <Button
-      onClick={[Function]}
-      onKeyUp={[Function]}
       style={
         Object {
           "margin": "auto",

@@ -33,31 +33,19 @@ exports[`snapshot 1`] = `
         alt="image 1"
         key="image 1"
         src="images/slide-1.jpg"
-        style={
-          Object {
-            "width": 0,
-          }
-        }
+        width={0}
       />
       <img
         alt="image 2"
         key="image 2"
         src="images/slide-2.jpg"
-        style={
-          Object {
-            "width": 0,
-          }
-        }
+        width={0}
       />
       <img
         alt="image 3"
         key="image 3"
         src="images/slide-3.jpg"
-        style={
-          Object {
-            "width": 0,
-          }
-        }
+        width={0}
       />
     </div>
   </div>
