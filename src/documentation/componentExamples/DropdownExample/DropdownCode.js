@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Dropdown from '{yourpath}/Dropdown';
+import Dropdown from 'quark-components/Dropdown';
 
 const data = [
   { name: 'Profile' },

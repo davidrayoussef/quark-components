@@ -1,5 +1,5 @@
 import React from 'react';
-import Share from '../../../components/Share/Share';
+import Share from '../../../components/Share';
 
 export const ShareExample = () => (
   <Share 

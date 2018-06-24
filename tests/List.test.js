@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import List from '../src/components/List/List';
+import List from '../src/components/List';
 
 const data = [
   { name: 'list item 1' },

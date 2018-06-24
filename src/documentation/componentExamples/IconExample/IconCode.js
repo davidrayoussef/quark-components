@@ -3,8 +3,8 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Icon from '{yourpath}/Icon';
-import Grid from '{yourpath}/Grid';
+import Icon from 'quark-components/Icon';
+import Grid from 'quark-components/Grid';
 
 <Grid cols={'repeat(auto-fit, minmax(100px, 1fr))'}>
   <Icon value="email" color="gray" />

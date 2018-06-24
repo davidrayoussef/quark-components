@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Button from '../src/components/Button/Button';
+import Button from '../src/components/Button';
 
 test('should render', () => {
   const wrapper = shallow(

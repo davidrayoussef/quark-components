@@ -1,5 +1,5 @@
 import React from 'react';
-import NavMenu from '../../../components/NavMenu/NavMenu';
+import NavMenu from '../../../components/NavMenu';
 
 export const NavMenuExample = () => (
   <NavMenu

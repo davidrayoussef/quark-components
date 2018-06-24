@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import List from '{yourpath}/List';
+import List from 'quark-components/List';
 
 <List
   listTitle="List Items"

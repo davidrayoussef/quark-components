@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Fetcher from '../src/components/Fetcher/Fetcher';
+import Fetcher from '../src/components/Fetcher';
 
 global.fetch = jest.fn().mockImplementation(() => {
   const promise = new Promise(resolve => {

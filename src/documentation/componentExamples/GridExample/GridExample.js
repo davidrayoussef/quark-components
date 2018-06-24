@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../../../components/Grid/Grid';
+import Grid from '../../../components/Grid';
 
 export const GridExample = () => (
   <Grid fluid>

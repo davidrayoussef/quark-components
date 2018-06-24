@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Share from '{yourpath}/Share';
+import Share from 'quark-components/Share';
 
 <Share 
   shares={['twitter', 'facebook', 'email']} 

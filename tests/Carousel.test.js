@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Carousel from '../src/components/Carousel/Carousel';
+import Carousel from '../src/components/Carousel';
 
 const images = [
   { title: 'image 1', src: 'images/slide-1.jpg' },

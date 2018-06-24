@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Modal from '../src/components/Modal/Modal';
+import Modal from '../src/components/Modal';
 
 test('should render', () => {
   const wrapper = shallow(

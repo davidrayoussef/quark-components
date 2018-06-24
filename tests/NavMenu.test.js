@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import NavMenu from '../src/components/NavMenu/NavMenu';
+import NavMenu from '../src/components/NavMenu';
 import { withMobileMenu } from '../src/components/NavMenu/withMobileMenu';
 
 Object.defineProperty(window, 'matchMedia', {

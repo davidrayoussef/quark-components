@@ -3,8 +3,8 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React, { Component, Fragment } from 'react';
-import Modal from '{yourpath}/Modal';
-import Button from '{yourpath}/Button';
+import Modal from 'quark-components/Modal';
+import Button from 'quark-components/Button';
 
 class AppExample extends Component {
   state = {

@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Loader from '{yourpath}/Loader';
+import Loader from 'quark-components/Loader';
 
 <Loader />
 `;

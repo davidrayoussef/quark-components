@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import HeaderBar from '../src/components/HeaderBar/HeaderBar';
+import HeaderBar from '../src/components/HeaderBar';
 
 test('should render', () => {
   const wrapper = shallow(<HeaderBar />);

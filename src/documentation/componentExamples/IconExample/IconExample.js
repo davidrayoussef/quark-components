@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../../../components/Icon/Icon';
-import Grid from '../../../components/Grid/Grid';
+import Icon from '../../../components/Icon';
+import Grid from '../../../components/Grid';
 
 export const IconExample = () => (
   <Grid cols={'repeat(auto-fit, minmax(100px, 1fr))'}>

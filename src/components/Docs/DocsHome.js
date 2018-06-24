@@ -1,8 +1,8 @@
 import React from 'react';
-import Grid from '../Grid/Grid';
-import Card from '../Card/Card';
+import Grid from '../Grid';
+import Card from '../Card';
 import RouterLinkButton from '../Button/RouterLinkButton';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import { componentData } from '../../documentation/componentData.js';
 import style from './DocsHome.css';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import Button from '../Button';
+import Icon from '../Icon';
 import style from './Modal.css';
 
 class Modal extends Component {

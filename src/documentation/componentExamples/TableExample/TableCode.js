@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Table from '{yourpath}/Table';
+import Table from 'quark-components/Table';
 
 <Table
   tableHeads={['Company', 'Contact', 'Country']}

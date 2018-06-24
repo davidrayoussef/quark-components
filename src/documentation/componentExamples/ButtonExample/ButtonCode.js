@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Button from '{yourpath}/Button';
+import Button from 'quark-components/Button';
 
 <div>
   <Button type="primary">Primary</Button>

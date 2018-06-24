@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Dots from './Dots';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import style from './Carousel.css';
 
 class Carousel extends Component {

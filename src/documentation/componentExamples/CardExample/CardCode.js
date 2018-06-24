@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Card from '{yourpath}/Card';
+import Card from 'quark-components/Card';
 
 <Card
   name="React"

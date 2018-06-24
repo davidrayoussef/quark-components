@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import style from './withMobile.css';
 
 export const withMobileMenu = (Component) => {

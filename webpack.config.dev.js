@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
 	devtool: 'eval',
 	entry: [
-		'./src/index.js'
+		'./src/main.js'
 	],
 	output: {
 		path: __dirname + '/dist',

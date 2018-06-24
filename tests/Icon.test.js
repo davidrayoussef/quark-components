@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Icon from '../src/components/Icon/Icon';
+import Icon from '../src/components/Icon';
 
 test('should render', () => {
   const wrapper = shallow(

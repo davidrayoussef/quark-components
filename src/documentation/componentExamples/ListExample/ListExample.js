@@ -1,5 +1,5 @@
 import React from 'react';
-import List from '../../../components/List/List';
+import List from '../../../components/List';
 
 export const ListExample = () => (
   <List

@@ -3,8 +3,8 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Fetcher from '{yourpath}/Fetcher';
-import Loader from '{yourpath}/Loader';
+import Fetcher from 'quark-components/Fetcher';
+import Loader from 'quark-components/Loader';
 
 <Fetcher
   loader={Loader}

@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Carousel from '{yourpath}/Carousel';
+import Carousel from 'quark-components/Carousel';
 
 const images = [
   {

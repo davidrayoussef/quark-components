@@ -1,8 +1,14 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './documentation/App';
-
-render(
-  <App />,
-  document.getElementById("app")
-);
+export { default as Button } from './components/Button';
+export { default as Card } from './components/Card';
+export { default as Carousel } from './components/Carousel';
+export { default as Dropdown } from './components/Dropdown';
+export { default as Fetcher } from './components/Fetcher';
+export { default as Grid } from './components/Grid';
+export { default as HeaderBar } from './components/HeaderBar';
+export { default as Icon } from './components/Icon';
+export { default as List } from './components/List';
+export { default as Loader } from './components/Loader';
+export { default as Modal } from './components/Modal';
+export { default as NavMenu } from './components/NavMenu';
+export { default as Share } from './components/Share';
+export { default as Table } from './components/Table';

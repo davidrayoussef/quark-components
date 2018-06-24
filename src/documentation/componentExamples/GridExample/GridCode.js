@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import Grid from '{yourpath}/Grid';
+import Grid from 'quark-components/Grid';
 
 <Grid fluid>
   <div>Grid Item 1</div>

@@ -3,7 +3,7 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React from 'react';
-import NavMenu from '{yourpath}/NavMenu';
+import NavMenu from 'quark-components/NavMenu';
 
 <NavMenu
   menuTitle="NavMenu Items"
