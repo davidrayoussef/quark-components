@@ -16,7 +16,7 @@ const cards = componentData.map(({ name, description }) => (
     <div className={style['button-container']}>
       <a
         className={style.icon}
-        href={`https://github.com/davidrayoussef/react-simple-ui-components/tree/master/src/components/${name}`}
+        href={`https://github.com/davidrayoussef/quark-components/tree/master/src/components/${name}`}
       >
         <Icon 
           value="github"

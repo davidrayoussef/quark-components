@@ -20,7 +20,7 @@ const Docs = ({ children, headerTitle, ...rest }) => {
             {headerTitle}
           </Link>
         </h1>
-        <a href="https://github.com/davidrayoussef/react-simple-ui-components">
+        <a href="https://github.com/davidrayoussef/quark-components">
           <Icon 
             value="github" 
             color="rgba(255, 255, 255, .6)"
