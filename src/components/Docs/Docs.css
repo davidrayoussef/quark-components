@@ -26,6 +26,10 @@ li {
   height: 100vh;
 }
 
+.logo-wrapper {
+  display: flex;
+}
+
 .main {
   background: #f4f4fd;
   display: grid;
@@ -47,7 +51,7 @@ li {
     position: fixed;
   }
 
-  header svg {
+  .github-icon {
     display: none;
   }
 
