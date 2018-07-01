@@ -17,7 +17,7 @@ export const componentData = [
         propName: 'type',
         propType: 'string',
         propDefault: 'primary',
-        propDescription: 'The type button (primary, secondary, reverse or danger).'
+        propDescription: 'The type of button (primary, secondary, reverse or danger).'
       },
       {
         propName: 'size',
