@@ -16,15 +16,13 @@ class Fetcher extends Component {
     this.fetchData();
   }
 
-  fetchData = () => {
-    fetch(this.props.url)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          data: data
-        })
-      })
-      // .catch(err => console.error(err));
+  fetchData = async () => {
+    const res = await fetch(this.props.url);
+    const json = await res.json();
+
+    this.setState({
+      data: json
+    });
   }
 
   render() {
