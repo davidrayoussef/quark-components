@@ -14,6 +14,8 @@ export * from './componentExamples/HeaderBarExample/HeaderBarExample';
 export * from './componentExamples/HeaderBarExample/HeaderBarCode';
 export * from './componentExamples/IconExample/IconExample';
 export * from './componentExamples/IconExample/IconCode';
+export * from './componentExamples/LazyLoadExample/LazyLoadExample';
+export * from './componentExamples/LazyLoadExample/LazyLoadCode';
 export * from './componentExamples/ListExample/ListExample';
 export * from './componentExamples/ListExample/ListCode';
 export * from './componentExamples/LoaderExample/LoaderExample';

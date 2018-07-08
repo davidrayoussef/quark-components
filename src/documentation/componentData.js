@@ -198,6 +198,20 @@ export const componentData = [
     ]
   },
   {
+    name: 'LazyLoad',
+    description: 'A wrapper for loading images efficiently as they scroll into view.',
+    component: Modules.LazyLoadExample,
+    code: Modules.LazyLoadCode,
+    propDescriptions: [
+      {
+        propName: 'children',
+        propType: 'node',
+        propDefault: null,
+        propDescription: 'The images to lazy load.'
+      }
+    ]
+  },
+  {
     name: 'List',
     description: 'A list of multiple items, presented either vertically or horizontally.',
     component: Modules.ListExample,
