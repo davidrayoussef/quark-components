@@ -26,5 +26,7 @@ export * from './componentExamples/NavMenuExample/NavMenuExample';
 export * from './componentExamples/NavMenuExample/NavMenuCode';
 export * from './componentExamples/ShareExample/ShareExample';
 export * from './componentExamples/ShareExample/ShareCode';
+export * from './componentExamples/SwiperExample/SwiperExample';
+export * from './componentExamples/SwiperExample/SwiperCode';
 export * from './componentExamples/TableExample/TableExample';
 export * from './componentExamples/TableExample/TableCode';

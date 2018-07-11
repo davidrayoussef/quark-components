@@ -1,0 +1,11 @@
+.swipe-container {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+}
+
+.images-container {
+  display: flex;
+  align-items: flex-start;
+  transition: transform .5s ease-in-out;
+}

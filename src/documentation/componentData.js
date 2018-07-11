@@ -341,6 +341,20 @@ export const componentData = [
     ]
   },
   {
+    name: 'Swiper',
+    description: 'A wrapper for adding swipe functionality to images.',
+    component: Modules.SwiperExample,
+    code: Modules.SwiperCode,
+    propDescriptions: [
+      {
+        propName: 'children',
+        propType: 'node',
+        propDefault: null,
+        propDescription: 'The images to make swipable.'
+      }
+    ]
+  },
+  {
     name: 'Table',
     description: 'A responsive table that displays vertically on small screens.',
     component: Modules.TableExample,
