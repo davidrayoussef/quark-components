@@ -84,7 +84,7 @@ class LazyLoad extends Component {
     
     return (
       <div ref={this.imgContainerElement} className={style['img-container']}>
-        { images }
+        {images}
       </div>
     );
   }
