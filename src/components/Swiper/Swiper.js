@@ -59,18 +59,36 @@ class Swiper extends Component {
   };
 
   handleTouchEnd = () => {
-    const { translate, imgWidth, distance, direction, activeIndex } = this.state;
+    const { imgWidth, distance, direction, activeIndex } = this.state;
     const { threshold } = this.props;
+    const { getTranslateAmount, updateActiveIndex } = this;
     const translateAmount = (Math.abs(distance) > threshold ? -imgWidth : 0);
+    // Need willSwipe flag to properly increment/decrement activeIndex
     const willSwipe = translateAmount !== 0;
 
     this.setState({
       startX: 0,
       distance: 0,
       touch: null,
-      translate: translate + (direction === 'left' ? translateAmount : -translateAmount),
-      activeIndex: willSwipe ? activeIndex + (direction === 'left' ? 1 : -1) : activeIndex
+      translate: getTranslateAmount(activeIndex, direction, translateAmount),
+      activeIndex: willSwipe ? updateActiveIndex(activeIndex, direction) : activeIndex
     });
+  };
+
+  getTranslateAmount = (activeIndex, direction, translateAmount) => {
+    const { imgWidth, translate } = this.state;
+    const imgCount = this.imageContainerElement.current.children.length;
+    const totalWidth = imgCount * imgWidth;
+
+    if (direction === 'left') return (translate - imgWidth) % totalWidth;
+    return translate - (translate === 0 ? totalWidth - imgWidth : translateAmount);
+  };
+
+  updateActiveIndex = (activeIndex, direction) => {
+    const imgCount = this.imageContainerElement.current.children.length;
+
+    if (direction === 'left') return (activeIndex + 1) % imgCount;
+    return activeIndex === 0 ? imgCount - 1 : activeIndex - 1;
   };
 
   render() {
