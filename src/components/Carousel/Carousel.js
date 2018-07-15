@@ -105,8 +105,9 @@ class Carousel extends Component {
     );
     const arrowIconStyle = { 
       cursor: 'pointer', 
-      minWidth: 35, 
-      maxWidth: 50
+      minWidth: 25,
+      maxWidth: 50,
+      width: '7vw'
     };
 
     let Component;
@@ -121,7 +122,10 @@ class Carousel extends Component {
 
     if (renderedImages.length) {
       return (
-        <section className={style.wrapper}>
+        <section 
+          className={style.wrapper} 
+          style={ !showArrows ? { 'gridTemplateColumns': '1fr' } : {} }
+        >
           { showArrows
             ? <Icon
                 value="arrowLeft"
