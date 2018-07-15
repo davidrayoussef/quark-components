@@ -351,6 +351,24 @@ export const componentData = [
         propType: 'node',
         propDefault: null,
         propDescription: 'The images to make swipable.'
+      },
+      {
+        propName: 'threshold',
+        propType: 'number',
+        propDefault: '15',
+        propDescription: 'The amount in pixels needed to register a swipe action.'
+      },
+      {
+        propName: 'onSwipeLeft',
+        propType: 'function',
+        propDefault: null,
+        propDescription: 'A callback to run after a left swipe.'
+      },
+      {
+        propName: 'onSwipeRight',
+        propType: 'function',
+        propDefault: null,
+        propDescription: 'A callback to run after a right swipe.'
       }
     ]
   },

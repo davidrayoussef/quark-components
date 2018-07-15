@@ -11,17 +11,20 @@ class Swiper extends Component {
     direction: null,
     touch: null,
     translate: 0,
-    imgWidth: 0,
-    activeIndex: 0
+    imgWidth: 0
   };
 
   static defaultProps = {
-    threshold: 15
+    threshold: 15,
+    onSwipeLeft: () => {},
+    onSwipeRight: () => {}
   };
 
   static propTypes = {
     children: PropTypes.node.isRequired,
-    threshold: PropTypes.number
+    threshold: PropTypes.number,
+    onSwipeLeft: PropTypes.func,
+    onSwipeRight: PropTypes.func
   };
 
   componentDidMount() {
@@ -59,37 +62,33 @@ class Swiper extends Component {
   };
 
   handleTouchEnd = () => {
-    const { imgWidth, distance, direction, activeIndex } = this.state;
+    const { imgWidth, distance, direction } = this.state;
     const { threshold } = this.props;
-    const { getTranslateAmount, updateActiveIndex } = this;
     const translateAmount = (Math.abs(distance) > threshold ? -imgWidth : 0);
-    // Need willSwipe flag to properly increment/decrement activeIndex
-    const willSwipe = translateAmount !== 0;
 
     this.setState({
       startX: 0,
       distance: 0,
       touch: null,
-      translate: getTranslateAmount(activeIndex, direction, translateAmount),
-      activeIndex: willSwipe ? updateActiveIndex(activeIndex, direction) : activeIndex
-    });
+      translate: this.getTranslateAmount(translateAmount, direction),
+    }, this.onSwipe);
   };
 
-  getTranslateAmount = (activeIndex, direction, translateAmount) => {
+  getTranslateAmount(translateAmount, direction) {
     const { imgWidth, translate } = this.state;
     const imgCount = this.imageContainerElement.current.children.length;
     const totalWidth = imgCount * imgWidth;
 
     if (direction === 'left') return (translate - imgWidth) % totalWidth;
     return translate - (translate === 0 ? totalWidth - imgWidth : translateAmount);
-  };
+  }
 
-  updateActiveIndex = (activeIndex, direction) => {
-    const imgCount = this.imageContainerElement.current.children.length;
+  onSwipe() {
+    const { direction } = this.state;
+    const { onSwipeLeft, onSwipeRight } = this.props;
 
-    if (direction === 'left') return (activeIndex + 1) % imgCount;
-    return activeIndex === 0 ? imgCount - 1 : activeIndex - 1;
-  };
+    return direction === 'left' ? onSwipeLeft() : onSwipeRight();
+  }
 
   render() {
     const { children } = this.props;
