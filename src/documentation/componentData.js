@@ -78,10 +78,22 @@ export const componentData = [
         propDescription: 'An array of objects with a title property and an image src property.'
       },
       {
+        propName: 'showArrows',
+        propType: 'boolean',
+        propDefault: 'true',
+        propDescription: 'Use to show left and right navigation arrows.'
+      },
+      {
         propName: 'showDots',
         propType: 'boolean',
         propDefault: 'false',
         propDescription: 'Use to show navigation dots.'
+      },
+      {
+        propName: 'useSwiper',
+        propType: 'boolean',
+        propDefault: 'true',
+        propDescription: 'Use to add swipe functionality on mobile devices.'
       }
     ]
   },

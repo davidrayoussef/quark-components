@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Dots from './Dots';
 import Icon from '../Icon';
+import Swiper from '../Swiper';
 import style from './Carousel.css';
 
 class Carousel extends Component {
@@ -15,7 +16,9 @@ class Carousel extends Component {
   };
 
   static defaultProps = {
-    showDots: false
+    showArrows: true,
+    showDots: false,
+    useSwiper: true
   };
 
   static propTypes = {
@@ -25,7 +28,9 @@ class Carousel extends Component {
         title: PropTypes.string.isRequired
       })
     ).isRequired,
-    showDots: PropTypes.bool
+    showArrows: PropTypes.bool,
+    showDots: PropTypes.bool,
+    useSwiper: PropTypes.bool
   };
 
   componentDidMount() {
@@ -84,18 +89,12 @@ class Carousel extends Component {
       translate: translate + (index > activeIndex ? -((index - activeIndex) * imgWidth) : ((activeIndex - index) * imgWidth)),
       activeIndex: index,
       shouldAnimate: true
-    }, () => console.log(this.state.translate));
+    });
   };
 
   render() {
     const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
-    const { images, showDots } = this.props;
-    const arrowIconStyle = { 
-      cursor: 'pointer', 
-      minWidth: 35, 
-      maxWidth: 50
-    };
-
+    const { images, showArrows, showDots, useSwiper } = this.props;
     const renderedImages = images.map(img =>
       <img
         key={img.title}
@@ -104,28 +103,50 @@ class Carousel extends Component {
         width={imgWidth}
       />
     );
+    const arrowIconStyle = { 
+      cursor: 'pointer', 
+      minWidth: 35, 
+      maxWidth: 50
+    };
+
+    let Component;
+    let props = {};
+
+    if (useSwiper) {
+      Component = Swiper;
+      props.onSwipeLeft = this.slideNext;
+      props.onSwipeRight = this.slidePrev;
+    }
+    else Component = Fragment;
 
     if (renderedImages.length) {
       return (
-        <main className={style.wrapper}>
-          <Icon
-            value="arrowLeft"
-            color="lightgray"
-            style={arrowIconStyle}
-            onClick={this.slidePrev}
-          />
+        <section className={style.wrapper}>
+          { showArrows
+            ? <Icon
+                value="arrowLeft"
+                color="lightgray"
+                style={arrowIconStyle}
+                onClick={this.slidePrev}
+              />
+            : null
+          }
 
           <div className={style.images}>
-            <div
-              ref={this.imageContainerElement}
-              className={style['image-container']}
-              style={{
-                transform: `translateX(${translate}px)`,
-                transition: shouldAnimate ? 'transform .4s ease-in-out' : 'none'
-              }}
-            >
-              {renderedImages}
-            </div>
+
+            <Component {...props}>
+              <div
+                ref={this.imageContainerElement}
+                className={style['image-container']}
+                style={{
+                  transform: `translateX(${translate}px)`,
+                  transition: shouldAnimate ? 'transform .4s ease-in-out' : 'none'
+                }}
+              >
+                {renderedImages}
+              </div>
+            </Component>
+
             { showDots
               ? <Dots
                   images={images}
@@ -137,13 +158,16 @@ class Carousel extends Component {
             }
           </div>
 
-          <Icon
-            value="arrowRight"
-            color="lightgray"
-            style={arrowIconStyle}
-            onClick={this.slideNext}
-          />
-        </main>
+          { showArrows
+            ? <Icon
+                value="arrowRight"
+                color="lightgray"
+                style={arrowIconStyle}
+                onClick={this.slideNext}
+              />
+            : null
+          }
+        </section>
       );
     }
     return null;
