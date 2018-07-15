@@ -62,7 +62,7 @@ class Swiper extends Component {
   };
 
   handleTouchEnd = () => {
-    const { imgWidth, distance, direction } = this.state;
+    const { imgWidth, distance, direction, translate } = this.state;
     const { threshold } = this.props;
     const translateAmount = (Math.abs(distance) > threshold ? -imgWidth : 0);
 
@@ -70,8 +70,8 @@ class Swiper extends Component {
       startX: 0,
       distance: 0,
       touch: null,
-      translate: this.getTranslateAmount(translateAmount, direction),
-    }, this.onSwipe);
+      translate: translateAmount !== 0 ? this.getTranslateAmount(translateAmount, direction) : translate,
+    }, translateAmount !== 0 ? this.onSwipe : null);
   };
 
   getTranslateAmount(translateAmount, direction) {
