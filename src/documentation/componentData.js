@@ -354,7 +354,7 @@ export const componentData = [
   },
   {
     name: 'Swiper',
-    description: 'A wrapper for adding swipe functionality to images.',
+    description: 'A wrapper for adding swipe functionality to images on mobile devices.',
     component: Modules.SwiperExample,
     code: Modules.SwiperCode,
     propDescriptions: [
