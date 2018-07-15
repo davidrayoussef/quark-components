@@ -27,7 +27,9 @@ export const withMobileMenu = (Component) => {
           mobileStyles: {
             width: '100vw',
             height: '100vh',
-            position: 'fixed'
+            position: 'fixed',
+            overflowY: 'auto',
+            paddingBottom: '100%'
           }
         })
       }
