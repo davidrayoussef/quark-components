@@ -11,7 +11,9 @@ class Swiper extends Component {
     direction: null,
     touch: null,
     translate: 0,
-    imgWidth: 0
+    imgWidth: 0,
+    activeIndex: 0,
+    shouldAnimate: true
   };
 
   static defaultProps = {
@@ -29,7 +31,23 @@ class Swiper extends Component {
 
   componentDidMount() {
     setTimeout(this.setImageWidth, 0);
+    window.addEventListener('resize', this.handleResize);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    const { translate, activeIndex } = this.state;
+    const imgWidth = this.imageContainerElement.current.offsetWidth;
+
+    this.setState({
+      imgWidth: imgWidth,
+      translate: Math.sign(translate) * (activeIndex * imgWidth),
+      shouldAnimate: false
+    });
+  };
 
   setImageWidth = () => {
     this.setState({
@@ -62,19 +80,32 @@ class Swiper extends Component {
   };
 
   handleTouchEnd = () => {
-    const { imgWidth, distance, direction, translate } = this.state;
+    const { imgWidth, distance, direction, activeIndex } = this.state;
     const { threshold } = this.props;
+    const { getTranslateAmount, updateActiveIndex, onSwipe } = this;
     const translateAmount = (Math.abs(distance) > threshold ? -imgWidth : 0);
+    const willSwipe = translateAmount !== 0;
 
-    this.setState({
-      startX: 0,
-      distance: 0,
-      touch: null,
-      translate: translateAmount !== 0 ? this.getTranslateAmount(translateAmount, direction) : translate,
-    }, translateAmount !== 0 ? this.onSwipe : null);
+    if (willSwipe) {
+      this.setState({
+        startX: 0,
+        distance: 0,
+        touch: null,
+        translate: getTranslateAmount(translateAmount, direction),
+        activeIndex: updateActiveIndex(activeIndex, direction),
+        shouldAnimate: true
+      }, onSwipe);
+    }
+    else {
+      this.setState({
+        startX: 0,
+        distance: 0,
+        touch: null
+      });
+    }
   };
 
-  getTranslateAmount(translateAmount, direction) {
+  getTranslateAmount = (translateAmount, direction) => {
     const { imgWidth, translate } = this.state;
     const imgCount = this.imageContainerElement.current.children.length;
     const totalWidth = imgCount * imgWidth;
@@ -83,7 +114,14 @@ class Swiper extends Component {
     return translate - (translate === 0 ? totalWidth - imgWidth : translateAmount);
   }
 
-  onSwipe() {
+  updateActiveIndex = (activeIndex, direction) => {
+    const imgCount = this.imageContainerElement.current.children.length;
+    
+    if (direction === 'left') return (activeIndex + 1) % imgCount;
+    return activeIndex === 0 ? imgCount - 1 : activeIndex - 1;
+  }
+
+  onSwipe = () => {
     const { direction } = this.state;
     const { onSwipeLeft, onSwipeRight } = this.props;
 
@@ -91,6 +129,7 @@ class Swiper extends Component {
   }
 
   render() {
+    const { translate, shouldAnimate } = this.state;
     const { children } = this.props;
 
     return (
@@ -103,7 +142,10 @@ class Swiper extends Component {
         <div
           ref={this.imageContainerElement}
           className={style['images-container']}
-          style={{ transform: `translateX(${this.state.translate}px)` }}
+          style={{ 
+            transform: `translateX(${translate}px)`,
+            transition: shouldAnimate ? 'transform .4s ease-out' : 'none'
+          }}
         >
           {children}
         </div>
