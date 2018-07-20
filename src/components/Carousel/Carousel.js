@@ -34,7 +34,6 @@ class Carousel extends Component {
   };
 
   componentDidMount() {
-    setTimeout(this.setImageWidth, 0);
     window.addEventListener('resize', this.handleResize);
   }
 
@@ -46,7 +45,7 @@ class Carousel extends Component {
     this.setState({
       imgWidth: this.imageContainerElement.current.offsetWidth
     });
-  }
+  };
 
   handleResize = () => {
     const { activeIndex, translate } = this.state;
@@ -95,12 +94,13 @@ class Carousel extends Component {
   render() {
     const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
     const { images, showArrows, showDots, useSwiper } = this.props;
-    const renderedImages = images.map(img =>
+    const renderedImages = images.map(({ title, src }) =>
       <img
-        key={img.title}
-        src={img.src}
-        alt={img.title}
+        key={title}
+        src={src}
+        alt={title}
         width={imgWidth}
+        onLoad={this.setImageWidth}
       />
     );
     const arrowIconStyle = { 

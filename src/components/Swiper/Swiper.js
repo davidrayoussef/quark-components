@@ -112,21 +112,21 @@ class Swiper extends Component {
 
     if (direction === 'left') return (translate - imgWidth) % totalWidth;
     return translate - (translate === 0 ? totalWidth - imgWidth : translateAmount);
-  }
+  };
 
   updateActiveIndex = (activeIndex, direction) => {
     const imgCount = this.imageContainerElement.current.children.length;
     
     if (direction === 'left') return (activeIndex + 1) % imgCount;
     return activeIndex === 0 ? imgCount - 1 : activeIndex - 1;
-  }
+  };
 
   onSwipe = () => {
     const { direction } = this.state;
     const { onSwipeLeft, onSwipeRight } = this.props;
 
     return direction === 'left' ? onSwipeLeft() : onSwipeRight();
-  }
+  };
 
   render() {
     const { translate, shouldAnimate } = this.state;
