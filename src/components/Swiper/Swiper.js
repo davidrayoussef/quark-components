@@ -60,7 +60,8 @@ class Swiper extends Component {
     
     this.setState({
       startX: touch.clientX, 
-      touch: touch
+      touch: touch,
+      imgWidth: this.imageContainerElement.current.offsetWidth
     });
   };
   

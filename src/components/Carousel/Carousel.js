@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Dots from './Dots';
 import Icon from '../Icon';
+import Image from '../Image';
 import Swiper from '../Swiper';
 import style from './Carousel.css';
 
@@ -95,11 +96,10 @@ class Carousel extends Component {
     const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
     const { images, showArrows, showDots, useSwiper } = this.props;
     const renderedImages = images.map(({ title, src }) =>
-      <img
+      <Image
         key={title}
         src={src}
         alt={title}
-        width={imgWidth}
         onLoad={this.setImageWidth}
       />
     );
@@ -174,6 +174,7 @@ class Carousel extends Component {
         </section>
       );
     }
+
     return null;
   }
 }

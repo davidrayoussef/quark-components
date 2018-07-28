@@ -1,4 +1,4 @@
-function computeHoverColor(color) {
+export function computeHoverColor(color) {
   if ( !color || !color.startsWith('rgb') ) return null;
   const rgb = color.match(/\d+/g).slice(0,3);
   return `
@@ -8,10 +8,8 @@ function computeHoverColor(color) {
   `;
 }
 
-function computeActiveColor(color) {
+export function computeActiveColor(color) {
   if ( !color || !color.startsWith('rgb') ) return null;
   const rgb = color.match(/\d+/g).slice(0,3);
   return `rgba(${rgb.join(', ') + ', .1'})`;
 }
-
-export { computeHoverColor, computeActiveColor };

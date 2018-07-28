@@ -210,6 +210,44 @@ export const componentData = [
     ]
   },
   {
+    name: 'Image',
+    description: 'A replacement for the img tag, used to fallback to a default image to handle broken images.',
+    component: Modules.ImageExample,
+    code: Modules.ImageCode,
+    propDescriptions: [
+      {
+        propName: 'src',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The source url for the image.'
+      },
+      {
+        propName: 'alt',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The alternative text description for the image.'
+      },
+      {
+        propName: 'onLoad',
+        propType: 'function',
+        propDefault: '() => {}',
+        propDescription: 'A callback to run after an image loads.'
+      },
+      {
+        propName: 'onError',
+        propType: 'function',
+        propDefault: '() => {}',
+        propDescription: 'A callback to run when an error occurs loading the image.'
+      },
+      {
+        propName: 'defaultSrc',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The source url for a default image to use in the event that the original image doesn\'t load.'
+      }      
+    ]
+  },  
+  {
     name: 'LazyLoad',
     description: 'A wrapper for loading images efficiently as they scroll into view.',
     component: Modules.LazyLoadExample,

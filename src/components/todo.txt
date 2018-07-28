@@ -1,5 +1,4 @@
 Form - Form.Input Form.Select Form.Radio Form.CheckBox Form.Submit Form.TextArea Form.Switch Form.Uploader
-Swiper
 FilterSearch
 Tabs
 Gallery
