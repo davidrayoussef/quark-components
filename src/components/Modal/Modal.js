@@ -51,7 +51,7 @@ class Modal extends Component {
             <header>{title}</header>
             {children}
             <Button
-              type="secondary"
+              styleType="secondary"
               style={{ width: 100, margin: 'auto' }}
               onClick={handleClose}
             >

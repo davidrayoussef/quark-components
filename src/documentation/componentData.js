@@ -14,7 +14,7 @@ export const componentData = [
         propDescription: 'The content inside the button.'
       },
       {
-        propName: 'type',
+        propName: 'styleType',
         propType: 'string',
         propDefault: 'primary',
         propDescription: 'The type of button (primary, secondary, reverse or danger).'
@@ -150,6 +150,14 @@ export const componentData = [
     ]
   },
   {
+    name: 'Form',
+    description: 'A container for form elements that accept user input.',
+    component: Modules.FormExample,
+    code: Modules.FormCode,
+    propDescriptions: [
+    ]
+  },
+  {
     name: 'Grid',
     description: 'A wrapper component that lays out its children using CSS Grid.',
     component: Modules.GridExample,
@@ -246,7 +254,14 @@ export const componentData = [
         propDescription: 'The source url for a default image to use in the event that the original image doesn\'t load.'
       }      
     ]
-  },  
+  },
+  {
+    name: 'Input',
+    description: 'A text input component that accepts user data.',
+    component: Modules.InputExample,
+    code: Modules.InputCode,
+    propDescriptions: []
+  },
   {
     name: 'LazyLoad',
     description: 'A wrapper for loading images efficiently as they scroll into view.',
@@ -336,7 +351,7 @@ export const componentData = [
         propName: 'linkColor',
         propType: 'string',
         propDefault: 'rgb(52, 88, 226)',
-        propDescription: 'The type button (primary, secondary, reverse or danger).'
+        propDescription: 'The color of the link (named, hex, or rgb).'
       },
       {
         propName: 'linkType',
