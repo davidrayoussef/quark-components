@@ -1,0 +1,24 @@
+.select {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.select select {
+  border: 2px solid rgba(0,0,0,.1);;
+  background: rgba(0,0,0,.05);
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select svg {
+  position: absolute;
+  right: 15px;
+  height: 100%;
+}
