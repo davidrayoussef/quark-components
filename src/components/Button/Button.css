@@ -1,5 +1,8 @@
 .button {
   position: relative;
+  padding: 0 15px;
+  margin: 0 10px 10px 0;
+  text-align: center;
   color: #faf9f9;
   cursor: pointer;
   border: none;
@@ -24,13 +27,13 @@
 }
 
 .reverse {
-  background: rgba(0, 0, 0, .025);
-  color: rgba(52, 88, 226, .9);
-  box-shadow: inset 0 0 0 1.5px rgba(52, 88, 226, .9);
+  background: rgba(0, 0, 0, .020);
+  color: #666;
+  box-shadow: inset 0 0 0 1.5px rgb(150, 203, 254);;
 }
 
 .reverse:hover {
-  background: rgba(0, 0, 0, .075);
+  background: rgba(0, 0, 0, .05);
 }
 
 .danger {
