@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import style from './Select.css';
 
-const Select = ({ name, label, options, value, onChange }) => {
+const Select = ({ name, label, options, value, placeholder, onChange }) => {
   return (
     <div>
       { label && <label htmlFor={name}>{label}</label> }
@@ -13,6 +13,7 @@ const Select = ({ name, label, options, value, onChange }) => {
           value={value} 
           onChange={onChange}
         >
+          <option value="" disabled>{placeholder}</option>
           { 
             options.map(option => (
               <option key={option} value={option}>{option}</option>
@@ -34,6 +35,7 @@ Select.propTypes = {
   label: PropTypes.string,
   options: PropTypes.array.isRequired,
   value: PropTypes.string,
+  placeholder: PropTypes.string,
   onChange: PropTypes.func
 };
 
