@@ -12,7 +12,7 @@ const Form = ({ children, onSubmit, ...rest }) => {
       {children}
     </form>
   );
-}
+};
 
 Form.propTypes = {
   children: PropTypes.node.isRequired,

@@ -8,13 +8,13 @@ const Input = ({ name, type, label, placeholder, value, required, onChange, ...r
       { label && <label htmlFor={name}>{label}</label> }
       <input 
         {...rest}
+        autoComplete="off"
         name={name}
         type={type}
         value={value}
         placeholder={placeholder}
         required={required}
         onChange={onChange}
-        autoComplete="off"
       />
     </div>
   );
