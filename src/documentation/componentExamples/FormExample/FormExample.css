@@ -1,0 +1,21 @@
+.button-group {
+  margin-top: 5;
+}
+
+.results {
+  color: rgba(0, 0, 0, .8);
+}
+
+.results h3 {
+  font-weight: normal;
+  margin: 0 0 5px 0;
+}
+
+.results p {
+  margin: 0;
+}
+
+.results code {
+  font-size: 1.2em;
+  color: #888;
+}

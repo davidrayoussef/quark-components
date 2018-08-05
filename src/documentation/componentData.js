@@ -151,10 +151,22 @@ export const componentData = [
   },
   {
     name: 'Form',
-    description: 'A container for form elements that accept user input.',
+    description: 'A wrapper for form elements that accept user input.',
     component: Modules.FormExample,
     code: Modules.FormCode,
     propDescriptions: [
+      {
+        propName: 'children',
+        propType: 'node',
+        propDefault: null,
+        propDescription: 'The form elements to render.'
+      },
+      {
+        propName: 'onSubmit',
+        propType: 'function',
+        propDefault: null,
+        propDescription: 'The function to call on form submission.'
+      }
     ]
   },
   {

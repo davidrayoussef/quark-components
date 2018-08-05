@@ -8,6 +8,8 @@ export * from './componentExamples/DropdownExample/DropdownExample';
 export * from './componentExamples/DropdownExample/DropdownCode';
 export * from './componentExamples/FetcherExample/FetcherExample';
 export * from './componentExamples/FetcherExample/FetcherCode';
+export * from './componentExamples/FormExample/FormExample';
+export * from './componentExamples/FormExample/FormCode';
 export * from './componentExamples/GridExample/GridExample';
 export * from './componentExamples/GridExample/GridCode';
 export * from './componentExamples/HeaderBarExample/HeaderBarExample';
