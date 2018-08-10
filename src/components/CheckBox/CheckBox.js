@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './CheckBox.css';
 
-const CheckBox = ({ name, label, options, checkedOptions, onChange }) => {
+const CheckBox = ({ name, label, options, checkedOptions, onChange, ...rest }) => {
   return (
-    <div>
+    <div {...rest}>
       { label && <label htmlFor={name}>{label}</label> }
       <div className={style.checkbox}>
         {

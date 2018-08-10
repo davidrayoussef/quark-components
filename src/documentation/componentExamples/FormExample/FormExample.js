@@ -89,6 +89,7 @@ class AppExample extends Component {
           onChange={this.handleChange}
         />
         <CheckBox
+          className={style.favorites}
           name="favorites"
           label="FAVORITE FRAMEWORKS"
           options={["React", "Angular", "Vue"]}
