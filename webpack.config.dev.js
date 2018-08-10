@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'inline-module-source-map',
   entry: [
     './src/main.js'
   ],
