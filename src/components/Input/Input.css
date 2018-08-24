@@ -11,6 +11,25 @@
   transition: all .2s;
 }
 
+.input-container label {
+  display: block;
+  font-size: .8rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
 .input-container input::placeholder {
   color: rgba(0, 0, 0, .4);
+}
+
+.input-container .error {
+  background: #fce8e6;
+}
+
+.error-text {
+  font-size: 14px;
+  color:rgba(244, 54, 54, 1);
+  width: 100%;
+  max-width: 500px;
+  margin: 5px 0 15px;
 }
