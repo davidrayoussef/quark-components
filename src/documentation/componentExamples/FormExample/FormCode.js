@@ -3,11 +3,11 @@ import DocsCodeBlock from '../../../components/Docs/DocsCodeBlock';
 
 const code = `
 import React, { Component } from 'react';
-import Form from '../../../components/Form';
-import Input from '../../../components/Input';
-import Select from '../../../components/Select';
-import CheckBox from '../../../components/CheckBox';
-import Button from '../../../components/Button';
+import Form from 'quark-components/Form';
+import Input from 'quark-components/Input';
+import Select from 'quark-components/Select';
+import CheckBox from 'quark-components/CheckBox';
+import Button from 'quark-components/Button';
 
 class AppExample extends Component {
   state = {
