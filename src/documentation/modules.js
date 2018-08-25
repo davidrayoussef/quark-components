@@ -18,6 +18,8 @@ export * from './componentExamples/IconExample/IconExample';
 export * from './componentExamples/IconExample/IconCode';
 export * from './componentExamples/ImageExample/ImageExample';
 export * from './componentExamples/ImageExample/ImageCode';
+export * from './componentExamples/InputExample/InputExample';
+export * from './componentExamples/InputExample/InputCode';
 export * from './componentExamples/LazyLoadExample/LazyLoadExample';
 export * from './componentExamples/LazyLoadExample/LazyLoadCode';
 export * from './componentExamples/ListExample/ListExample';
