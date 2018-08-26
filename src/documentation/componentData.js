@@ -269,10 +269,47 @@ export const componentData = [
   },
   {
     name: 'Input',
-    description: 'A text input component that accepts user data.',
+    description: 'A text field that accepts user data.',
     component: Modules.InputExample,
     code: Modules.InputCode,
-    propDescriptions: []
+    propDescriptions: [
+      {
+        propName: 'name',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The name attribute for the input, used to reference form data on submission.'
+      },
+      {
+        propName: 'label',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The text label above the input.'
+      },
+      {
+        propName: 'value',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The value for the input field.'
+      },
+      {
+        propName: 'errorMessage',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'An error message to display when input is invalid.'
+      },
+      {
+        propName: 'isValid',
+        propType: 'boolean',
+        propDefault: 'true',
+        propDescription: 'A boolean to indicate whether input entered is valid or not.'
+      },
+      {
+        propName: 'onChange',
+        propType: 'function',
+        propDefault: null,
+        propDescription: 'The function to run when the user enters text.'
+      }                              
+    ]
   },
   {
     name: 'LazyLoad',
