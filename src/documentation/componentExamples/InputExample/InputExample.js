@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Form from '../../../components/Form';
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
 import { validateUsername, validatePassword, validateEmail } from '../../../utils/validate';
