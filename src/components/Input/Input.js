@@ -14,13 +14,13 @@ const Input = ({ name, label, value, errorMessage, isValid, onChange, ...rest })
         onChange={onChange}
         className={isValid ? '' : style.error}
       />
-      <p className={style['error-text']}>{isValid ? '' : errorMessage}</p>
+      { errorMessage && <p className={style['error-text']}>{isValid ? '' : errorMessage }</p> }
     </div>
   );
 }
 
 Input.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.oneOfType([
     PropTypes.string,

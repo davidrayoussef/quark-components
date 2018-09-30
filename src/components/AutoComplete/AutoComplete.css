@@ -1,0 +1,22 @@
+.suggestion-list {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  background: #FFF;
+  border-left: 3px solid #EEE;
+  border-right: 3px solid #EEE;
+  border-bottom: 3px solid #EEE;  
+}
+
+.suggestion {
+  padding: 5px 10px;
+}
+
+.suggestion:hover {
+  background: rgba(0, 0, 0, .05);
+  transition: .2s;
+  cursor: pointer;
+}
