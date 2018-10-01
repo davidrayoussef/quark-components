@@ -6,11 +6,14 @@ import style from './AutoComplete.css';
 class AutoComplete extends Component {
   state = {
     filteredSuggestions: [],
-    userInput: ''
+    value: ''
   };
 
   static propTypes = {
-    suggestions: PropTypes.array.isRequired
+    suggestions: PropTypes.array.isRequired,
+    name: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string
   };
 
   handleChange = (e) => {
@@ -19,14 +22,14 @@ class AutoComplete extends Component {
     const filteredSuggestions = suggestions.filter(v => v.toLowerCase().startsWith(val));
 
     this.setState({
-      filteredSuggestions: e.target.value.length ? filteredSuggestions : [],
-      userInput: e.currentTarget.value
+      value: val,
+      filteredSuggestions: val.length ? filteredSuggestions : []
     });
   };
 
   handleClick = (suggestion) => () => {
     this.setState({
-      userInput: suggestion,
+      value: suggestion,
       filteredSuggestions: []
     });
   };
@@ -45,8 +48,9 @@ class AutoComplete extends Component {
     return (
       <Fragment>
         <Input 
-          value={this.state.userInput}
-          onChange={this.handleChange} 
+          value={this.state.value}
+          onChange={this.handleChange}
+          {...this.props}
         />
         <ul className={style['suggestion-list']}>
           { renderedSuggestions }

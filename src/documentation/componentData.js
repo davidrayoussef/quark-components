@@ -2,6 +2,38 @@ import * as Modules from './modules';
 
 export const componentData = [
   {
+    name: 'AutoComplete',
+    description: 'An input with typeahead functionality that displays type suggestions.',
+    component: Modules.AutoCompleteExample,
+    code: Modules.AutoCompleteCode,
+    propDescriptions: [
+      {
+        propName: 'suggestions',
+        propType: 'array',
+        propDefault: null,
+        propDescription: 'A list of items to use as suggestions.'
+      },
+      {
+        propName: 'name',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The name attribute for the input, used to reference form data on submission.'
+      },
+      {
+        propName: 'label',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The text label above the input.'
+      },
+      {
+        propName: 'value',
+        propType: 'string',
+        propDefault: null,
+        propDescription: 'The initial value for the input field.'
+      }
+    ]
+  },
+  {
     name: 'Button',
     description: 'A customizable button used to trigger an action.',
     component: Modules.ButtonExample,
@@ -289,7 +321,7 @@ export const componentData = [
         propName: 'value',
         propType: 'string',
         propDefault: null,
-        propDescription: 'The value for the input field.'
+        propDescription: 'The initial value for the input field.'
       },
       {
         propName: 'errorMessage',
@@ -422,6 +454,13 @@ export const componentData = [
       }
     ]
   },
+  {
+    name: 'Notification',
+    description: 'Notification',
+    component: Modules.NotificationExample,
+    code: Modules.NotificationCode,
+    propDescriptions: []
+  },  
   {
     name: 'Share',
     description: 'A social sharing widget.',

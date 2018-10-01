@@ -1,3 +1,5 @@
+export * from './componentExamples/AutoCompleteExample/AutoCompleteExample';
+export * from './componentExamples/AutoCompleteExample/AutoCompleteCode';
 export * from './componentExamples/ButtonExample/ButtonExample';
 export * from './componentExamples/ButtonExample/ButtonCode';
 export * from './componentExamples/CardExample/CardExample';
@@ -30,6 +32,8 @@ export * from './componentExamples/ModalExample/ModalExample';
 export * from './componentExamples/ModalExample/ModalCode';
 export * from './componentExamples/NavMenuExample/NavMenuExample';
 export * from './componentExamples/NavMenuExample/NavMenuCode';
+export * from './componentExamples/NotificationExample/NotificationExample';
+export * from './componentExamples/NotificationExample/NotificationCode';
 export * from './componentExamples/ShareExample/ShareExample';
 export * from './componentExamples/ShareExample/ShareCode';
 export * from './componentExamples/SwiperExample/SwiperExample';
