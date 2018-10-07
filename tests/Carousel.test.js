@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Carousel from '../src/components/Carousel';
 
 const images = [
@@ -16,7 +16,7 @@ test('should render', () => {
 });
 
 test('should render 3 images', () => {
-  const wrapper = shallow(
+  const wrapper = mount(
     <Carousel images={images} />
   );
   expect(wrapper.find('img').length).toBe(3);
@@ -26,7 +26,7 @@ test('should correctly update activeIndex on left arrow click', () => {
   const wrapper = shallow(
     <Carousel images={images} />
   );
-  const leftButton = wrapper.find('main').children().at(0);
+  const leftButton = wrapper.children().at(0);
   leftButton.simulate('click');
   expect(wrapper.state().activeIndex).toBe(2);
 });
@@ -35,7 +35,7 @@ test('should correctly update activeIndex on right arrow click', () => {
   const wrapper = shallow(
     <Carousel images={images} />
   );
-  const rightButton = wrapper.find('main').children().at(2);
+  const rightButton = wrapper.children().at(2);
   rightButton.simulate('click');
   expect(wrapper.state().activeIndex).toBe(1);
 });

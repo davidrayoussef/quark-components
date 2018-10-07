@@ -23,37 +23,37 @@ test('should add .primary class if no type is passed', () => {
   expect(wrapper.find('.primary').length).toBe(1);
 });
 
-test('should add .primary class if type="primary"', () => {
+test('should add .primary class if styleType="primary"', () => {
   const wrapper = shallow(
-    <Button type="primary">Button Text</Button>
+    <Button styleType="primary">Button Text</Button>
   );
   expect(wrapper.find('.primary').length).toBe(1);
 });
 
-test('should add .secondary class if type="secondary"', () => {
+test('should add .secondary class if styleType="secondary"', () => {
   const wrapper = shallow(
-    <Button type="secondary">Button Text</Button>
+    <Button styleType="secondary">Button Text</Button>
   );
   expect(wrapper.find('.secondary').length).toBe(1);
 });
 
-test('should add .reverse class if type="reverse"', () => {
+test('should add .reverse class if styleType="reverse"', () => {
   const wrapper = shallow(
-    <Button type="reverse">Button Text</Button>
+    <Button styleType="reverse">Button Text</Button>
   );
   expect(wrapper.find('.reverse').length).toBe(1);
 });
 
-test('should add .danger class if type="danger"', () => {
+test('should add .danger class if styleType="danger"', () => {
   const wrapper = shallow(
-    <Button type="danger">Button Text</Button>
+    <Button styleType="danger">Button Text</Button>
   );
   expect(wrapper.find('.danger').length).toBe(1);
 });
 
 test('snapshot', () => {
   const wrapper = shallow(
-    <Button type="primary">Button Text</Button>
+    <Button styleType="primary">Button Text</Button>
   );
   expect(wrapper).toMatchSnapshot();
 });

@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
-<main
+<section
   className="wrapper"
+  style={Object {}}
 >
   <Icon
     color="lightgray"
@@ -11,7 +12,8 @@ exports[`snapshot 1`] = `
       Object {
         "cursor": "pointer",
         "maxWidth": 50,
-        "minWidth": 35,
+        "minWidth": 25,
+        "width": "7vw",
       }
     }
     value="arrowLeft"
@@ -20,34 +22,43 @@ exports[`snapshot 1`] = `
   <div
     className="images"
   >
-    <div
-      className="image-container"
-      style={
-        Object {
-          "transform": "translateX(0px)",
-          "transition": "transform .4s ease-in-out",
-        }
-      }
+    <Swiper
+      onSwipeLeft={[Function]}
+      onSwipeRight={[Function]}
+      threshold={15}
     >
-      <img
-        alt="image 1"
-        key="image 1"
-        src="images/slide-1.jpg"
-        width={0}
-      />
-      <img
-        alt="image 2"
-        key="image 2"
-        src="images/slide-2.jpg"
-        width={0}
-      />
-      <img
-        alt="image 3"
-        key="image 3"
-        src="images/slide-3.jpg"
-        width={0}
-      />
-    </div>
+      <div
+        className="image-container"
+        style={
+          Object {
+            "transform": "translateX(0px)",
+            "transition": "transform .4s ease-in-out",
+          }
+        }
+      >
+        <Image
+          alt="image 1"
+          key="image 1"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="images/slide-1.jpg"
+        />
+        <Image
+          alt="image 2"
+          key="image 2"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="images/slide-2.jpg"
+        />
+        <Image
+          alt="image 3"
+          key="image 3"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="images/slide-3.jpg"
+        />
+      </div>
+    </Swiper>
   </div>
   <Icon
     color="lightgray"
@@ -56,11 +67,12 @@ exports[`snapshot 1`] = `
       Object {
         "cursor": "pointer",
         "maxWidth": 50,
-        "minWidth": 35,
+        "minWidth": 25,
+        "width": "7vw",
       }
     }
     value="arrowRight"
     width={60}
   />
-</main>
+</section>
 `;

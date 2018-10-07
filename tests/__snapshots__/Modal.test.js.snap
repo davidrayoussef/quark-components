@@ -27,7 +27,7 @@ exports[`snapshot 1`] = `
           "width": 100,
         }
       }
-      type="secondary"
+      styleType="secondary"
     >
       OK
     </Button>
