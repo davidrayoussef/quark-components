@@ -16,7 +16,7 @@ test('should render correct Button text', () => {
   expect(wrapper.text()).toBe('Button Text');
 });
 
-test('should add .primary class if no type is passed', () => {
+test('should add .primary class if no styleType is passed', () => {
   const wrapper = shallow(
     <Button>Button Text</Button>
   );
@@ -49,6 +49,41 @@ test('should add .danger class if styleType="danger"', () => {
     <Button styleType="danger">Button Text</Button>
   );
   expect(wrapper.find('.danger').length).toBe(1);
+});
+
+test('should add .small class if size="small"', () => {
+  const wrapper = shallow(
+    <Button size="small">Button Text</Button>
+  );
+  expect(wrapper.find('.small').length).toBe(1);
+});
+
+test('should add .normal class if size="normal"', () => {
+  const wrapper = shallow(
+    <Button size="normal">Button Text</Button>
+  );
+  expect(wrapper.find('.normal').length).toBe(1);
+});
+
+test('should add .large class if size="large"', () => {
+  const wrapper = shallow(
+    <Button size="large">Button Text</Button>
+  );
+  expect(wrapper.find('.large').length).toBe(1);
+});
+
+test('should render a button element if no component prop is passed', () => {
+  const wrapper = shallow(
+    <Button>Button Text</Button>
+  );
+  expect(wrapper.find('button').length).toBe(1);
+});
+
+test('should render an anchor tag if "a" is passed to component prop', () => {
+  const wrapper = shallow(
+    <Button component="a">Button Text</Button>
+  );
+  expect(wrapper.find('a').length).toBe(1);
 });
 
 test('snapshot', () => {
