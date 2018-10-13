@@ -57,6 +57,13 @@ exports[`snapshot 1`] = `
           onLoad={[Function]}
           src="images/slide-3.jpg"
         />
+        <Image
+          alt="image 4"
+          key="image 4"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="images/slide-4.jpg"
+        />
       </div>
     </Swiper>
   </div>

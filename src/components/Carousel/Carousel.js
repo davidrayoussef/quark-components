@@ -124,7 +124,7 @@ class Carousel extends Component {
       return (
         <section 
           className={style.wrapper} 
-          style={ !showArrows ? { 'gridTemplateColumns': '1fr' } : {} }
+          style={ !showArrows ? { gridTemplateColumns: '1fr' } : {} }
         >
           { showArrows
             ? <Icon

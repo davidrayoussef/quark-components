@@ -53,6 +53,10 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "!src/components/Docs/**"
     ]
   }
 }
