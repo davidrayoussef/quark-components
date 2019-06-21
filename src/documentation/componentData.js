@@ -17,7 +17,8 @@ export const componentData = [
         propName: 'name',
         propType: 'string',
         propDefault: null,
-        propDescription: 'The name attribute for the input, used to reference form data on submission.'
+        propDescription:
+          'The name attribute for the input, used to reference form data on submission.'
       },
       {
         propName: 'label',
@@ -61,13 +62,15 @@ export const componentData = [
         propName: 'component',
         propType: 'string',
         propDefault: 'button',
-        propDescription: 'The HTML element of the button, for example, if an anchor tag is needed rather than a button tag.'
+        propDescription:
+          'The HTML element of the button, for example, if an anchor tag is needed rather than a button tag.'
       }
     ]
   },
   {
     name: 'Card',
-    description: 'A block containing a short summary, such as a person\'s profile, usually used as a grid item.',
+    description:
+      "A block containing a short summary, such as a person's profile, usually used as a grid item.",
     component: Modules.CardExample,
     code: Modules.CardCode,
     propDescriptions: [
@@ -99,7 +102,8 @@ export const componentData = [
   },
   {
     name: 'Carousel',
-    description: 'A carousel/slider used to view images one at a time that slide horizontally into view.',
+    description:
+      'A carousel/slider used to view images one at a time that slide horizontally into view.',
     component: Modules.CarouselExample,
     code: Modules.CarouselCode,
     propDescriptions: [
@@ -130,8 +134,16 @@ export const componentData = [
     ]
   },
   {
+    name: 'DragAndDrop',
+    description: 'drag and drop',
+    component: Modules.DragAndDropExample,
+    code: Modules.DragAndDropCode,
+    propDescriptions: []
+  },
+  {
     name: 'Dropdown',
-    description: 'A hidden menu that appears on a button click, used for profile menus, additional settings, etc.',
+    description:
+      'A hidden menu that appears on a button click, used for profile menus, additional settings, etc.',
     component: Modules.DropdownExample,
     code: Modules.DropdownCode,
     propDescriptions: [
@@ -229,7 +241,8 @@ export const componentData = [
   },
   {
     name: 'HeaderBar',
-    description: 'A horizontal bar at the top of a page, used to present branding, a search box, and/or a navigation menu.',
+    description:
+      'A horizontal bar at the top of a page, used to present branding, a search box, and/or a navigation menu.',
     component: Modules.HeaderBarExample,
     code: Modules.HeaderBarCode,
     propDescriptions: [
@@ -263,7 +276,8 @@ export const componentData = [
   },
   {
     name: 'Image',
-    description: 'A replacement for the img tag, used to fallback to a default image to handle broken images.',
+    description:
+      'A replacement for the img tag, used to fallback to a default image to handle broken images.',
     component: Modules.ImageExample,
     code: Modules.ImageCode,
     propDescriptions: [
@@ -295,8 +309,9 @@ export const componentData = [
         propName: 'defaultSrc',
         propType: 'string',
         propDefault: null,
-        propDescription: 'The source url for a default image to use in the event that the original image doesn\'t load.'
-      }      
+        propDescription:
+          "The source url for a default image to use in the event that the original image doesn't load."
+      }
     ]
   },
   {
@@ -309,7 +324,8 @@ export const componentData = [
         propName: 'name',
         propType: 'string',
         propDefault: null,
-        propDescription: 'The name attribute for the input, used to reference form data on submission.'
+        propDescription:
+          'The name attribute for the input, used to reference form data on submission.'
       },
       {
         propName: 'label',
@@ -340,7 +356,7 @@ export const componentData = [
         propType: 'function',
         propDefault: null,
         propDescription: 'The function to run when the user enters text.'
-      }                              
+      }
     ]
   },
   {
@@ -444,7 +460,8 @@ export const componentData = [
         propName: 'linkDisabled',
         propType: 'boolean',
         propDefault: 'false',
-        propDescription: 'A boolean that specifies whether the links should be disabled with preventDefault().'
+        propDescription:
+          'A boolean that specifies whether the links should be disabled with preventDefault().'
       },
       {
         propName: 'data',
@@ -454,13 +471,6 @@ export const componentData = [
       }
     ]
   },
-  {
-    name: 'Notification',
-    description: 'Notification',
-    component: Modules.NotificationExample,
-    code: Modules.NotificationCode,
-    propDescriptions: []
-  },  
   {
     name: 'Share',
     description: 'A social sharing widget.',
@@ -541,7 +551,8 @@ export const componentData = [
         propName: 'tableData',
         propType: 'array',
         propDefault: null,
-        propDescription: 'An array of objects, with each object representing a row containing cell data.'
+        propDescription:
+          'An array of objects, with each object representing a row containing cell data.'
       }
     ]
   }

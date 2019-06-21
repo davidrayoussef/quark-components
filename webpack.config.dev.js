@@ -4,9 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-module-source-map',
-  entry: [
-    './src/main.js'
-  ],
+  entry: ['./src/main.js'],
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
@@ -18,10 +16,7 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-          'eslint-loader',
-        ]
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -36,11 +31,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: { localIdentName: '[name]_[local]_[hash:base64]' },
               importLoaders: 1,
-              localIdentName: '[name]_[local]_[hash:base64]',
-              sourceMap: true,
-              minimize: true
+              sourceMap: true
             }
           }
         ]
