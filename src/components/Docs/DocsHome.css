@@ -1,16 +1,18 @@
 .button-container {
+  display: grid;
   margin-top: auto;
 }
 
-.button-container a, .button-container button {
+.button-container a,
+.button-container button {
   display: block;
   margin-top: 20px;
 }
 
 .icon svg {
-  transition: fill .2s;
+  transition: fill 0.2s;
 }
 
 .icon svg:hover {
-  fill: rgba(0, 0, 0, .4);
+  fill: rgba(0, 0, 0, 0.4);
 }

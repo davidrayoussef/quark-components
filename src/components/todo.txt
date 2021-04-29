@@ -3,4 +3,5 @@ FilterSearch
 Tabs
 Gallery
 Article
-Autocomplete
+Accordion
+Tooltip

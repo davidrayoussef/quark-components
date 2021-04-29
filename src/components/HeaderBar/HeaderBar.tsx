@@ -1,0 +1,17 @@
+import React from 'react';
+
+import { HeaderBarProps } from '../../shared';
+
+import style from './HeaderBar.css';
+
+export const HeaderBar: React.FC<HeaderBarProps> = ({
+  children,
+  title
+}: HeaderBarProps) => {
+  return (
+    <header className={style.header}>
+      {title && <h1>{title}</h1>}
+      {children}
+    </header>
+  );
+};
