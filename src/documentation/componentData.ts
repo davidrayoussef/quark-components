@@ -1,35 +1,36 @@
 import * as Modules from './modules';
+import { PropType } from '../shared';
 
 export const componentData = [
   {
     name: 'AutoComplete',
     description:
-      'An input with typeahead functionality that displays type suggestions.',
+      'An input that displays suggestions based on a passed in array of values.',
     component: Modules.AutoCompleteExample,
     code: Modules.AutoCompleteCode,
     propDetails: [
       {
         propName: 'suggestions',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription: 'A list of items to use as suggestions.'
       },
       {
         propName: 'name',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription:
           'The name attribute for the input, used to reference form data on submission.'
       },
       {
         propName: 'label',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The text label above the input.'
       },
       {
         propName: 'value',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The initial value for the input field.'
       }
@@ -43,26 +44,26 @@ export const componentData = [
     propDetails: [
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The content inside the button.'
       },
       {
         propName: 'styleType',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'primary',
         propDescription:
           'The type of button (primary, secondary, reverse or danger).'
       },
       {
         propName: 'size',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'normal',
         propDescription: 'The size of the button (small, normal, large).'
       },
       {
         propName: 'component',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'button',
         propDescription:
           'The HTML element of the button, for example, if an anchor tag is needed rather than a button tag.'
@@ -78,25 +79,25 @@ export const componentData = [
     propDetails: [
       {
         propName: 'avatarSrc',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The source of the image.'
       },
       {
         propName: 'name',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The name or title of the card.'
       },
       {
         propName: 'description',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The description/summary of the card.'
       },
       {
         propName: 'linkSrc',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The url for a link on the card.'
       }
@@ -111,26 +112,26 @@ export const componentData = [
     propDetails: [
       {
         propName: 'images',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription:
           'An array of objects with a title property and an image src property.'
       },
       {
         propName: 'showArrows',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'true',
         propDescription: 'Use to show left and right navigation arrows.'
       },
       {
         propName: 'showDots',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'false',
         propDescription: 'Use to show navigation dots.'
       },
       {
         propName: 'useSwiper',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'true',
         propDescription: 'Use to add swipe functionality on mobile devices.'
       }
@@ -145,20 +146,20 @@ export const componentData = [
     propDetails: [
       {
         propName: 'label',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The text label for the dropdown button.'
       },
       {
         propName: 'data',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription:
           'An array of objects with a name and url property for the menu links.'
       },
       {
         propName: 'linksDisabled',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'false',
         propDescription: 'Set to true to disable anchor links.'
       }
@@ -172,19 +173,19 @@ export const componentData = [
     propDetails: [
       {
         propName: 'render',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'The render function.'
       },
       {
         propName: 'loader',
-        propType: 'component',
+        propType: PropType.Component,
         propDefault: undefined,
         propDescription: 'An optional Spinner/Loader component.'
       },
       {
         propName: 'url',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'normal',
         propDescription: 'The url to fetch.'
       }
@@ -198,13 +199,13 @@ export const componentData = [
     propDetails: [
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The form elements to render.'
       },
       {
         propName: 'onSubmit',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'The function to call on form submission.'
       }
@@ -219,19 +220,19 @@ export const componentData = [
     propDetails: [
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The grid items to be rendered.'
       },
       {
         propName: 'cols',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'repeat(auto-fit, minmax(200px, 1fr))',
         propDescription: 'The value for the grid-template-columns property.'
       },
       {
         propName: 'rows',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The value for the grid-template-rows property.'
       }
@@ -246,7 +247,7 @@ export const componentData = [
     propDetails: [
       {
         propName: 'title',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title text of the header.'
       }
@@ -261,14 +262,14 @@ export const componentData = [
     propDetails: [
       {
         propName: 'value',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription:
           'A lowercase string of the icon type (email, facebook, twitter).'
       },
       {
         propName: 'color',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'gray',
         propDescription:
           'A hex value, rgb value, or name for the fill color of the icon.'
@@ -284,32 +285,32 @@ export const componentData = [
     propDetails: [
       {
         propName: 'src',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The source url for the image.'
       },
       {
         propName: 'alt',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The alternative text description for the image.'
       },
       {
         propName: 'onLoad',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: '() => {}',
         propDescription: 'A callback to run after an image loads.'
       },
       {
         propName: 'onError',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: '() => {}',
         propDescription:
           'A callback to run when an error occurs loading the image.'
       },
       {
         propName: 'defaultSrc',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription:
           "The source url for a default image to use in the event that the original image doesn't load."
@@ -324,39 +325,39 @@ export const componentData = [
     propDetails: [
       {
         propName: 'name',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription:
           'The name attribute for the input, used to reference form data on submission.'
       },
       {
         propName: 'label',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The text label above the input.'
       },
       {
         propName: 'value',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The initial value for the input field.'
       },
       {
         propName: 'errorMessage',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'An error message to display when input is invalid.'
       },
       {
         propName: 'isValid',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'true',
         propDescription:
           'A boolean to indicate whether input entered is valid or not.'
       },
       {
         propName: 'onChange',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'The function to run when the user enters text.'
       }
@@ -371,7 +372,7 @@ export const componentData = [
     propDetails: [
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The images to lazy load.'
       }
@@ -386,13 +387,13 @@ export const componentData = [
     propDetails: [
       {
         propName: 'listTitle',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title of the list.'
       },
       {
         propName: 'data',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription: 'An array of the list items to render.'
       }
@@ -414,25 +415,25 @@ export const componentData = [
     propDetails: [
       {
         propName: 'title',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title of the modal.'
       },
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The content of the modal.'
       },
       {
         propName: 'isOpen',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: undefined,
         propDescription: 'A boolean to open or close the modal.'
       },
       {
         propName: 'handleClose',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'Callback function to close the modal.'
       }
@@ -447,32 +448,32 @@ export const componentData = [
     propDetails: [
       {
         propName: 'menuTitle',
-        propType: 'title',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title of the navigation menu.'
       },
       {
         propName: 'linkColor',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'rgb(52, 88, 226)',
         propDescription: 'The color of the link (named, hex, or rgb).'
       },
       {
         propName: 'linkType',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: 'anchorLink',
         propDescription: 'A standard anchor link or a React Router link.'
       },
       {
         propName: 'linkDisabled',
-        propType: 'boolean',
+        propType: PropType.Boolean,
         propDefault: 'false',
         propDescription:
           'A boolean that specifies whether the links should be disabled with preventDefault().'
       },
       {
         propName: 'data',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription: 'An array of menu items to render.'
       }
@@ -486,25 +487,25 @@ export const componentData = [
     propDetails: [
       {
         propName: 'shares',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription: 'An array of social network names.'
       },
       {
         propName: 'url',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The url to share.'
       },
       {
         propName: 'title',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The subject for email shares.'
       },
       {
         propName: 'text',
-        propType: 'string',
+        propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The text of the share.'
       }
@@ -519,26 +520,26 @@ export const componentData = [
     propDetails: [
       {
         propName: 'children',
-        propType: 'node',
+        propType: PropType.Node,
         propDefault: undefined,
         propDescription: 'The images to make swipable.'
       },
       {
         propName: 'threshold',
-        propType: 'number',
+        propType: PropType.Number,
         propDefault: '15',
         propDescription:
           'The amount in pixels needed to register a swipe action.'
       },
       {
         propName: 'onSwipeLeft',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'A callback to run after a left swipe.'
       },
       {
         propName: 'onSwipeRight',
-        propType: 'function',
+        propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'A callback to run after a right swipe.'
       }
@@ -553,13 +554,13 @@ export const componentData = [
     propDetails: [
       {
         propName: 'tableHeads',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription: 'An array of table column headings.'
       },
       {
         propName: 'tableData',
-        propType: 'array',
+        propType: PropType.Array,
         propDefault: undefined,
         propDescription:
           'An array of objects, with each object representing a row containing cell data.'

@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { DocsHome } from '../components/Docs/DocsHome';
 import { DocsExampleBlock } from '../components/Docs/DocsExampleBlock';
 
 import { componentData } from './componentData';
+
+import style from '../components/Docs/Docs.css';
 
 const renderRoutes = () => {
   return componentData.map(
@@ -13,7 +15,7 @@ const renderRoutes = () => {
         key={name}
         path={`/${name.toLowerCase()}`}
         render={() => (
-          <Fragment>
+          <div className={style.exampleContainer}>
             <DocsExampleBlock
               name={name}
               description={description}
@@ -22,7 +24,7 @@ const renderRoutes = () => {
               {component()}
             </DocsExampleBlock>
             {code()}
-          </Fragment>
+          </div>
         )}
       />
     )

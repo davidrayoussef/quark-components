@@ -34,7 +34,7 @@ export const DocsHome = (): React.ReactElement => (
   <Grid
     cols="repeat(auto-fill, minmax(250px, 1fr))"
     rows="auto"
-    style={{ margin: 10 }}
+    style={{ margin: 10, width: '100%' }}
   >
     {cards}
   </Grid>
