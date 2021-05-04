@@ -1,5 +1,5 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { DocsCodeBlockProps } from '../../shared';
@@ -13,13 +13,13 @@ export const DocsCodeBlock: React.FC<DocsCodeBlockProps> = ({
     <SyntaxHighlighter
       language="jsx"
       style={atomDark}
+      codeTagProps={{ style: { fontSize: '16px' } }}
       customStyle={{
-        fontSize: '1.1rem',
-        height: '100%',
-        padding: '0 30px 30px',
-        margin: 0,
         background: 'var(--primary)',
-        borderRadius: 0
+        borderRadius: 0,
+        height: '100%',
+        margin: 0,
+        padding: '0 30px 30px'
       }}
     >
       {children}
