@@ -4,8 +4,8 @@
   text-align: center;
   color: #faf9f9;
   cursor: pointer;
-  border: none;
-  transition: .2s;
+  border: 0;
+  transition: 0.2s;
   overflow: hidden;
 }
 
@@ -14,25 +14,25 @@
 }
 
 .primary:hover {
-  background: rgba(3, 169, 244, .8);
+  background: rgba(3, 169, 244, 0.8);
 }
 
 .secondary {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .secondary:hover {
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .reverse {
-  background: rgba(0, 0, 0, .020);
+  background: rgba(0, 0, 0, 0.02);
   color: #666;
-  box-shadow: inset 0 0 0 1.5px rgb(150, 203, 254);;
+  box-shadow: inset 0 0 0 1.5px rgb(150, 203, 254);
 }
 
 .reverse:hover {
-  background: rgba(0, 0, 0, .05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .danger {
@@ -40,21 +40,21 @@
 }
 
 .danger:hover {
-  background: rgba(244, 74, 56, .8);
+  background: rgba(244, 74, 56, 0.8);
 }
 
 .small {
-  font-size: .85rem;
-  padding: 10px;
+  font-size: 12px;
+  padding: 8px;
 }
 
 .normal {
-  font-size: 1rem;
-  padding: 15px 20px;
+  font-size: 15px;
+  padding: 10px 15px;
 }
 
 .large {
-  font-size: 1.5rem;
+  font-size: 16px;
   padding: 15px 20px;
 }
 
@@ -72,7 +72,7 @@
   left: 50%;
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, 0.15);
   opacity: 0;
   border-radius: 100%;
   transform: scale(1, 1) translate(-50%);
@@ -80,7 +80,7 @@
 }
 
 .button.reverse:after {
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 @keyframes ripple {
