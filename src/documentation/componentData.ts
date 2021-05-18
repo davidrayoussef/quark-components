@@ -29,6 +29,13 @@ export const componentData = [
         propDescription: 'The text label above the input.'
       },
       {
+        propName: 'placeholder',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription:
+          'The help text that appears in the field when no value is input.'
+      },
+      {
         propName: 'value',
         propType: PropType.String,
         propDefault: undefined,
@@ -73,33 +80,21 @@ export const componentData = [
   {
     name: 'Card',
     description:
-      "A block containing a short summary, such as a person's profile, usually used as a grid item.",
+      "A block containing a few short pieces of info, such as a person's profile.",
     component: Modules.CardExample,
     code: Modules.CardCode,
     propDetails: [
       {
-        propName: 'avatarSrc',
-        propType: PropType.String,
+        propName: 'children',
+        propType: PropType.Node,
         propDefault: undefined,
-        propDescription: 'The source of the image.'
+        propDescription: 'The content of the card.'
       },
       {
-        propName: 'name',
+        propName: 'title',
         propType: PropType.String,
         propDefault: undefined,
-        propDescription: 'The name or title of the card.'
-      },
-      {
-        propName: 'description',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The description/summary of the card.'
-      },
-      {
-        propName: 'linkSrc',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The url for a link on the card.'
+        propDescription: 'An optional header/title for the card.'
       }
     ]
   },

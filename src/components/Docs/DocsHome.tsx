@@ -14,9 +14,9 @@ const cards = componentData.map(
     <Card
       key={name}
       style={{ background: 'white', maxWidth: 'unset', position: 'relative' }}
-      title={name}
-      description={description}
     >
+      <h3>{name}</h3>
+      <div>{description}</div>
       <div className={style.buttonContainer}>
         <a
           className={style.icon}

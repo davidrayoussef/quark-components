@@ -32,11 +32,9 @@ export interface LinkButtonProps extends ButtonProps, RouteComponentProps {
 }
 
 export interface CardProps {
-  children?: React.ReactNode;
-  avatarSrc?: string;
-  description?: string;
-  style?: React.CSSProperties;
+  children: React.ReactNode;
   title?: string;
+  style?: React.CSSProperties;
 }
 
 export interface CarouselProps {
