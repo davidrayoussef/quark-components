@@ -140,23 +140,31 @@ export const componentData = [
     code: Modules.DropdownCode,
     propDetails: [
       {
-        propName: 'label',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The text label for the dropdown button.'
-      },
-      {
         propName: 'data',
         propType: PropType.Array,
         propDefault: undefined,
         propDescription:
-          'An array of objects with a name and url property for the menu links.'
+          'An array of objects with a label and value property for the menu items.'
       },
       {
-        propName: 'linksDisabled',
-        propType: PropType.Boolean,
-        propDefault: 'false',
-        propDescription: 'Set to true to disable anchor links.'
+        propName: 'defaultLabel',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription:
+          'The text label for the dropdown button before an item is selected.'
+      },
+      {
+        propName: 'width',
+        propType: PropType.String,
+        propDefault: '200px',
+        propDescription: 'Width of the dropdown container.'
+      },
+      {
+        propName: 'onMenuItemClick',
+        propType: PropType.Function,
+        propDefault: undefined,
+        propDescription:
+          'An optional callback executed when a menu item is clicked.'
       }
     ]
   },

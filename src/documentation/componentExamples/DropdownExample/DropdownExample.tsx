@@ -3,12 +3,17 @@ import React from 'react';
 import { Dropdown } from '../../../components/Dropdown';
 
 const data = [
-  { name: 'Profile' },
-  { name: 'Settings' },
-  { name: 'Help' },
-  { name: 'Log Out' }
+  { label: 'Stocks', value: 'stocks' },
+  { label: 'Bonds', value: 'bonds' },
+  { label: 'Etfs', value: 'etfs' },
+  { label: 'Options', value: 'options' },
+  { label: 'Cryptocurrencies', value: 'cryptocurrencies' }
 ];
 
 export const DropdownExample = (): React.ReactElement => (
-  <Dropdown label="Dropdown Label" data={data} linksDisabled />
+  <Dropdown
+    data={data}
+    defaultLabel="Investment Types"
+    onMenuItemClick={item => console.log(item)}
+  />
 );

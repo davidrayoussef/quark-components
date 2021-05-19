@@ -7,16 +7,17 @@ import React from 'react';
 import { Dropdown } from 'quark-components';
 
 const data = [
-  { name: 'Profile' },
-  { name: 'Settings' },
-  { name: 'Help' },
-  { name: 'Log Out' }
+  { label: 'Stocks', value: 'stocks' },
+  { label: 'Bonds', value: 'bonds' },
+  { label: 'Etfs', value: 'etfs' },
+  { label: 'Options', value: 'options' },
+  { label: 'Cryptocurrencies', value: 'cryptocurrencies' }
 ];
 
-<Dropdown
-  label="Dropdown Label"
+<Dropdown 
   data={data}
-  linksDisabled
+  defaultLabel="Investment Types"
+  onMenuItemClick={item => console.log(item)}
 />
 `;
 

@@ -10,11 +10,8 @@ export class Dropdown extends Component<DropdownProps, DropdownState> {
   dropdownElement: React.RefObject<HTMLDivElement> = React.createRef();
 
   state: Readonly<DropdownState> = {
-    isOpen: false
-  };
-
-  static defaultProps = {
-    linksDisabled: false
+    isOpen: false,
+    selectedItem: undefined
   };
 
   componentDidMount(): void {
@@ -40,32 +37,57 @@ export class Dropdown extends Component<DropdownProps, DropdownState> {
     }
   };
 
-  handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>): void => {
-    if (this.props.linksDisabled) {
-      event.preventDefault();
-    }
+  handleMenuItemClick = ({
+    label,
+    value
+  }: {
+    label: string;
+    value: string;
+  }): void => {
+    this.setState(
+      {
+        selectedItem: { label, value },
+        isOpen: false
+      },
+      () => {
+        this.props.onMenuItemClick?.({ label, value });
+      }
+    );
   };
 
   render(): JSX.Element {
-    const { isOpen } = this.state;
-    const { label, data } = this.props;
-    const menuItems = data.map(({ name, url, linkDisabled }) => (
-      <a
-        key={name}
-        href={url && !linkDisabled ? url : '#'}
-        onClick={this.handleLinkClick}
-      >
-        {name}
-      </a>
-    ));
-
+    const { isOpen, selectedItem } = this.state;
+    const { defaultLabel, data, width = '200px' } = this.props;
+    const selectedLabel = selectedItem?.label;
     return (
-      <div className={style.dropdown} ref={this.dropdownElement}>
+      <div
+        className={style.dropdown}
+        style={{ width }}
+        ref={this.dropdownElement}
+      >
         <div className={style.label} onClick={this.toggleMenu}>
-          <span>{label}</span>
-          <Icon value="arrowDown" color="#BBB" width="15" />
+          <span>{selectedLabel ?? defaultLabel}</span>
+          <Icon
+            value="arrowDown"
+            color="#BBB"
+            width="15"
+            className={isOpen ? style.flip : ''}
+          />
         </div>
-        <ul className={isOpen ? style.show : ''}>{menuItems}</ul>
+        <ul className={isOpen ? style.show : ''}>
+          {data.map(({ label, value }) => (
+            <button
+              key={value}
+              className={label === selectedLabel ? style.selected : ''}
+              onClick={this.handleMenuItemClick.bind(undefined, {
+                label,
+                value
+              })}
+            >
+              {label}
+            </button>
+          ))}
+        </ul>
       </div>
     );
   }

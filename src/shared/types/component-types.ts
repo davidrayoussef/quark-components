@@ -103,18 +103,19 @@ export interface PropDetail {
 
 export interface DropdownProps {
   data: DropdownItem[];
-  label?: string;
-  linksDisabled?: boolean;
+  defaultLabel?: string;
+  width?: string;
+  onMenuItemClick?: VoidFunction;
 }
 
 export interface DropdownItem {
-  name: string;
-  url?: string;
-  linkDisabled?: boolean;
+  label: string;
+  value: string;
 }
 
 export interface DropdownState {
   isOpen: boolean;
+  selectedItem: { label: string; value: string } | undefined;
 }
 
 export interface FetcherProps {

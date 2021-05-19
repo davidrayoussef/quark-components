@@ -8,20 +8,21 @@
 
 .menuTitle {
   margin: 25px 25px 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 100;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .nav a {
   border-left: var(--border-width) solid transparent;
   text-decoration: none;
   padding: 10px calc(25px - var(--border-width));
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 @media (max-width: 1200px) {
