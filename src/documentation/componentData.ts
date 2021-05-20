@@ -175,12 +175,6 @@ export const componentData = [
     code: Modules.FetcherCode,
     propDetails: [
       {
-        propName: 'render',
-        propType: PropType.Function,
-        propDefault: undefined,
-        propDescription: 'The render function.'
-      },
-      {
         propName: 'loader',
         propType: PropType.Component,
         propDefault: undefined,

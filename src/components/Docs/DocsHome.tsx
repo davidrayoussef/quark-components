@@ -13,7 +13,12 @@ const cards = componentData.map(
   ({ name, description }: { name: string; description: string }) => (
     <Card
       key={name}
-      style={{ background: 'white', maxWidth: 'unset', position: 'relative' }}
+      style={{
+        background: 'white',
+        maxWidth: 'unset',
+        position: 'relative',
+        boxShadow: 'none'
+      }}
     >
       <h3>{name}</h3>
       <div>{description}</div>
