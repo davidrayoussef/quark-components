@@ -4,16 +4,10 @@ import { DocsCodeBlock } from '../../../components/Docs';
 
 const code = `
 import React, { Component } from 'react';
-import { Form } from 'quark-components';
-import { Input } from 'quark-components';
-import { Select } from 'quark-components';
-import { CheckBox } from 'quark-components';
-import { Button } from 'quark-components';
+import { Form, Input, Select, CheckBox, Button } from 'quark-components';
 
 class AppExample extends Component {
-  state = {
-    ...this.getInitialState()
-  };
+  state = this.getInitialState()
 
   getInitialState() {
     return {
@@ -25,16 +19,15 @@ class AppExample extends Component {
     };
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  handleCheckBox = (e) => {
+  handleCheckBox = e => {
     const { favorites } = this.state;
     const newValue = e.target.value;
-
     this.setState({
       favorites: favorites.includes(newValue) 
         ? favorites.filter(v => v !== newValue)
@@ -42,11 +35,9 @@ class AppExample extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
-
     const { firstName, lastName, gender, favorites } = this.state;
-
     this.setState({
       formValues: {
         firstName,
@@ -57,9 +48,8 @@ class AppExample extends Component {
     });
   };
 
-  handleClear = (e) => {
+  handleClear = e => {
     e.preventDefault();
-
     this.setState(
       this.getInitialState()
     );
@@ -67,7 +57,6 @@ class AppExample extends Component {
 
   render() {
     const { firstName, lastName, gender, favorites, formValues } = this.state;
-
     return (
       <Form onSubmit={this.handleSubmit}>
         <Input

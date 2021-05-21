@@ -57,7 +57,7 @@ class AppExample extends Component<{}, FormExampleState> {
     this.setState(this.getInitialState());
   };
 
-  render() {
+  render(): JSX.Element {
     const { firstName, lastName, gender, favorites, formValues } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
@@ -84,7 +84,6 @@ class AppExample extends Component<{}, FormExampleState> {
           onChange={this.handleChange}
         />
         <CheckBox
-          className={style.favorites}
           name="favorites"
           label="FAVORITE FRAMEWORKS"
           options={['React', 'Angular', 'Vue']}

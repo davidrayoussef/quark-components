@@ -1,18 +1,9 @@
-.favorites {
-  margin: 20px 0;
-}
-
-.button-group {
-  margin: 20px 0 10px;
-}
-
 .button-group button {
   margin-right: 10px;
 }
 
 .results {
-  margin-top: 20px;
-  color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .results h3 {
