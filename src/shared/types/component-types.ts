@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { SVGProps } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
 import { ButtonSize, ButtonType } from '../constants';
@@ -144,15 +144,11 @@ export interface GridProps {
 export interface HeaderBarProps {
   children?: React.ReactNode;
   title?: string;
+  navLinks?: React.ReactNode[];
 }
 
-export interface IconProps {
+export interface IconProps extends SVGProps<SVGSVGElement> {
   value: string;
-  className?: string;
-  color?: string;
-  style?: React.CSSProperties;
-  width?: number | string;
-  onClick?: VoidFunction;
 }
 
 export interface ImageProps {

@@ -6,11 +6,13 @@ import style from './HeaderBar.css';
 
 export const HeaderBar: React.FC<HeaderBarProps> = ({
   children,
-  title
+  title,
+  navLinks
 }: HeaderBarProps) => {
   return (
     <header className={style.header}>
       {title && <h1>{title}</h1>}
+      {navLinks && <nav className={style.nav}>{navLinks}</nav>}
       {children}
     </header>
   );

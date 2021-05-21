@@ -247,6 +247,19 @@ export const componentData = [
         propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title text of the header.'
+      },
+      {
+        propName: 'navLinks',
+        propType: PropType.Array,
+        propDefault: undefined,
+        propDescription:
+          'An optional array of anchor tags or React Router Links for a navigation bar.'
+      },
+      {
+        propName: 'children',
+        propType: PropType.Node,
+        propDefault: undefined,
+        propDescription: 'Optional right-aligned content.'
       }
     ]
   },

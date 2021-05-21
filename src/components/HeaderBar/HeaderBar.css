@@ -4,7 +4,7 @@
   width: 100%;
   height: 57px;
   padding: 15px;
-  color: #EEE;
+  color: #eee;
   background: var(--primary);
   z-index: 1;
 }
@@ -18,4 +18,20 @@
 .header a {
   color: unset;
   text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.nav a {
+  transition: all 0.15s;
+}
+
+.nav a:hover {
+  background: none;
+  color: var(--secondary);
 }
