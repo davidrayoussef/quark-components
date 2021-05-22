@@ -130,6 +130,7 @@ export interface FetcherState {
 
 export interface FormProps {
   children: React.ReactNode;
+  style?: React.CSSProperties;
   onSubmit: VoidFunction;
 }
 

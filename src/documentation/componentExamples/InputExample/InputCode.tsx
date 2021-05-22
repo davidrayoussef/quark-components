@@ -4,13 +4,8 @@ import { DocsCodeBlock } from '../../../components/Docs';
 
 const code = `
 import React, { Component } from 'react';
-import { Input } from 'quark-components';
-import { Button } from 'quark-components';
-import { 
-  validateUsername, 
-  validatePassword, 
-  validateEmail
-} from './utils';
+import { Input, Button, Form } from 'quark-components';
+import { validateUsername, validatePassword, validateEmail } from './utils';
 
 class AppExample extends Component {
   state = {
@@ -25,13 +20,13 @@ class AppExample extends Component {
     formValues: {}
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  handleBlur = (e) => {
+  handleBlur = e => {
     this.setState({
       touched: {
         ...this.state.touched,
@@ -40,11 +35,9 @@ class AppExample extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
-
     const { username, password, email } = this.state;
-
     this.setState({
       formValues: {
         username,
@@ -62,9 +55,8 @@ class AppExample extends Component {
       email: validateEmail(email)
     };
     const isDisabled = !Object.values(isValid).every(Boolean);
-
     return (
-      <form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Input
           name="username"
           label="USERNAME"
@@ -99,13 +91,15 @@ class AppExample extends Component {
         <Button type="submit" disabled={isDisabled}>
           Submit
         </Button>
-        {
-          Object.keys(formValues).length ? <div className={style.results}>
+        {Object.keys(formValues).length && (
+          <div className={style.results}>
             <h3>Submitted values:</h3>
-            <p><code>{JSON.stringify(formValues)}</code></p>
-          </div> : null
-        }
-      </form>
+            <p>
+              <code>{JSON.stringify(formValues)}</code>
+            </p>
+          </div>
+        )}
+      </Form>
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Input } from '../../../components/Input';
 import { Button } from '../../../components/Button';
+import { Form } from '../../../components/Form';
 import {
   validateUsername,
   validatePassword,
@@ -60,7 +61,7 @@ class AppExample extends Component {
     const isDisabled = !Object.values(isValid).every(Boolean);
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} style={{ gridGap: '.7rem' }}>
         <Input
           name="username"
           label="USERNAME"
@@ -92,18 +93,18 @@ class AppExample extends Component {
           onChange={this.handleChange}
           onBlur={this.handleBlur}
         />
-        <Button type="submit" disabled={isDisabled}>
+        <Button type="submit" disabled={isDisabled} style={{ width: '75px' }}>
           Submit
         </Button>
-        {Object.keys(formValues).length ? (
+        {Object.keys(formValues).length !== 0 && (
           <div className={style.results}>
             <h3>Submitted values:</h3>
             <p>
               <code>{JSON.stringify(formValues)}</code>
             </p>
           </div>
-        ) : null}
-      </form>
+        )}
+      </Form>
     );
   }
 }
