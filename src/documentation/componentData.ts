@@ -280,7 +280,7 @@ export const componentData = [
       {
         propName: 'color',
         propType: PropType.String,
-        propDefault: 'gray',
+        propDefault: '#bfbfbf (gray)',
         propDescription:
           'A hex value, rgb value, or name for the fill color of the icon.'
       }

@@ -4,12 +4,19 @@ import { Icon } from '../../../components/Icon';
 import { Grid } from '../../../components/Grid';
 
 export const IconExample = (): React.ReactElement => (
-  <Grid cols={'repeat(auto-fit, minmax(100px, 1fr))'}>
-    <Icon value="email" color="gray" />
-    <Icon value="facebook" color="#3B5998" />
-    <Icon value="github" color="#24292e" />
-    <Icon value="reddit" color="rgb(255, 69, 0)" />
-    <Icon value="twitter" color="rgb(85, 172, 238)" />
-    <Icon value="youtube" color="rgb(205, 32, 31)" />
+  <Grid
+    cols="repeat(auto-fill, minmax(50px, 1fr))"
+    style={{ alignItems: 'center' }}
+  >
+    <Icon value="arrowRight" width="20" />
+    <Icon value="arrowDown" width="20" />
+    <Icon value="close" width="25" />
+    <Icon value="email" width="30" />
+    <Icon value="facebook" width="30" />
+    <Icon value="github" width="30" />
+    <Icon value="menu" width="30" viewBox="0 0 30 30" />
+    <Icon value="reddit" width="30" />
+    <Icon value="twitter" width="30" />
+    <Icon value="youtube" width="30" />
   </Grid>
 );

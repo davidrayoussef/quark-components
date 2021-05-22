@@ -14,6 +14,6 @@ export const DropdownExample = (): React.ReactElement => (
   <Dropdown
     data={data}
     defaultLabel="Investment Types"
-    onMenuItemClick={item => console.log(item)}
+    onMenuItemClick={item => console.log(item)} // eslint-disable-line no-console
   />
 );
