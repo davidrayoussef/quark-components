@@ -300,6 +300,13 @@ export const componentData = [
         propDescription: 'The source url for the image.'
       },
       {
+        propName: 'defaultSrc',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription:
+          "The source url for a default image to use in the event that the original image doesn't load."
+      },
+      {
         propName: 'alt',
         propType: PropType.String,
         propDefault: undefined,
@@ -308,22 +315,15 @@ export const componentData = [
       {
         propName: 'onLoad',
         propType: PropType.Function,
-        propDefault: '() => {}',
+        propDefault: undefined,
         propDescription: 'A callback to run after an image loads.'
       },
       {
         propName: 'onError',
         propType: PropType.Function,
-        propDefault: '() => {}',
-        propDescription:
-          'A callback to run when an error occurs loading the image.'
-      },
-      {
-        propName: 'defaultSrc',
-        propType: PropType.String,
         propDefault: undefined,
         propDescription:
-          "The source url for a default image to use in the event that the original image doesn't load."
+          'A callback to run when an error occurs loading the image.'
       }
     ]
   },

@@ -8,10 +8,10 @@ import { Image } from 'quark-components';
 
 <Image 
   src="http://www.example.com/nonexistent-image-link.jpg"
-  alt="Description of image"
   defaultSrc="images/default-image.jpg"
-  onError={() => console.error('Original image failed to load.')}
-  onLoad={() => console.log('Image loaded.')}
+  alt="Description of image"
+  onError={() => alert('Original image failed to load.')}
+  onLoad={() => alert('Image loaded.')}
 />
 `;
 

@@ -7,11 +7,6 @@ export class Image extends Component<ImageProps, ImageState> {
     imgSrc: this.props.src
   };
 
-  static defaultProps: Pick<ImageProps, 'onLoad' | 'onError'> = {
-    onLoad: () => {},
-    onError: () => {}
-  };
-
   handleError = (): void => {
     const { defaultSrc, onError } = this.props;
     this.setState({ imgSrc: defaultSrc ?? '' }, onError);
