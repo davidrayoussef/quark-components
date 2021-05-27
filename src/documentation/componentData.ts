@@ -208,33 +208,33 @@ export const componentData = [
       }
     ]
   },
-  {
-    name: 'Grid',
-    description:
-      'A wrapper component that lays out its children using CSS Grid.',
-    component: Modules.GridExample,
-    code: Modules.GridCode,
-    propDetails: [
-      {
-        propName: 'children',
-        propType: PropType.Node,
-        propDefault: undefined,
-        propDescription: 'The grid items to be rendered.'
-      },
-      {
-        propName: 'cols',
-        propType: PropType.String,
-        propDefault: 'repeat(auto-fit, minmax(200px, 1fr))',
-        propDescription: 'The value for the grid-template-columns property.'
-      },
-      {
-        propName: 'rows',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The value for the grid-template-rows property.'
-      }
-    ]
-  },
+  // {
+  //   name: 'Grid',
+  //   description:
+  //     'A wrapper component that lays out its children using CSS Grid.',
+  //   component: Modules.GridExample,
+  //   code: Modules.GridCode,
+  //   propDetails: [
+  //     {
+  //       propName: 'children',
+  //       propType: PropType.Node,
+  //       propDefault: undefined,
+  //       propDescription: 'The grid items to be rendered.'
+  //     },
+  //     {
+  //       propName: 'cols',
+  //       propType: PropType.String,
+  //       propDefault: 'repeat(auto-fit, minmax(200px, 1fr))',
+  //       propDescription: 'The value for the grid-template-columns property.'
+  //     },
+  //     {
+  //       propName: 'rows',
+  //       propType: PropType.String,
+  //       propDefault: undefined,
+  //       propDescription: 'The value for the grid-template-rows property.'
+  //     }
+  //   ]
+  // },
   {
     name: 'HeaderBar',
     description:
@@ -283,6 +283,12 @@ export const componentData = [
         propDefault: '#bfbfbf (gray)',
         propDescription:
           'A hex value, rgb value, or name for the fill color of the icon.'
+      },
+      {
+        propName: 'width',
+        propType: PropType.String,
+        propDefault: '20',
+        propDescription: 'The width of the icon in pixels.'
       }
     ]
   },
@@ -390,13 +396,12 @@ export const componentData = [
   },
   {
     name: 'List',
-    description:
-      'A list of multiple items, presented either vertically or horizontally.',
+    description: 'A vertical list of multiple items.',
     component: Modules.ListExample,
     code: Modules.ListCode,
     propDetails: [
       {
-        propName: 'listTitle',
+        propName: 'title',
         propType: PropType.String,
         propDefault: undefined,
         propDescription: 'The title of the list.'
@@ -427,7 +432,7 @@ export const componentData = [
         propName: 'title',
         propType: PropType.String,
         propDefault: undefined,
-        propDescription: 'The title of the modal.'
+        propDescription: 'The title of the modal content.'
       },
       {
         propName: 'children',

@@ -10,7 +10,7 @@ import { Share } from 'quark-components';
   shares={['twitter', 'facebook', 'email']} 
   url={window.location}
   title={document.title}
-  text={\`${document.title}: A library of React UI components.\`}
+  text="Quark Components: A library of React UI components."
 />
 `;
 

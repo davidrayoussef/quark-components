@@ -186,7 +186,7 @@ export interface LazyLoadState {
 }
 
 export interface ListProps {
-  data: string[] | { name: string }[];
+  data: string[];
   title?: string;
 }
 

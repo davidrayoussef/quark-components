@@ -9,11 +9,11 @@ import { List } from 'quark-components';
 <List
   title="List Items"
   data={[
-    { name: 'List Item 1' },
-    { name: 'List Item 2' },
-    { name: 'List Item 3' },
-    { name: 'List Item 4' },
-    { name: 'List Item 5' }
+    'List Item 1',
+    'List Item 2',
+    'List Item 3',
+    'List Item 4',
+    'List Item 5'
   ]}
 />
 `;

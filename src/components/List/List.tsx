@@ -9,8 +9,7 @@ export const List: React.VFC<ListProps> = ({ title, data }: ListProps) => {
     <Fragment>
       <h3 className={style.listTitle}>{title}</h3>
       <ul className={style.list}>
-        {data.map((item: string | { name: string }) => {
-          item = typeof item === 'string' ? item : item.name;
+        {data.map((item: string) => {
           return <li key={item}>{item}</li>;
         })}
       </ul>

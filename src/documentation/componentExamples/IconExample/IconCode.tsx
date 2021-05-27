@@ -10,13 +10,13 @@ import { Icon, Grid } from 'quark-components';
   <Icon value="arrowRight" width="20" />
   <Icon value="arrowDown" width="20" />
   <Icon value="close" width="25" />
-  <Icon value="email" width="30" />
-  <Icon value="facebook" width="30" />
-  <Icon value="github" width="30" />
-  <Icon value="menu" width="30" />
-  <Icon value="reddit" width="30" />
-  <Icon value="twitter" width="30" />
-  <Icon value="youtube" width="30" />
+  <Icon value="email" />
+  <Icon value="facebook" />
+  <Icon value="github" />
+  <Icon value="menu" />
+  <Icon value="reddit" />
+  <Icon value="twitter" />
+  <Icon value="youtube" />
 </Grid>
 `;
 

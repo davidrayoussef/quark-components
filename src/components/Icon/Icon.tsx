@@ -6,7 +6,7 @@ import { IconProps } from '../../shared';
 export const Icon: React.VFC<IconProps> = ({
   value,
   color = '#bfbfbf',
-  width = 60,
+  width = 30,
   ...rest
 }: IconProps) => {
   return (
