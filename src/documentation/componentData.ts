@@ -423,6 +423,33 @@ export const componentData = [
     propDetails: []
   },
   {
+    name: 'Menu',
+    description: 'An accordion menu used for navigation.',
+    component: Modules.MenuExample,
+    code: Modules.MenuCode,
+    propDetails: [
+      {
+        propName: 'children',
+        propType: PropType.Node,
+        propDefault: undefined,
+        propDescription:
+          'The contents of the Menu, consisting of several Menu.Item components and an optional Menu.SubMenu.'
+      },
+      {
+        propName: 'onMenuItemClick',
+        propType: PropType.Function,
+        propDefault: undefined,
+        propDescription: 'Callback function called when a menu item is clicked.'
+      },
+      {
+        propName: 'menuItem',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription: 'ID and label for top-level menu item.'
+      }
+    ]
+  },
+  {
     name: 'Modal',
     description: 'A pop-in box used to present information center-screen.',
     component: Modules.ModalExample,
@@ -451,46 +478,6 @@ export const componentData = [
         propType: PropType.Function,
         propDefault: undefined,
         propDescription: 'Callback function to close the modal.'
-      }
-    ]
-  },
-  {
-    name: 'NavMenu',
-    description:
-      'A list of navigation links, presented either vertically or horizontally.',
-    component: Modules.NavMenuExample,
-    code: Modules.NavMenuCode,
-    propDetails: [
-      {
-        propName: 'menuTitle',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The title of the navigation menu.'
-      },
-      {
-        propName: 'linkColor',
-        propType: PropType.String,
-        propDefault: 'rgb(52, 88, 226)',
-        propDescription: 'The color of the link (named, hex, or rgb).'
-      },
-      {
-        propName: 'linkType',
-        propType: PropType.String,
-        propDefault: 'anchorLink',
-        propDescription: 'A standard anchor link or a React Router link.'
-      },
-      {
-        propName: 'linkDisabled',
-        propType: PropType.Boolean,
-        propDefault: 'false',
-        propDescription:
-          'A boolean that specifies whether the links should be disabled with preventDefault().'
-      },
-      {
-        propName: 'data',
-        propType: PropType.Array,
-        propDefault: undefined,
-        propDescription: 'An array of menu items to render.'
       }
     ]
   },

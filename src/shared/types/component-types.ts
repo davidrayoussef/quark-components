@@ -190,6 +190,25 @@ export interface ListProps {
   title?: string;
 }
 
+export interface MenuProps {
+  children: React.ReactNode;
+  onMenuItemClick: VoidFunction;
+}
+
+export interface MenuState {
+  expanded: string;
+}
+
+export interface MenuItemProps {
+  children: React.ReactNode;
+  menuItem: string;
+}
+
+export interface SubMenuProps {
+  children: React.ReactNode;
+  menuItem?: string;
+}
+
 export interface ModalProps {
   children: React.ReactNode;
   isOpen: boolean;
@@ -207,6 +226,10 @@ export interface NavMenuProps {
   mobileStyles?: React.CSSProperties;
   handleMobileLinkClick?: VoidFunction;
   path?: string;
+}
+
+export interface NavMenuState {
+  expanded: string | undefined;
 }
 
 export interface NavMenuWithMobileProps extends NavMenuWithMobileState {

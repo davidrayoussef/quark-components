@@ -1,0 +1,30 @@
+.menu-item {
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-item > span {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.1s;
+  height: 50px;
+  text-indent: 1rem;
+}
+
+.menu-item > span:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.menu-item a {
+  text-decoration: none;
+}
+
+.menu-item svg {
+  margin: 0 1rem 0 auto;
+  transition: transform 0.2s;
+}
+
+.menu-item.expanded svg {
+  transform: rotate(-180deg);
+}
