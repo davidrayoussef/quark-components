@@ -1,0 +1,9 @@
+.logo {
+  margin-right: 5px;
+  & .circles {
+    fill: rgb(175, 189, 243);
+  }
+  & .edges {
+    fill: rgb(113, 208, 251);
+  }
+}

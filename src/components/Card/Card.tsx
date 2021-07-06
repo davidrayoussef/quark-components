@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CardProps } from '../../shared';
 
-import style from './Card.css';
+import style from './Card.scss';
 
 export const Card: React.FC<CardProps> = ({
   children,

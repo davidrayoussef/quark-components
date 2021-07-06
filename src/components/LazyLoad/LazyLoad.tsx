@@ -2,7 +2,7 @@ import React, { Component, ReactElement } from 'react';
 
 import { LazyLoadProps, LazyLoadState } from '../../shared';
 
-import style from './LazyLoad.css';
+import style from './LazyLoad.scss';
 
 export class LazyLoad extends Component<LazyLoadProps, LazyLoadState> {
   imgContainerElement: React.RefObject<HTMLDivElement> = React.createRef();

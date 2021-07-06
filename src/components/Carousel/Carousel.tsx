@@ -7,7 +7,7 @@ import { Swiper } from '../Swiper';
 
 import { CarouselProps, CarouselState, SwiperProps } from '../../shared';
 
-import style from './Carousel.css';
+import style from './Carousel.scss';
 
 export class Carousel extends Component<CarouselProps, CarouselState> {
   imageContainerElement: React.RefObject<HTMLDivElement> = React.createRef();
@@ -113,7 +113,7 @@ export class Carousel extends Component<CarouselProps, CarouselState> {
     } else Component = Fragment;
     return renderedImages.length ? (
       <section
-        className={style.wrapper}
+        className={style.carousel}
         style={!showArrows ? { gridTemplateColumns: '1fr' } : {}}
       >
         {showArrows && (

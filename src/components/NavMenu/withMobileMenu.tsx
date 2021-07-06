@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 
 import { NavMenuProps, NavMenuWithMobileState } from '../../shared';
 
-import style from './withMobile.css';
+import style from './withMobile.scss';
 
 export const withMobileMenu = (
   Component: React.ComponentClass<NavMenuProps>

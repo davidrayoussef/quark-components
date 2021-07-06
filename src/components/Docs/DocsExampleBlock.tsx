@@ -4,7 +4,7 @@ import { Table } from '../Table';
 
 import { DocsExampleBlockProps } from '../../shared';
 
-import style from './DocsExampleBlock.css';
+import style from './DocsExampleBlock.scss';
 
 export const DocsExampleBlock: React.FC<DocsExampleBlockProps> = ({
   name,

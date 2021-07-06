@@ -25,13 +25,11 @@
   align-items: center;
   gap: 1rem;
   margin: 0 auto;
-}
-
-.nav a {
-  transition: all 0.15s;
-}
-
-.nav a:hover {
-  background: none;
-  color: var(--secondary);
+  & a {
+    transition: all 0.15s;
+    &:hover {
+      background: none;
+      color: var(--secondary);
+    }
+  }
 }

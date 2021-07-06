@@ -4,7 +4,7 @@ import { Input } from '../Input';
 
 import { AutoCompleteProps, AutoCompleteState } from '../../shared';
 
-import style from './AutoComplete.css';
+import style from './AutoComplete.scss';
 
 export class AutoComplete extends Component<
   AutoCompleteProps,

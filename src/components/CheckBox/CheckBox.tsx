@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CheckBoxProps } from '../../shared';
 
-import style from './CheckBox.css';
+import style from './CheckBox.scss';
 
 export const CheckBox: React.VFC<CheckBoxProps> = ({
   name,

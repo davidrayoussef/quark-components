@@ -8,11 +8,11 @@ import {
   isMobile
 } from '../../utilities';
 
-import style from './NavMenu.css';
+import style from './NavMenu.scss';
 
 export class NavMenu extends Component<NavMenuProps> {
   static defaultProps = {
-    linkColor: 'rgb(52, 88, 226)',
+    linkColor: 'rgb(52, 122, 226)',
     linkType: 'anchorLink',
     linkDisabled: false
   };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { TableProps } from '../../shared';
 
-import style from './Table.css';
+import style from './Table.scss';
 
 export const Table: React.VFC<TableProps> = ({
   tableHeads,
@@ -11,7 +11,7 @@ export const Table: React.VFC<TableProps> = ({
   const heads =
     tableHeads &&
     tableHeads.map(tableHead => <th key={tableHead}>{tableHead}</th>);
-  // HANDLE RESIZE
+  //TODO: HANDLE RESIZE
   const data = tableData.map(tableRow => (
     <tr key={JSON.stringify(tableRow)}>
       {Object.keys(tableRow).map((key, index) => {

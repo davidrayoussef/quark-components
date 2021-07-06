@@ -5,7 +5,7 @@ import { Icon } from '../../Icon';
 import { MenuContext } from '../Menu';
 import { MenuItemProps } from '../../../shared';
 
-import style from './MenuItem.css';
+import style from './MenuItem.scss';
 
 export const MenuItem: React.FC<MenuItemProps> = ({
   children,

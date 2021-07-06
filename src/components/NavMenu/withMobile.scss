@@ -1,0 +1,29 @@
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 12px;
+  right: 0;
+  z-index: 2;
+  & path {
+    transition: 0.15s ease-in-out;
+  }
+  &.close {
+    & path:nth-child(1) {
+      transform: rotate(45deg) translateX(6px) translateY(-6px);
+    }
+    & path:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+    & path:nth-child(3) {
+      transform: rotate(-45deg) translateX(-17px) translateY(-5px);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .menu-icon {
+    display: block;
+  }
+}

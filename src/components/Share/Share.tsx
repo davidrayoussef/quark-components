@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 
 import { ShareProps } from '../../shared';
 
-import style from './Share.css';
+import style from './Share.scss';
 
 export const Share: React.VFC<ShareProps> = ({
   shares,

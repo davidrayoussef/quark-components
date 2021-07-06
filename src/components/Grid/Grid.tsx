@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { GridProps } from '../../shared';
 
-import style from './Grid.css';
+import style from './Grid.scss';
 
 export const Grid: React.FC<GridProps> = ({
   children,

@@ -5,7 +5,7 @@ import { SubMenu } from './SubMenu';
 
 import { MenuProps, MenuState } from '../../shared';
 
-import style from './Menu.css';
+import style from './Menu.scss';
 
 export const MenuContext = React.createContext({
   expanded: undefined,

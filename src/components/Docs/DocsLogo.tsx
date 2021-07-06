@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './DocsLogo.css';
+import style from './DocsLogo.scss';
 
 export const DocsLogo = (): React.ReactElement<HTMLElement & SVGElement> => (
   <svg

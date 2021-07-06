@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 
 import { DropdownProps, DropdownState } from '../../shared';
 
-import style from './Dropdown.css';
+import style from './Dropdown.scss';
 
 export class Dropdown extends Component<DropdownProps, DropdownState> {
   dropdownElement: React.RefObject<HTMLDivElement> = React.createRef();

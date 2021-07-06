@@ -1,18 +1,18 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { ListProps } from '../../shared';
 
-import style from './List.css';
+import style from './List.scss';
 
 export const List: React.VFC<ListProps> = ({ title, data }: ListProps) => {
   return (
-    <Fragment>
-      <h3 className={style.listTitle}>{title}</h3>
+    <div className={style.listContainer}>
+      <h3 className={style.title}>{title}</h3>
       <ul className={style.list}>
         {data.map((item: string) => {
           return <li key={item}>{item}</li>;
         })}
       </ul>
-    </Fragment>
+    </div>
   );
 };

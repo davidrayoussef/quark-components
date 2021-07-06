@@ -4,7 +4,7 @@ import { Button } from '../../../components/Button';
 
 import { ButtonType } from '../../../shared';
 
-import style from './ButtonExample.css';
+import style from './ButtonExample.scss';
 
 export const ButtonExample = (): React.ReactElement => (
   <div className={style.buttonGroup}>

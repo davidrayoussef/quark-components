@@ -6,7 +6,7 @@ import { DocsExampleBlock } from '../components/Docs/DocsExampleBlock';
 
 import { componentData } from './componentData';
 
-import style from '../components/Docs/Docs.css';
+import style from '../components/Docs/Docs.scss';
 
 const renderRoutes = () => {
   return componentData.map(

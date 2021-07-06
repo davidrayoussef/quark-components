@@ -8,7 +8,7 @@ import { Button } from '../../../components/Button';
 
 import { ButtonType, FormExampleState } from '../../../shared';
 
-import style from './FormExample.css';
+import style from './FormExample.scss';
 
 class AppExample extends Component<{}, FormExampleState> {
   state: Readonly<FormExampleState> = this.getInitialState();

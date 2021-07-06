@@ -2,7 +2,7 @@ import React from 'react';
 
 import { DotsProps } from '../../shared';
 
-import style from './Dots.css';
+import style from './Dots.scss';
 
 export const Dots: React.VFC<DotsProps> = ({
   images,

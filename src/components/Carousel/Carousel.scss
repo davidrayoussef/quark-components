@@ -1,0 +1,27 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  max-width: 730px;
+  justify-items: center;
+  align-items: center;
+  & .images {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    & .image-container {
+      display: flex;
+      align-items: flex-start;
+    }
+    & img {
+      width: 100%;
+      min-width: 100%;
+      object-fit: contain;
+    }
+  }
+  & svg {
+    transition: fill 0.15s;
+    &:hover {
+      fill: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

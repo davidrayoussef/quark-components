@@ -1,0 +1,13 @@
+.list-container {
+  & .title {
+    margin: 0 0 5px;
+    font-size: 1rem;
+  }
+  & .list {
+    margin-top: 0;
+    padding: 0;
+    & li {
+      margin-bottom: 5px;
+    }
+  }
+}

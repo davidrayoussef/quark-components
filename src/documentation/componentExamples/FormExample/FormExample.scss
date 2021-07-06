@@ -1,0 +1,17 @@
+.button-group button {
+  margin-right: 10px;
+}
+.results {
+  color: rgba(0, 0, 0, 0.8);
+  & h3 {
+    font-weight: normal;
+    margin: 0 0 5px 0;
+  }
+  & p {
+    margin: 0;
+  }
+  & code {
+    font-size: 1.2em;
+    color: #888;
+  }
+}

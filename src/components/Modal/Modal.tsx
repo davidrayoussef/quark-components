@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 
 import { ButtonType, ModalProps } from '../../shared';
 
-import style from './Modal.css';
+import style from './Modal.scss';
 
 export class Modal extends Component<ModalProps> {
   modalElement: React.RefObject<HTMLDivElement> = React.createRef();

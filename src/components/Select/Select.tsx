@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 
 import { SelectProps } from './../../shared';
 
-import style from './Select.css';
+import style from './Select.scss';
 
 export const Select: React.VFC<SelectProps> = ({
   name,

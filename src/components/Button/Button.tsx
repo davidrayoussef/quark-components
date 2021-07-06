@@ -3,7 +3,7 @@ import React from 'react';
 import { ButtonProps } from '../../shared';
 import { getTypeStyle, getSizeStyle } from '../../utilities';
 
-import style from './Button.css';
+import style from './Button.scss';
 
 export const Button: React.FC<ButtonProps> = ({
   children,

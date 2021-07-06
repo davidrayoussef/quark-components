@@ -9,7 +9,7 @@ import { Icon } from '../Icon';
 import { routes } from '../../documentation/routes';
 import { DocsProps } from '../../shared';
 
-import style from './Docs.css';
+import style from './Docs.scss';
 
 const NavMenuWithMobile = withMobileMenu(NavMenu);
 
@@ -18,10 +18,10 @@ export const Docs: React.FC<DocsProps> = ({
   ...rest
 }: DocsProps) => {
   return (
-    <div className={style.wrapper}>
+    <div className={style.container}>
       <HeaderBar>
         <h1>
-          <Link to="/" className={style.logoWrapper}>
+          <Link to="/" className={style.logoContainer}>
             <DocsLogo />
             {headerTitle}
           </Link>

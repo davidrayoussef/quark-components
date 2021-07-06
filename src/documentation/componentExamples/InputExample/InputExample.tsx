@@ -9,7 +9,7 @@ import {
   validateEmail
 } from '../../../utilities';
 
-import style from './InputExample.css';
+import style from './InputExample.scss';
 
 class AppExample extends Component {
   state = {

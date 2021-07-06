@@ -4,7 +4,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { DocsCodeBlockProps } from '../../shared';
 
-import style from './DocsCodeBlock.css';
+import style from './DocsCodeBlock.scss';
 
 export const DocsCodeBlock: React.FC<DocsCodeBlockProps> = ({
   children

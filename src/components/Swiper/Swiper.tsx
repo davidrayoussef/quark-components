@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { SwiperProps, SwiperState } from '../../shared';
 
-import style from './Swiper.css';
+import style from './Swiper.scss';
 
 export class Swiper extends Component<SwiperProps, SwiperState> {
   imageContainerElement: React.RefObject<HTMLDivElement> = React.createRef();

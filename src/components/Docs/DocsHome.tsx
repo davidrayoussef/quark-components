@@ -7,7 +7,7 @@ import { Icon } from '../Icon';
 
 import { componentData } from '../../documentation/componentData';
 
-import style from './DocsHome.css';
+import style from './DocsHome.scss';
 
 const cards = componentData.map(
   ({ name, description }: { name: string; description: string }) => (

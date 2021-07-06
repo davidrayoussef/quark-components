@@ -1,0 +1,21 @@
+.examples {
+  padding: 25px 25px 75px;
+  background: #fefefe;
+  & > h2 {
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0 0 20px;
+  }
+  & > h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 30px 0 10px;
+  }
+  & .description {
+    margin-bottom: 25px;
+  }
+  & .example {
+    padding: 20px 25px;
+    margin: 0 -25px;
+  }
+}

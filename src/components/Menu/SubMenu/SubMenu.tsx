@@ -3,7 +3,7 @@ import React from 'react';
 import { MenuContext } from '../Menu';
 import { SubMenuProps } from '../../../shared';
 
-import style from './SubMenu.css';
+import style from './SubMenu.scss';
 
 export const SubMenu: React.FC<SubMenuProps> = ({
   children,
