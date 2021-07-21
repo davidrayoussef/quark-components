@@ -11,7 +11,7 @@
     vertical-align: top;
   }
   & th {
-    color: rgba(52, 88, 226, 0.9);
+    color: rgb(52, 122, 226);
     padding-bottom: 5px;
   }
   & tr {
@@ -57,7 +57,7 @@
         border-left: var(--border);
         border-right: var(--border);
         background: rgba(52, 88, 226, 0.075);
-        color: rgba(52, 88, 226, 0.9);
+        color: rgba(52, 122, 226, 0.4);
       }
       & td {
         display: table-cell;

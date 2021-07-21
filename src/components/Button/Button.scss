@@ -14,10 +14,12 @@
     background: rgba(3, 169, 244, 0.8);
   }
   &.secondary {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    color: #555;
   }
   &.secondary:hover {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.25);
+    color: #000;
   }
   &.reverse {
     background: rgba(0, 0, 0, 0.02);

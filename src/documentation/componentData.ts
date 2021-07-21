@@ -380,6 +380,39 @@ export const componentData = [
     ]
   },
   {
+    name: 'InputTable',
+    description:
+      'A table for inputting, copy & pasting CSV data, or dragging and dropping a CSV file, with validation.',
+    component: Modules.InputTableExample,
+    code: Modules.InputTableCode,
+    propDetails: [
+      {
+        propName: 'columnDefs',
+        propType: PropType.Array,
+        propDefault: undefined,
+        propDescription: 'An array of objects used to define the column fields.'
+      },
+      {
+        propName: 'rowCount',
+        propType: PropType.Number,
+        propDefault: undefined,
+        propDescription: 'The number of rows to add.'
+      },
+      {
+        propName: 'title',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription: 'The header title of the table.'
+      },
+      {
+        propName: 'onSubmit',
+        propType: PropType.Function,
+        propDefault: undefined,
+        propDescription: 'Callback function called on successful submission.'
+      }
+    ]
+  },
+  {
     name: 'LazyLoad',
     description:
       'A wrapper for loading images efficiently as they scroll into view.',

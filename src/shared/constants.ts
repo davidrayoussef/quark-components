@@ -3,6 +3,11 @@ export enum ButtonSize {
   Large = 'large'
 }
 
+export enum ButtonText {
+  Submit = 'Submit',
+  Clear = 'Clear'
+}
+
 export enum ButtonType {
   Primary = 'primary',
   Secondary = 'secondary',

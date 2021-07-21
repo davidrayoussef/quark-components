@@ -1,0 +1,35 @@
+.tooltip-container {
+  --dark-gray: #444;
+  --left: 107px;
+  position: absolute;
+  font-size: 0.6rem;
+  left: var(--left);
+  top: 0;
+  width: 75px;
+  padding: 0.25rem;
+  background: var(--dark-gray);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  z-index: 9999;
+  animation: fade-in 0.2s;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 10px;
+    transform: translateY(-50%);
+    border: 4px solid var(--dark-gray);
+    border-color: transparent var(--dark-gray) transparent transparent;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    left: calc(var(--left) - 5px);
+    opacity: 0;
+  }
+  100% {
+    left: var(--left);
+    opacity: 1;
+  }
+}

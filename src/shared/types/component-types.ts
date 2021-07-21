@@ -18,6 +18,7 @@ export interface AutoCompleteState {
 
 export interface ButtonProps {
   children?: React.ReactNode;
+  className?: string;
   disabled?: boolean;
   size?: ButtonSize;
   style?: React.CSSProperties;
@@ -177,6 +178,38 @@ export interface InputProps {
   onBlur?: VoidFunction;
 }
 
+export interface InputTableProps {
+  columnDefs: ColumnDef[];
+  rowCount: number;
+  title: string;
+  onSubmit?: VoidFunction;
+}
+
+export interface ColumnDef {
+  headerName: string;
+  fieldName: string;
+  validation?: Validation;
+  type?: string;
+}
+
+export interface Validation {
+  value: RegExp | ValidationPredicateFunction;
+  message: string;
+  required?: boolean;
+}
+
+export interface Row {
+  [key: string]: string;
+}
+
+export interface RowToPost {
+  [key: string]: string | number;
+}
+
+export interface Errors {
+  [key: string]: string;
+}
+
 export interface LazyLoadProps {
   children: React.ReactNode;
 }
@@ -280,8 +313,16 @@ export interface TableProps {
   tableData: { [key: string]: any }[]; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
+export interface TooltipProps {
+  message: string;
+}
+
 export type VoidFunction = (arg?: unknown) => void;
+
+export type AnyFunction = (arg?: unknown) => unknown;
 
 export type WithMobileMenuHOC = <P extends NavMenuWithMobileProps>(
   Component: React.Component<NavMenuWithMobileProps>
 ) => React.ComponentClass<P, NavMenuWithMobileState>;
+
+export type ValidationPredicateFunction = (value: string) => boolean;
