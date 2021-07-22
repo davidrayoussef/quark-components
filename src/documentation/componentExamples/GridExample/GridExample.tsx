@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid } from '../../../components/Grid';
+import { Grid } from '@/components/Grid';
 
 export const GridExample = (): React.ReactElement => (
   <Grid fluid>

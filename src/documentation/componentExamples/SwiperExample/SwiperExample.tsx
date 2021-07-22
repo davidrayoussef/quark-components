@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Swiper } from '../../../components/Swiper';
+import { Swiper } from '@/components/Swiper';
 
 export const SwiperExample = (): React.ReactElement => (
   <Swiper>

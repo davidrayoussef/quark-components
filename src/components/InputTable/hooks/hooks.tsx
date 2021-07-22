@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ColumnDef, Errors } from '../../../shared';
+import { ColumnDef, Errors } from '@/shared';
 import {
   addEmptyRows,
   generateEmptyRow,
@@ -12,7 +12,7 @@ import {
   isValid,
   processData,
   transformData
-} from '../../../utilities';
+} from '@/utilities';
 
 export function useTableData({
   columnDefs,

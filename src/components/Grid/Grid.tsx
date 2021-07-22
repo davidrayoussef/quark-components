@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { GridProps } from '../../shared';
+import { GridProps } from '@/shared';
 
 import style from './Grid.scss';
 

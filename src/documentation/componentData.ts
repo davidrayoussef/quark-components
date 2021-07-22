@@ -1,5 +1,5 @@
 import * as Modules from './modules';
-import { PropType } from '../shared';
+import { PropType } from '@/shared';
 
 export const componentData = [
   {

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import { Input } from '../Input';
 
-import { AutoCompleteProps, AutoCompleteState } from '../../shared';
+import { AutoCompleteProps, AutoCompleteState } from '@/shared';
 
 import style from './AutoComplete.scss';
 

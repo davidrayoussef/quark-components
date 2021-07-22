@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { FetcherProps, FetcherState } from '../../shared';
+import { FetcherProps, FetcherState } from '@/shared';
 
 export class Fetcher extends Component<FetcherProps, FetcherState> {
   state: Readonly<FetcherState> = {

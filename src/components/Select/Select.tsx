@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Icon } from '../Icon';
 
-import { SelectProps } from './../../shared';
+import { SelectProps } from '@/shared';
 
 import style from './Select.scss';
 

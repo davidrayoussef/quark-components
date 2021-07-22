@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CheckBoxProps } from '../../shared';
+import { CheckBoxProps } from '@/shared';
 
 import style from './CheckBox.scss';
 

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Modal } from '../../../components/Modal';
-import { Button } from '../../../components/Button';
+
+import { Modal } from '@/components/Modal';
+import { Button } from '@/components/Button';
 
 class AppExample extends Component {
   state = {

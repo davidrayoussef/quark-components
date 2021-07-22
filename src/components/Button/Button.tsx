@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ButtonProps } from '../../shared';
-import { getTypeStyle, getSizeStyle } from '../../utilities';
+import { ButtonProps } from '@/shared';
+import { getTypeStyle, getSizeStyle } from '@/utilities';
 
 import style from './Button.scss';
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { ImageProps, ImageState } from '../../shared';
+import { ImageProps, ImageState } from '@/shared';
 
 export class Image extends Component<ImageProps, ImageState> {
   state: Readonly<ImageState> = {

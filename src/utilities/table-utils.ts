@@ -4,7 +4,7 @@ import {
   Row,
   ValidationPredicateFunction,
   RowToPost
-} from '../shared';
+} from '@/shared';
 
 export function generateEmptyTableData({
   columnDefs,

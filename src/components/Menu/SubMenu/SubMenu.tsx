@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MenuContext } from '../Menu';
-import { SubMenuProps } from '../../../shared';
+import { SubMenuProps } from '@/shared';
 
 import style from './SubMenu.scss';
 

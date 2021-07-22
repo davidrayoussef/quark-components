@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import { Form } from '../../../components/Form';
-import { Input } from '../../../components/Input';
-import { Select } from '../../../components/Select';
-import { CheckBox } from '../../../components/CheckBox';
-import { Button } from '../../../components/Button';
+import { Form } from '@/components/Form';
+import { Input } from '@/components/Input';
+import { Select } from '@/components/Select';
+import { CheckBox } from '@/components/CheckBox';
+import { Button } from '@/components/Button';
 
-import { ButtonType, FormExampleState } from '../../../shared';
+import { ButtonType, FormExampleState } from '@/shared';
 
 import style from './FormExample.scss';
 

@@ -1,4 +1,4 @@
-import { ButtonSize, ButtonType } from '../shared';
+import { ButtonSize, ButtonType } from '@/shared';
 
 export function computeHoverColor(color: string): string | undefined {
   if (!color || !color.startsWith('rgb')) return undefined;

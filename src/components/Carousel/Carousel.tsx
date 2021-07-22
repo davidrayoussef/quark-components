@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 import { Image } from '../Image';
 import { Swiper } from '../Swiper';
 
-import { CarouselProps, CarouselState, SwiperProps } from '../../shared';
+import { CarouselProps, CarouselState, SwiperProps } from '@/shared';
 
 import style from './Carousel.scss';
 

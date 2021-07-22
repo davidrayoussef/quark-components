@@ -3,7 +3,7 @@ import React from 'react';
 import { Icon } from '../../Icon';
 
 import { MenuContext } from '../Menu';
-import { MenuItemProps } from '../../../shared';
+import { MenuItemProps } from '@/shared';
 
 import style from './MenuItem.scss';
 

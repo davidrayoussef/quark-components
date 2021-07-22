@@ -5,7 +5,7 @@ import { Card } from '../Card';
 import { RouterLinkButton } from '../Button';
 import { Icon } from '../Icon';
 
-import { componentData } from '../../documentation/componentData';
+import { componentData } from '@/documentation/componentData';
 
 import style from './DocsHome.scss';
 

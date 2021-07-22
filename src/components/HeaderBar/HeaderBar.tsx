@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HeaderBarProps } from '../../shared';
+import { HeaderBarProps } from '@/shared';
 
 import style from './HeaderBar.scss';
 

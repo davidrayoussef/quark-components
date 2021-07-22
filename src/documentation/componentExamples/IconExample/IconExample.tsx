@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Icon } from '../../../components/Icon';
-import { Grid } from '../../../components/Grid';
+import { Icon } from '@/components/Icon';
+import { Grid } from '@/components/Grid';
 
 export const IconExample = (): React.ReactElement => (
   <Grid

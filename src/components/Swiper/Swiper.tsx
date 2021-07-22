@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { SwiperProps, SwiperState } from '../../shared';
+import { SwiperProps, SwiperState } from '@/shared';
 
 import style from './Swiper.scss';
 

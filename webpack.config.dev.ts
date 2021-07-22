@@ -1,4 +1,5 @@
 import webpack, { Configuration } from 'webpack';
+import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
@@ -46,7 +47,14 @@ const webpackConfig = (): Configuration => ({
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.css']
+    extensions: ['.ts', '.tsx', '.js', '.css'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@shared': path.resolve(__dirname, 'src/shared'),
+      '@utilities': path.resolve(__dirname, 'src/utilities'),
+      '@documentation': path.resolve(__dirname, 'src/documentation')
+    }
   },
   devServer: {
     contentBase: './dist',

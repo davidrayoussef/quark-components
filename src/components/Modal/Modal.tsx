@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
-import { ButtonType, ModalProps } from '../../shared';
+import { ButtonType, ModalProps } from '@/shared';
 
 import style from './Modal.scss';
 

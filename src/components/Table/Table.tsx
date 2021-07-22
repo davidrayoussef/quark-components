@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TableProps } from '../../shared';
+import { TableProps } from '@/shared';
 
 import style from './Table.scss';
 

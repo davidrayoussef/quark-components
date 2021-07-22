@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Table } from '../Table';
 
-import { DocsExampleBlockProps } from '../../shared';
+import { DocsExampleBlockProps } from '@/shared';
 
 import style from './DocsExampleBlock.scss';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { DocsHome } from '../components/Docs/DocsHome';
-import { DocsExampleBlock } from '../components/Docs/DocsExampleBlock';
+import { DocsHome } from '@/components/Docs/DocsHome';
+import { DocsExampleBlock } from '@/components/Docs/DocsExampleBlock';
 
 import { componentData } from './componentData';
 
-import style from '../components/Docs/Docs.scss';
+import style from '@/components/Docs/Docs.scss';
 
 const renderRoutes = () => {
   return componentData.map(

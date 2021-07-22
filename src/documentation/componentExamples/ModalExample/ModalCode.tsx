@@ -1,5 +1,5 @@
 import React from 'react';
-import { DocsCodeBlock } from '../../../components/Docs';
+import { DocsCodeBlock } from '@/components/Docs';
 
 const code = `
 import React, { Component, Fragment } from 'react';

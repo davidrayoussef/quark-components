@@ -6,8 +6,8 @@ import { DocsLogo } from './DocsLogo';
 import { NavMenu, withMobileMenu } from '../NavMenu';
 import { Icon } from '../Icon';
 
-import { routes } from '../../documentation/routes';
-import { DocsProps } from '../../shared';
+import { routes } from '@/documentation/routes';
+import { DocsProps } from '@/shared';
 
 import style from './Docs.scss';
 

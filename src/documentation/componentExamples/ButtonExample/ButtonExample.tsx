@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Button } from '../../../components/Button';
+import { Button } from '@/components/Button';
 
-import { ButtonType } from '../../../shared';
+import { ButtonType } from '@/shared';
 
 import style from './ButtonExample.scss';
 

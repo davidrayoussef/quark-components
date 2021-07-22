@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { NavMenuProps } from '../../shared';
-import {
-  computeHoverColor,
-  computeActiveColor,
-  isMobile
-} from '../../utilities';
+import { NavMenuProps } from '@/shared';
+import { computeHoverColor, computeActiveColor, isMobile } from '@/utilities';
 
 import style from './NavMenu.scss';
 

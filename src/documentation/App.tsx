@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 
-import { Docs } from '../components/Docs';
+import { Docs } from '@/components/Docs';
 
 import { componentData } from './componentData';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { MenuItem } from './MenuItem';
 import { SubMenu } from './SubMenu';
 
-import { MenuProps, MenuState } from '../../shared';
+import { MenuProps, MenuState } from '@/shared';
 
 import style from './Menu.scss';
 

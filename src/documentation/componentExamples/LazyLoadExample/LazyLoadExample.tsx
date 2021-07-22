@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LazyLoad } from '../../../components/LazyLoad';
+import { LazyLoad } from '@/components/LazyLoad';
 
 export const LazyLoadExample = (): React.ReactElement => (
   <LazyLoad>

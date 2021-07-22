@@ -1,6 +1,6 @@
 import React, { Component, ReactElement } from 'react';
 
-import { LazyLoadProps, LazyLoadState } from '../../shared';
+import { LazyLoadProps, LazyLoadState } from '@/shared';
 
 import style from './LazyLoad.scss';
 

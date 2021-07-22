@@ -3,7 +3,7 @@ import React from 'react';
 import { Tooltip } from '../Tooltip';
 import { Button } from '../Button';
 
-import { InputTableProps, ButtonText, ButtonType } from '../../shared';
+import { InputTableProps, ButtonText, ButtonType } from '@/shared';
 import { useTableData } from './hooks';
 
 import styles from './InputTable.scss';

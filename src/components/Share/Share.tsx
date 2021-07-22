@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Icon } from '../Icon';
 
-import { ShareProps } from '../../shared';
+import { ShareProps } from '@/shared';
 
 import style from './Share.scss';
 

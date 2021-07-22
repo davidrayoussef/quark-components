@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
-import { Menu } from '../../../components/Menu';
+import { Menu } from '@/components/Menu';
 
 const onMenuItemClick = (event: React.MouseEvent) => {
   const target = event.target as HTMLElement;

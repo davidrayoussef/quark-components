@@ -1,4 +1,4 @@
-import { ColumnDef, Row } from './../shared';
+import { ColumnDef, Row } from '@/shared';
 import { addEmptyRows } from './table-utils';
 
 export function handleFile({

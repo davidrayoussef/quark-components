@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { icons } from './IconModule';
-import { IconProps } from '../../shared';
+import { IconProps } from '@/shared';
 
 export const Icon: React.VFC<IconProps> = ({
   value,

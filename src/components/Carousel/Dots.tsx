@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DotsProps } from '../../shared';
+import { DotsProps } from '@/shared';
 
 import style from './Dots.scss';
 

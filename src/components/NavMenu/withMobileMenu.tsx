@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Icon } from '../Icon';
 
-import { NavMenuProps, NavMenuWithMobileState } from '../../shared';
+import { NavMenuProps, NavMenuWithMobileState } from '@/shared';
 
 import style from './withMobile.scss';
 

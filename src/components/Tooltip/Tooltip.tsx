@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TooltipProps } from '../../shared';
+import { TooltipProps } from '@/shared';
 
 import styles from './Tooltip.scss';
 

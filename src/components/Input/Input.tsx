@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputProps } from '../../shared';
+import { InputProps } from '@/shared';
 
 import style from './Input.scss';
 

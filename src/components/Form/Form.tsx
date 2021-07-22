@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormProps } from '../../shared';
+import { FormProps } from '@/shared';
 
 import style from './Form.scss';
 

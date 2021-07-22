@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CardProps } from '../../shared';
+import { CardProps } from '@/shared';
 
 import style from './Card.scss';
 

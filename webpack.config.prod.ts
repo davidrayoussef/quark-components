@@ -1,4 +1,5 @@
 import webpack, { Configuration } from 'webpack';
+import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -54,7 +55,14 @@ export const webpackConfig = (): Configuration => ({
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.css']
+    extensions: ['.ts', '.tsx', '.js', '.css'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@shared': path.resolve(__dirname, 'src/shared'),
+      '@utilities': path.resolve(__dirname, 'src/utilities'),
+      '@documentation': path.resolve(__dirname, 'src/documentation')
+    }
   },
   optimization: {
     minimize: true,

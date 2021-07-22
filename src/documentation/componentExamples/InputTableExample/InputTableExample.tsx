@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { InputTable } from '../../../components/InputTable';
+import { InputTable } from '@/components/InputTable';
 
-import { InputTableProps } from '../../../shared';
+import { InputTableProps } from '@/shared';
 
 const options: InputTableProps = {
   rowCount: 10,

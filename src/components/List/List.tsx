@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ListProps } from '../../shared';
+import { ListProps } from '@/shared';
 
 import style from './List.scss';
 

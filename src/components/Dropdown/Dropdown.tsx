@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Icon } from '../Icon';
 
-import { DropdownProps, DropdownState } from '../../shared';
+import { DropdownProps, DropdownState } from '@/shared';
 
 import style from './Dropdown.scss';
 

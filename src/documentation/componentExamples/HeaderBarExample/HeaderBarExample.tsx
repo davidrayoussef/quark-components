@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { HeaderBar } from '../../../components/HeaderBar';
-import { Icon } from '../../../components/Icon';
+import { HeaderBar } from '@/components/HeaderBar';
+import { Icon } from '@/components/Icon';
 
 const navLinks = [
   <a key="home" href="#">

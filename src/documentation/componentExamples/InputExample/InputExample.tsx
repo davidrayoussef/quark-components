@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
-import { Input } from '../../../components/Input';
-import { Button } from '../../../components/Button';
-import { Form } from '../../../components/Form';
-import {
-  validateUsername,
-  validatePassword,
-  validateEmail
-} from '../../../utilities';
+import { Input } from '@/components/Input';
+import { Button } from '@/components/Button';
+import { Form } from '@/components/Form';
+
+import { validateUsername, validatePassword, validateEmail } from '@/utilities';
 
 import style from './InputExample.scss';
 

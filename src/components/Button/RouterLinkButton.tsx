@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 
 import { Button } from './Button';
 
-import { ButtonSize, LinkButtonProps } from '../../shared';
+import { ButtonSize, LinkButtonProps } from '@/shared';
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   history,
