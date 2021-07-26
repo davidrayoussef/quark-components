@@ -23,7 +23,7 @@ export const CheckBox: React.VFC<CheckBoxProps> = ({
               autoComplete="off"
               name={name}
               value={option}
-              checked={checkedOptions.includes(option)}
+              checked={checkedOptions?.includes(option)}
               onChange={onChange}
             />
             {option}

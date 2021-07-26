@@ -11,7 +11,7 @@ export const Card: React.FC<CardProps> = ({
 }: CardProps) => {
   return (
     <div className={style.card} {...rest}>
-      {title && <h3>{title}</h3>}
+      {title && <h3 className="card-title">{title}</h3>}
       {children}
     </div>
   );

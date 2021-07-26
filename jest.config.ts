@@ -1,18 +1,21 @@
 const jestConfig = {
   roots: ['<rootDir>/src'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': 'ts-jest'
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+  testMatch: [
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)+(spec|test).+(ts|tsx|js)'
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts*'],
-  coveragePathIgnorePatterns: [
-    'index\\.tsx?$',
-    '\\.d\\.ts$',
-    '<rootDir>/src/components/Icons',
-    '<rootDir>/src/components/Logos'
+  collectCoverageFrom: [
+    'src/**',
+    '!src/components/Docs/**',
+    '!src/documentation/**',
+    '!src/main.tsx'
   ],
+  coveragePathIgnorePatterns: ['index\\.tsx?$', '\\.d\\.ts$'],
   coverageReporters: ['text', 'html'],
   coverageDirectory: '<rootDir>/test-coverage/',
   coverageThreshold: {
@@ -24,9 +27,10 @@ const jestConfig = {
     }
   },
   moduleNameMapper: {
-    '\\.css$': '<rootDir>/src/resources/test-setup/styleMock.ts'
+    '.+\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '@/(.*)$': '<rootDir>/src/$1'
   },
-  setupFilesAfterEnv: ['<rootDir>/src/resources/test-setup/setupEnzyme.ts']
+  setupFilesAfterEnv: ['<rootDir>/test-setup/setup.ts']
 };
 
 export default jestConfig;

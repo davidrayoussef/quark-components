@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 
 import { Dots } from './Dots';
 import { Icon } from '../Icon';
-import { Image } from '../Image';
 import { Swiper } from '../Swiper';
 
 import { CarouselProps, CarouselState, SwiperProps } from '@/shared';
@@ -96,7 +95,7 @@ export class Carousel extends Component<CarouselProps, CarouselState> {
     const { activeIndex, translate, imgWidth, shouldAnimate } = this.state;
     const { images, showArrows, showDots, useSwiper } = this.props;
     const renderedImages = images.map(({ title, src }) => (
-      <Image key={title} src={src} alt={title} onLoad={this.setImageWidth} />
+      <img key={title} src={src} alt={title} onLoad={this.setImageWidth} />
     ));
     const arrowIconStyle = {
       cursor: 'pointer',
