@@ -14,6 +14,9 @@
   "author": "David Ra Youssef (davidradeveloper@gmail.com)",
   "license": "MIT",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/copy-webpack-plugin": "6.4.1",
     "@types/enzyme": "3.10.8",
     "@types/jest": "26.0.20",
@@ -59,6 +62,6 @@
     "typescript-plugin-css-modules": "3.2.0",
     "webpack": "5.24.2",
     "webpack-cli": "4.5.0",
-    "webpack-dev-server": "3.11.2"
+    "webpack-dev-server": "^1.16.5"
   }
 }

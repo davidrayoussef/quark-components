@@ -1,55 +1,47 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Button } from './Button';
 
 import { ButtonSize, ButtonType } from '@/shared';
 
 describe('Button', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Button>Button Text</Button>);
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
-  });
-  test('renders button element if no component prop is passed', () => {
-    expect(wrapper.find('button').exists()).toBe(true);
-  });
-  test('renders correct text', () => {
-    expect(wrapper.text()).toEqual('Button Text');
+  test('renders button text', () => {
+    render(<Button>Button Text</Button>);
+    expect(screen.getByText(/Button Text/)).toBeInTheDocument();
   });
   test('adds .primary class if no styleType is passed', () => {
-    expect(wrapper.find('.primary').exists()).toBe(true);
+    const { container } = render(<Button>Button Text</Button>);
+    expect(container.querySelector('.primary')).toBeInTheDocument();
   });
   test('adds .secondary class for styleType="secondary"', () => {
-    wrapper.setProps({
-      styleType: ButtonType.Secondary
-    });
-    expect(wrapper.find('.secondary').exists()).toBe(true);
+    const { container } = render(
+      <Button styleType={ButtonType.Secondary}>Button Text</Button>
+    );
+    expect(container.querySelector('.secondary')).toBeInTheDocument();
   });
   test('adds .reverse class for styleType="reverse"', () => {
-    wrapper.setProps({
-      styleType: ButtonType.Reverse
-    });
-    expect(wrapper.find('.reverse').exists()).toBe(true);
+    const { container } = render(
+      <Button styleType={ButtonType.Reverse}>Button Text</Button>
+    );
+    expect(container.querySelector('.reverse')).toBeInTheDocument();
   });
   test('adds .danger class for styleType="danger"', () => {
-    wrapper.setProps({
-      styleType: ButtonType.Danger
-    });
-    expect(wrapper.find('.danger').exists()).toBe(true);
+    const { container } = render(
+      <Button styleType={ButtonType.Danger}>Button Text</Button>
+    );
+    expect(container.querySelector('.danger')).toBeInTheDocument();
   });
   test('adds .small class for size="small"', () => {
-    wrapper.setProps({
-      size: ButtonSize.Small
-    });
-    expect(wrapper.find('.small').exists()).toBe(true);
+    const { container } = render(
+      <Button size={ButtonSize.Small}>Button Text</Button>
+    );
+    expect(container.querySelector('.small')).toBeInTheDocument();
   });
   test('adds .large class for size="large"', () => {
-    wrapper.setProps({
-      size: ButtonSize.Large
-    });
-    expect(wrapper.find('.large').exists()).toBe(true);
+    const { container } = render(
+      <Button size={ButtonSize.Large}>Button Text</Button>
+    );
+    expect(container.querySelector('.large')).toBeInTheDocument();
   });
 });
