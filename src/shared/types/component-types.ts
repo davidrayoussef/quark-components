@@ -8,13 +8,12 @@ export interface AutoCompleteProps {
   label?: string;
   name?: string;
   placeholder?: string;
-  value?: string;
 }
 
-export interface AutoCompleteState {
-  filteredSuggestions: string[];
-  value: string;
-}
+// export interface AutoCompleteState {
+//   filteredSuggestions: string[];
+//   value: string;
+// }
 
 export interface ButtonProps {
   children?: React.ReactNode;

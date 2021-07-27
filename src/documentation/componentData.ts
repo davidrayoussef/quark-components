@@ -34,12 +34,6 @@ export const componentData = [
         propDefault: undefined,
         propDescription:
           'The help text that appears in the field when no value is input.'
-      },
-      {
-        propName: 'value',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The initial value for the input field.'
       }
     ]
   },
