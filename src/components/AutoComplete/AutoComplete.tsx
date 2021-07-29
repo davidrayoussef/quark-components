@@ -22,11 +22,7 @@ export const AutoComplete: React.FC<AutoCompleteProps> = ({
       <Input value={value} onChange={handleChange} {...rest} />
       <ul className={style.suggestionList}>
         {filteredSuggestions.map((suggestion: string) => (
-          <li
-            key={suggestion}
-            className={style.suggestion}
-            onClick={handleClick(suggestion)}
-          >
+          <li key={suggestion} onClick={handleClick(suggestion)}>
             {suggestion}
           </li>
         ))}

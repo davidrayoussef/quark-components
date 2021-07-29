@@ -10,7 +10,7 @@
   border-right: 3px solid #eee;
   border-bottom: 3px solid #eee;
   z-index: 2;
-  & .suggestion {
+  & li {
     padding: 5px 10px;
     &:hover {
       background: rgba(0, 0, 0, 0.05);
