@@ -10,11 +10,6 @@ export interface AutoCompleteProps {
   placeholder?: string;
 }
 
-// export interface AutoCompleteState {
-//   filteredSuggestions: string[];
-//   value: string;
-// }
-
 export interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
@@ -46,9 +41,9 @@ export interface CarouselProps {
 
 export interface CarouselState {
   activeIndex: number;
-  translate: number;
   imgWidth: number;
   shouldAnimate: boolean;
+  translate: number;
 }
 
 export interface DotsProps {
