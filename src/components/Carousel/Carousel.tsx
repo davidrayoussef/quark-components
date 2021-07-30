@@ -4,7 +4,8 @@ import { Dots } from './Dots';
 import { Icon } from '../Icon';
 import { Swiper } from '../Swiper';
 
-import { CarouselProps, CarouselState, SwiperProps } from '@/shared';
+import { CarouselProps, SwiperProps } from '@/shared';
+import { useCarousel } from './hooks';
 
 import style from './Carousel.scss';
 
@@ -14,92 +15,20 @@ export const Carousel: React.FC<CarouselProps> = ({
   showDots = false,
   useSwiper = true
 }: CarouselProps) => {
-  const imageContainerElement: React.RefObject<HTMLDivElement> = React.useRef();
-  const initialState: CarouselState = {
-    activeIndex: 0,
-    imgWidth: 0,
-    shouldAnimate: true,
-    translate: 0
-  };
-  const [
-    { activeIndex, translate, imgWidth, shouldAnimate },
-    setState
-  ] = React.useState(initialState);
-
-  React.useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  function setImageWidth(): void {
-    setState(prevState => ({
-      ...prevState,
-      imgWidth: imageContainerElement.current.offsetWidth
-    }));
-  }
-
-  function handleResize(): void {
-    setState(prevState => ({
-      ...prevState,
-      imgWidth: imageContainerElement.current.offsetWidth,
-      translate:
-        Math.sign(translate) *
-        (activeIndex * imageContainerElement.current.offsetWidth),
-      shouldAnimate: false
-    }));
-  }
-
-  function slidePrev(): void {
-    const imgCount = images.length;
-    const imgWidth = imageContainerElement.current?.offsetWidth;
-    setState(prevState => ({
-      ...prevState,
-      translate:
-        activeIndex === 0
-          ? translate - imgWidth * (imgCount - 1)
-          : translate + imgWidth,
-      activeIndex: activeIndex === 0 ? imgCount - 1 : activeIndex - 1,
-      shouldAnimate: true
-    }));
-  }
-
-  function slideNext(): void {
-    const imgCount = images.length;
-    const imgWidth = imageContainerElement.current?.offsetWidth;
-    setState(prevState => ({
-      ...prevState,
-      translate: (translate - imgWidth) % (imgWidth * imgCount),
-      activeIndex: (activeIndex + 1) % imgCount,
-      shouldAnimate: true
-    }));
-  }
-
-  function slideToIndex(index: number) {
-    return (): void => {
-      setState(prevState => ({
-        ...prevState,
-        translate:
-          translate +
-          (index > activeIndex
-            ? -((index - activeIndex) * imgWidth)
-            : (activeIndex - index) * imgWidth),
-        activeIndex: index,
-        shouldAnimate: true
-      }));
-    };
-  }
-
+  const {
+    activeIndex,
+    imgContainerElement,
+    imgWidth,
+    shouldAnimate,
+    translate,
+    setImageWidth,
+    slidePrev,
+    slideNext,
+    slideToIndex
+  } = useCarousel(images.length);
   const renderedImages = images.map(({ title, src }) => (
     <img key={title} src={src} alt={title} onLoad={setImageWidth} />
   ));
-  const arrowIconStyle = {
-    cursor: 'pointer',
-    minWidth: 25,
-    maxWidth: 50,
-    width: '7vw'
-  };
   let Component;
   const props: Pick<SwiperProps, 'onSwipeLeft' | 'onSwipeRight'> = {};
   if (useSwiper) {
@@ -116,14 +45,14 @@ export const Carousel: React.FC<CarouselProps> = ({
         <Icon
           value="arrowLeft"
           color="lightgray"
-          style={arrowIconStyle}
+          className={style.arrowIcon}
           onClick={slidePrev}
         />
       )}
       <div className={style.images}>
         <Component {...props}>
           <div
-            ref={imageContainerElement}
+            ref={imgContainerElement}
             className={style.imageContainer}
             style={{
               transform: `translateX(${translate}px)`,
@@ -146,7 +75,7 @@ export const Carousel: React.FC<CarouselProps> = ({
         <Icon
           value="arrowRight"
           color="lightgray"
-          style={arrowIconStyle}
+          className={style.arrowIcon}
           onClick={slideNext}
         />
       )}

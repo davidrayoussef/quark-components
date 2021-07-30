@@ -18,7 +18,11 @@
       object-fit: contain;
     }
   }
-  & svg {
+  & .arrow-icon {
+    cursor: pointer;
+    min-width: 25px;
+    max-width: 50px;
+    width: 7vw;
     transition: fill 0.15s;
     &:hover {
       fill: rgba(0, 0, 0, 0.4);
