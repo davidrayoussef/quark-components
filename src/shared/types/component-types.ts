@@ -108,11 +108,6 @@ export interface DropdownItem {
   value: string;
 }
 
-export interface DropdownState {
-  isOpen: boolean;
-  selectedItem: { label: string; value: string } | undefined;
-}
-
 export interface FetcherProps {
   children: (data: { [key: string]: any }) => React.ReactElement; // eslint-disable-line @typescript-eslint/no-explicit-any
   url: string;
@@ -309,6 +304,10 @@ export interface TableProps {
 
 export interface TooltipProps {
   message: string;
+}
+
+export interface CustomHookReturnType {
+  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 export type VoidFunction = (arg?: unknown) => void;

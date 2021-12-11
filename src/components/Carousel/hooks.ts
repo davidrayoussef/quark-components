@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { CarouselState } from '@/shared';
+import { CarouselState, CustomHookReturnType } from '@/shared';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useCarousel(imgCount: number): { [key: string]: any } {
+export function useCarousel(imgCount: number): CustomHookReturnType {
   const imgContainerElement: React.RefObject<HTMLDivElement> = React.useRef();
   const initialState: CarouselState = {
     activeIndex: 0,

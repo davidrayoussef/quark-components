@@ -133,14 +133,14 @@ export class Swiper extends Component<SwiperProps, SwiperState> {
     const { children } = this.props;
     return (
       <div
-        className={style.swipeContainer}
+        className={style.swiperContainer}
         onTouchStart={this.handleTouchStart}
         onTouchMove={this.handleTouchMove}
         onTouchEnd={this.handleTouchEnd}
       >
         <div
           ref={this.imageContainerElement}
-          className={style.imagesContainer}
+          className={style.swiperImageContainer}
           style={{
             transform: `translateX(${translate}px)`,
             transition: shouldAnimate ? 'transform .4s ease-out' : 'none'
