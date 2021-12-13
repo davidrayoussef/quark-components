@@ -23,7 +23,7 @@ export const Dropdown: React.VFC<DropdownProps> = ({
   const selectedLabel = selectedItem?.label;
   return (
     <div className={style.dropdown} style={{ width }} ref={dropdownElement}>
-      <div className={style.label} onClick={toggleMenu}>
+      <button type="button" className={style.button} onClick={toggleMenu}>
         <span>{selectedLabel ?? defaultLabel}</span>
         <Icon
           value="arrowDown"
@@ -31,10 +31,10 @@ export const Dropdown: React.VFC<DropdownProps> = ({
           width="15"
           className={open ? style.flip : ''}
         />
-      </div>
-      <ul className={open ? style.show : ''}>
+      </button>
+      <ul style={{ display: open ? 'block' : 'none' }}>
         {data.map(({ label, value }) => (
-          <button
+          <li
             key={value}
             className={label === selectedLabel ? style.selected : ''}
             onClick={handleMenuItemClick.bind(undefined, {
@@ -43,7 +43,7 @@ export const Dropdown: React.VFC<DropdownProps> = ({
             })}
           >
             {label}
-          </button>
+          </li>
         ))}
       </ul>
     </div>

@@ -1,22 +1,33 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Dropdown } from './';
 
 describe('Dropdown', () => {
-  let wrapper: ShallowWrapper;
+  const defaultLabel = 'Investment Types';
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <Dropdown
         data={[
           { label: 'Stocks', value: 'stocks' },
           { label: 'Bonds', value: 'bonds' }
         ]}
-        defaultLabel="Investment Types"
+        defaultLabel={defaultLabel}
       />
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByText(/Investment Types/)).toBeInTheDocument();
+  });
+  test('opens menu when clicked', () => {
+    expect(screen.queryByRole('list')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button'));
+    expect(screen.queryByRole('list')).toBeInTheDocument();
+  });
+  test('displays selected menu item when clicked', () => {
+    expect(screen.getByRole('button').textContent).toBe('Investment Types');
+    fireEvent.click(screen.getByRole('button'));
+    fireEvent.click(screen.getAllByRole('listitem')[0]);
+    expect(screen.getByRole('button').textContent).toBe('Stocks');
   });
 });
