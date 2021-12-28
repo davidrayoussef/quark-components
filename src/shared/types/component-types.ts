@@ -28,29 +28,23 @@ export interface LinkButtonProps extends ButtonProps, RouteComponentProps {
 
 export interface CardProps {
   children: React.ReactNode;
-  title?: string;
   style?: React.CSSProperties;
+  title?: string;
 }
 
 export interface CarouselProps {
-  images: { src: string; title: string }[];
+  children: JSX.Element[];
+  style?: React.CSSProperties;
   showArrows?: boolean;
   showDots?: boolean;
   useSwiper?: boolean;
-}
-
-export interface CarouselState {
-  activeIndex: number;
-  imgWidth: number;
-  shouldAnimate: boolean;
-  translate: number;
+  delay?: number;
 }
 
 export interface DotsProps {
-  images: { src: string; title: string }[];
   activeIndex: number;
-  containerWidth: number;
-  slideToIndex: (index: number) => VoidFunction;
+  childrenCount: number;
+  handleNavClick: (index: number) => VoidFunction;
 }
 
 export interface CheckBoxProps {

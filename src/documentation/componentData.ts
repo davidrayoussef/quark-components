@@ -100,11 +100,10 @@ export const componentData = [
     code: Modules.CarouselCode,
     propDetails: [
       {
-        propName: 'images',
-        propType: PropType.Array,
+        propName: 'children',
+        propType: PropType.Node,
         propDefault: undefined,
-        propDescription:
-          'An array of objects with a title property and an image src property.'
+        propDescription: 'The carousel elements to slide.'
       },
       {
         propName: 'showArrows',
@@ -123,6 +122,13 @@ export const componentData = [
         propType: PropType.Boolean,
         propDefault: 'true',
         propDescription: 'Use to add swipe functionality on mobile devices.'
+      },
+      {
+        propName: 'delay',
+        propType: PropType.Number,
+        propDefault: undefined,
+        propDescription:
+          'Optional amount in milliseconds for elements to auto-slide.'
       }
     ]
   },

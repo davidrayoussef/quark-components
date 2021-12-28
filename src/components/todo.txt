@@ -1,7 +1,7 @@
-Form.Radio Form.TextArea Form.Uploader
 FilterSearch
 Tabs
 Gallery
-Article
 Accordion
-Tooltip
+Form.Radio
+Form.TextArea
+Form.Uploader

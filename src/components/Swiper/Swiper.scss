@@ -1,11 +1,8 @@
 .swiper-container {
   position: relative;
   overflow: hidden;
-  max-width: 500px;
   & .swiper-image-container {
-    display: flex;
-    align-items: flex-start;
-    max-width: 100%;
+    white-space: nowrap;
     & img {
       width: 100%;
       min-width: 100%;

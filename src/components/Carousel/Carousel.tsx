@@ -10,64 +10,64 @@ import { useCarousel } from './hooks';
 import style from './Carousel.scss';
 
 export const Carousel: React.FC<CarouselProps> = ({
-  images,
+  children,
   showArrows = true,
   showDots = false,
-  useSwiper = true
+  useSwiper = true,
+  delay,
+  ...rest
 }: CarouselProps) => {
-  const {
-    activeIndex,
-    imgContainerElement,
-    imgWidth,
-    shouldAnimate,
-    translate,
-    setImageWidth,
-    slidePrev,
-    slideNext,
-    slideToIndex
-  } = useCarousel(images.length);
-  const renderedImages = images.map(({ title, src }) => (
-    <img key={title} src={src} alt={title} onLoad={setImageWidth} />
-  ));
-  let Component;
+  const childrenCount = React.Children.count(children);
+  const { activeIndex, handleNavClick } = useCarousel(childrenCount, delay);
   const props: Pick<SwiperProps, 'onSwipeLeft' | 'onSwipeRight'> = {};
+  let Component;
+
   if (useSwiper) {
     Component = Swiper;
-    props.onSwipeLeft = slideNext;
-    props.onSwipeRight = slidePrev;
+    props.onSwipeLeft = handleNavClick.bind(undefined, activeIndex + 1);
+    props.onSwipeRight = handleNavClick.bind(undefined, activeIndex - 1);
   } else Component = Fragment;
-  return renderedImages.length ? (
+
+  return childrenCount ? (
     <section
       className={style.carousel}
       style={!showArrows ? { gridTemplateColumns: '1fr' } : {}}
+      {...rest}
     >
       {showArrows && (
         <Icon
           value="arrowLeft"
           color="lightgray"
           className={style.arrowIcon}
-          onClick={slidePrev}
+          onClick={handleNavClick.bind(undefined, activeIndex - 1)}
         />
       )}
-      <div className={style.images}>
+      <div className={style.outerContainer}>
         <Component {...props}>
           <div
-            ref={imgContainerElement}
-            className={style.imageContainer}
+            className={style.innerContainer}
             style={{
-              transform: `translateX(${translate}px)`,
-              transition: shouldAnimate ? 'transform .4s ease-in-out' : 'none'
+              transform: `translateX(-${activeIndex * 100}%)`,
+              transition: 'transform .4s ease-in-out'
             }}
           >
-            {renderedImages}
+            {React.Children.map(children, child => {
+              return React.cloneElement(child, {
+                style: {
+                  width: '100%',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }
+              });
+            })}
           </div>
         </Component>
         {showDots && (
           <Dots
-            images={images}
             activeIndex={activeIndex}
-            containerWidth={imgWidth}
-            slideToIndex={slideToIndex}
+            childrenCount={childrenCount}
+            handleNavClick={handleNavClick}
           />
         )}
       </div>
@@ -76,7 +76,7 @@ export const Carousel: React.FC<CarouselProps> = ({
           value="arrowRight"
           color="lightgray"
           className={style.arrowIcon}
-          onClick={slideNext}
+          onClick={handleNavClick.bind(undefined, activeIndex + 1)}
         />
       )}
     </section>

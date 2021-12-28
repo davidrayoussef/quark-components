@@ -5,18 +5,16 @@ import { DotsProps } from '@/shared';
 import style from './Dots.scss';
 
 export const Dots: React.VFC<DotsProps> = ({
-  images,
   activeIndex,
-  containerWidth,
-  slideToIndex
+  childrenCount,
+  handleNavClick
 }: DotsProps) => (
-  <div className={style.dotsContainer} style={{ width: containerWidth }}>
-    {images.map((item, i) => (
+  <div className={style.dotsContainer}>
+    {Array.from({ length: childrenCount }, (_: void, index: number) => (
       <span
-        key={item.title}
-        className={activeIndex === i ? style.active : ''}
-        onClick={slideToIndex(i)}
-        style={{ width: containerWidth / 35, height: containerWidth / 35 }}
+        key={index}
+        className={activeIndex === index ? style.active : ''}
+        onClick={handleNavClick.bind(undefined, index)}
       ></span>
     ))}
   </div>

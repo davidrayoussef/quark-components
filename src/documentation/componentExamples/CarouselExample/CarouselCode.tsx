@@ -6,26 +6,19 @@ const code = `
 import React from 'react';
 import { Carousel } from 'quark-components';
 
-const images = [
-  {
-    title: 'Image 1',
-    src: 'images/slide-1.jpg'
-  },
-  {
-    title: 'Image 2',
-    src: 'images/slide-2.jpg'
-  },
-  {
-    title: 'Image 3',
-    src: 'images/slide-3.jpg'
-  },
-  {
-    title: 'Image 4',
-    src: 'images/slide-4.jpg'
-  }
-];
+<Carousel showDots>
+  <img src="images/slide-1.jpg" />
+  <img src="images/slide-2.jpg" />
+  <img src="images/slide-3.jpg" />
+  <img src="images/slide-4.jpg" />
+</Carousel>
 
-<Carousel images={images} showDots />
+<Carousel delay={2500}>
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+</Carousel>
 `;
 
 export const CarouselCode = (): React.ReactElement => (

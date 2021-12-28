@@ -1,23 +1,24 @@
 .dots-container {
-  --primary: rgba(255, 255, 255, .6);
+  --primary: rgba(255, 255, 255, 0.6);
 }
 
 .dots-container {
+  width: 100%;
   position: absolute;
   bottom: 20px;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  gap: 3%;
   color: var(--primary);
 }
 
 .dots-container span {
-  margin: 0 6px;
-  border-radius: 100%;
+  padding: clamp(4px, 2%, 7px);
+  border-radius: 50%;
   border: 1px solid var(--primary);
   cursor: pointer;
 }
 
 .active {
-  background: #FFF;
+  background: #fff;
 }
