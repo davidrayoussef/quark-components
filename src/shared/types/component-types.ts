@@ -104,12 +104,9 @@ export interface DropdownItem {
 
 export interface FetcherProps {
   children: (data: { [key: string]: any }) => React.ReactElement; // eslint-disable-line @typescript-eslint/no-explicit-any
-  url: string;
+  url: Request | string;
+  options?: unknown;
   loader?: React.ComponentType;
-}
-
-export interface FetcherState {
-  data: unknown;
 }
 
 export interface FormProps {

@@ -1,27 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { FetcherProps, FetcherState } from '@/shared';
+import { FetcherProps } from '@/shared';
+import { useFetcher } from './hooks';
 
-export class Fetcher extends Component<FetcherProps, FetcherState> {
-  state: Readonly<FetcherState> = {
-    data: undefined
-  };
+export const Fetcher: React.FC<FetcherProps> = ({
+  url,
+  options = {},
+  loader,
+  children
+}: FetcherProps) => {
+  const { data } = useFetcher(url, options);
 
-  componentDidMount(): void {
-    this.fetchData();
-  }
-
-  fetchData = async (): Promise<void> => {
-    const response = await fetch(this.props.url);
-    const data = await response.json();
-    this.setState({ data });
-  };
-
-  render(): JSX.Element {
-    const { data } = this.state;
-    const { loader } = this.props;
-    if (data) return this.props.children(data);
-    else if (loader) return React.createElement(loader);
-    return null;
-  }
-}
+  if (data) return children(data);
+  else if (loader) return React.createElement(loader);
+  return null;
+};

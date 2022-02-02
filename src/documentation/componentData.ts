@@ -185,6 +185,13 @@ export const componentData = [
         propType: PropType.String,
         propDefault: 'normal',
         propDescription: 'The url to fetch.'
+      },
+      {
+        propName: 'options',
+        propType: PropType.Object,
+        propDefault: undefined,
+        propDescription:
+          'Optional object containing custom settings for request.'
       }
     ]
   },

@@ -22,5 +22,6 @@ export enum PropType {
   Function = 'function',
   Node = 'node',
   Number = 'number',
+  Object = 'object',
   String = 'string'
 }

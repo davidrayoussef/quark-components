@@ -1,22 +1,17 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen, waitFor } from '@testing-library/react';
 
 import { Fetcher } from './';
 
-global.fetch = jest.fn().mockImplementation(() => {
-  return new Promise(resolve => {
-    resolve({
-      json() {
-        return { name: 'John Doe', location: 'New York City' };
-      }
-    });
-  });
+global.fetch = jest.fn().mockResolvedValue({
+  json() {
+    return { name: 'John Doe', location: 'New York City' };
+  }
 });
 
 describe('Fetcher', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders fetched data', async () => {
+    render(
       <Fetcher url="https://example.com">
         {({ name, location }) => (
           <div>
@@ -26,8 +21,8 @@ describe('Fetcher', () => {
         )}
       </Fetcher>
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    await waitFor(() =>
+      expect(screen.getByText('John Doe')).toBeInTheDocument()
+    );
   });
 });
