@@ -1,17 +1,16 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { HeaderBar } from './';
 
 describe('HeaderBar', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(<HeaderBar title="HeaderBar Title" />);
+    render(<HeaderBar title="HeaderBar Title" />);
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('heading')).toBeInTheDocument();
   });
-  test('renders title', () => {
-    expect(wrapper.text()).toEqual('HeaderBar Title');
+  test('renders title prop', () => {
+    expect(screen.getByText(/HeaderBar Title/)).toBeInTheDocument();
   });
 });
