@@ -1,14 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Image } from './';
 
 describe('Image', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Image src="path/to/img.jpg" alt="Image description" />);
-  });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    render(<Image src="path/to/img.jpg" alt="Image description" />);
+    expect(screen.queryByRole('img')).toBeInTheDocument();
   });
 });
