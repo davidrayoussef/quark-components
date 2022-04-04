@@ -1,18 +1,15 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Form } from './';
 
 describe('Form', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders', () => {
+    render(
       <Form onSubmit={jest.fn()}>
         <input />
       </Form>
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.queryByRole('textbox')).toBeInTheDocument();
   });
 });
