@@ -1,0 +1,10 @@
+.accordionItem {
+  & h3 {
+    cursor: pointer;
+  }
+  & .accordionItemBody {
+    overflow: hidden;
+    height: 0;
+    transition: height ease 0.2s;
+  }
+}

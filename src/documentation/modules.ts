@@ -1,3 +1,5 @@
+export * from './componentExamples/AccordionExample/AccordionExample';
+export * from './componentExamples/AccordionExample/AccordionCode';
 export * from './componentExamples/AutoCompleteExample/AutoCompleteExample';
 export * from './componentExamples/AutoCompleteExample/AutoCompleteCode';
 export * from './componentExamples/ButtonExample/ButtonExample';

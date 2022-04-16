@@ -3,6 +3,21 @@ import { PropType } from '@/shared';
 
 export const componentData = [
   {
+    name: 'Accordion',
+    description:
+      'A panel that a allows user to show and hide sections of related content.',
+    component: Modules.AccordionExample,
+    code: Modules.AccordionCode,
+    propDetails: [
+      {
+        // propName: 'suggestions',
+        // propType: PropType.Array,
+        // propDefault: undefined,
+        // propDescription: 'A list of items to use as suggestions.'
+      }
+    ]
+  },
+  {
     name: 'AutoComplete',
     description:
       'An input that displays suggestions based on a passed in array of values.',
