@@ -1,10 +1,9 @@
-import webpack, { Configuration } from 'webpack';
+import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 
-const webpackConfig = (): Configuration => ({
+const webpackConfig = () => ({
   devtool: 'inline-source-map',
   entry: './src/main.tsx',
   output: {
@@ -57,8 +56,7 @@ const webpackConfig = (): Configuration => ({
     }
   },
   devServer: {
-    contentBase: './dist',
-    hot: true,
+    static: { publicPath: './dist' },
     historyApiFallback: true
   },
   plugins: [
@@ -67,11 +65,6 @@ const webpackConfig = (): Configuration => ({
       template: __dirname + '/src/index.html',
       filename: 'index.html',
       inject: 'body'
-    }),
-    new ForkTsCheckerWebpackPlugin({
-      eslint: {
-        files: './src/**/*.{ts,tsx,js,jsx}'
-      }
     }),
     new CopyPlugin({
       patterns: [
