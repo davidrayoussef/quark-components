@@ -6,6 +6,8 @@ export { EmailIcon } from './EmailIcon';
 export { FacebookIcon } from './FacebookIcon';
 export { GithubIcon } from './GithubIcon';
 export { MenuIcon } from './MenuIcon';
+export { MinusIcon } from './MinusIcon';
+export { PlusIcon } from './PlusIcon';
 export { RedditIcon } from './RedditIcon';
 export { TwitterIcon } from './TwitterIcon';
 export { YoutubeIcon } from './YoutubeIcon';

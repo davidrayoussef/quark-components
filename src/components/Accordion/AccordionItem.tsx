@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Icon } from '../Icon';
+
 import { VoidFunction } from '@/shared';
 
 import style from './AccordionItem.scss';
@@ -20,18 +22,21 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const accordionItemBodyElement: React.RefObject<HTMLDivElement> = React.useRef();
   const [height, setHeight] = React.useState(0);
   React.useLayoutEffect(() => {
-    setHeight(active ? accordionItemBodyElement.current.scrollHeight : 0);
+    setHeight(active ? accordionItemBodyElement.current.scrollHeight + 10 : 0);
   }, [active]);
   return (
-    <section className={style.accordionItem}>
-      <h3 onClick={onClick}>{heading}</h3>
-      <div
-        ref={accordionItemBodyElement}
-        className={style.accordionItemBody}
-        style={{ height }}
-      >
+    <div className={style.accordionItem}>
+      <dt onClick={onClick}>
+        {heading}
+        <Icon
+          value={active ? 'minus' : 'plus'}
+          color="rgb(150, 203, 254)"
+          width="15"
+        />
+      </dt>
+      <dd ref={accordionItemBodyElement} style={{ height }}>
         {body}
-      </div>
-    </section>
+      </dd>
+    </div>
   );
 };

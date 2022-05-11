@@ -9,6 +9,8 @@ import {
   FacebookIcon,
   GithubIcon,
   MenuIcon,
+  MinusIcon,
+  PlusIcon,
   RedditIcon,
   TwitterIcon,
   YoutubeIcon
@@ -23,6 +25,8 @@ export const icons: { [key: string]: JSX.Element } = {
   facebook: <FacebookIcon />,
   github: <GithubIcon />,
   menu: <MenuIcon />,
+  minus: <MinusIcon />,
+  plus: <PlusIcon />,
   reddit: <RedditIcon />,
   twitter: <TwitterIcon />,
   youtube: <YoutubeIcon />

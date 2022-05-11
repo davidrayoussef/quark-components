@@ -25,7 +25,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   }
 
   return (
-    <div style={{ width }} className={style.accordion}>
+    <dl style={{ width }} className={style.accordion}>
       {data.map(({ heading, body }, index) => {
         return (
           <AccordionItem
@@ -37,6 +37,6 @@ export const Accordion: React.FC<AccordionProps> = ({
           />
         );
       })}
-    </div>
+    </dl>
   );
 };

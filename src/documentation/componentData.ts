@@ -5,15 +5,22 @@ export const componentData = [
   {
     name: 'Accordion',
     description:
-      'A panel that a allows user to show and hide sections of related content.',
+      'A panel that allows a user to show and hide sections of related content.',
     component: Modules.AccordionExample,
     code: Modules.AccordionCode,
     propDetails: [
       {
-        // propName: 'suggestions',
-        // propType: PropType.Array,
-        // propDefault: undefined,
-        // propDescription: 'A list of items to use as suggestions.'
+        propName: 'data',
+        propType: PropType.Array,
+        propDefault: undefined,
+        propDescription:
+          'An array of objects containing heading and content for each accordion item.'
+      },
+      {
+        propName: 'defaultExpanded',
+        propType: PropType.Number,
+        propDefault: undefined,
+        propDescription: 'The initial accordion item to have expanded on load.'
       }
     ]
   },
