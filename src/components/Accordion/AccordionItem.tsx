@@ -19,14 +19,18 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   heading,
   onClick
 }: AccordionItemProps) => {
-  const accordionItemBodyElement: React.RefObject<HTMLDivElement> = React.useRef();
+  const accordionItemBodyElement: React.RefObject<HTMLDivElement> =
+    React.useRef();
   const [height, setHeight] = React.useState(0);
   React.useLayoutEffect(() => {
     setHeight(active ? accordionItemBodyElement.current.scrollHeight + 10 : 0);
   }, [active]);
   return (
     <div className={style.accordionItem}>
-      <dt onClick={onClick}>
+      <dt
+        onClick={onClick}
+        style={{ background: active ? 'rgba(0, 0, 0, 0.04' : 'none' }}
+      >
         {heading}
         <Icon
           value={active ? 'minus' : 'plus'}
@@ -34,8 +38,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           width="15"
         />
       </dt>
-      <dd ref={accordionItemBodyElement} style={{ height }}>
-        {body}
+      <dd
+        ref={accordionItemBodyElement}
+        style={{ height, visibility: active ? 'visible' : 'hidden' }}
+      >
+        <span>{body}</span>
       </dd>
     </div>
   );

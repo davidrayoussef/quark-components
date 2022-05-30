@@ -12,7 +12,6 @@ interface AccordionProps {
 
 export const Accordion: React.FC<AccordionProps> = ({
   data,
-  width,
   defaultExpanded = 0
 }: AccordionProps) => {
   const [activeIndex, setActiveIndex] = React.useState(defaultExpanded);
@@ -25,7 +24,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   }
 
   return (
-    <dl style={{ width }} className={style.accordion}>
+    <dl className={style.accordion}>
       {data.map(({ heading, body }, index) => {
         return (
           <AccordionItem
