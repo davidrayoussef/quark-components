@@ -30,7 +30,8 @@ const jestConfig = {
     '\\.(css|sass|scss)$': 'identity-obj-proxy',
     '@/(.*)$': '<rootDir>/src/$1'
   },
-  setupFilesAfterEnv: ['<rootDir>/test-setup/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/test-setup/setup.ts'],
+  testEnvironment: 'jsdom'
 };
 
 export default jestConfig;
