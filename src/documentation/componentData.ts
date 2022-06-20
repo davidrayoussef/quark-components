@@ -22,6 +22,13 @@ export const componentData = [
         propDefault: 0,
         propDescription:
           'The initial accordion item index to have expanded on load.'
+      },
+      {
+        propName: 'alwaysExpanded',
+        propType: PropType.Boolean,
+        propDefault: 'false',
+        propDescription:
+          "Specifies whether one panel should always be open; clicking an already open panel's header will not close it."
       }
     ]
   },

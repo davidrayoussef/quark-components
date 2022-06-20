@@ -18,5 +18,8 @@ const data = [
 ];
 
 export const AccordionExample = (): React.ReactElement => (
-  <Accordion data={data} />
+  <div style={{ display: 'grid', gap: 40 }}>
+    <Accordion data={data} defaultExpanded={null} />
+    <Accordion data={data} defaultExpanded={0} alwaysExpanded />
+  </div>
 );

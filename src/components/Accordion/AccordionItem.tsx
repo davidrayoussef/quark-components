@@ -22,9 +22,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const accordionItemBodyElement: React.RefObject<HTMLDivElement> =
     React.useRef();
   const [height, setHeight] = React.useState(0);
+
   React.useLayoutEffect(() => {
     setHeight(active ? accordionItemBodyElement.current.scrollHeight + 10 : 0);
   }, [active]);
+  console.log('FIRED');
   return (
     <div className={style.accordionItem}>
       <dt

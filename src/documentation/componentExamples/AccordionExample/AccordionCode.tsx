@@ -25,6 +25,12 @@ const data = [
 ];
 
 <Accordion data={data} />
+
+<Accordion 
+  data={data} 
+  defaultExpanded={0} 
+  alwaysExpanded 
+/>
 `;
 
 export const AccordionCode = (): React.ReactElement => (

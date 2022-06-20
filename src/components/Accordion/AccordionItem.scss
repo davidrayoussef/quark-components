@@ -1,21 +1,27 @@
 .accordionItem {
   & dt {
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     border-top: 1px solid rgba(0, 0, 0, 0.075);
     border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    transition: background-color ease 0.2s;
   }
   & dd {
+    box-sizing: border-box;
     margin: 0;
     overflow: hidden;
     height: 0;
     transition: height ease 0.2s;
     & span {
       display: inline-block;
-      padding: 1rem;
+      padding: 1.5rem;
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
   }
 }
