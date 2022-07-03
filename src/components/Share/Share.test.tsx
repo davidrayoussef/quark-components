@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Share } from './';
 
 describe('Share', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <Share
         shares={['twitter', 'facebook', 'email']}
         url=""
@@ -16,6 +15,6 @@ describe('Share', () => {
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getAllByRole('link')).toHaveLength(3);
   });
 });

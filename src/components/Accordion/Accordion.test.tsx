@@ -10,18 +10,18 @@ const data = [
 ];
 
 describe('Accordion', () => {
-  beforeEach(() => {
-    render(<Accordion data={data} />);
-  });
   test('renders', () => {
+    render(<Accordion data={data} />);
     expect(screen.getByText('Heading 1')).toBeInTheDocument();
   });
   test('clicking head shows related content', () => {
+    render(<Accordion data={data} />);
     expect(screen.getByText('Body 2')).not.toBeVisible();
     fireEvent.click(screen.getByText('Heading 2'));
     expect(screen.getByText('Body 2')).toBeVisible();
   });
-  test('clicking head of currently expanded content does not collapse content', () => {
+  test('clicking head of currently expanded content does not collapse content if alwaysExpanded is true', () => {
+    render(<Accordion data={data} alwaysExpanded />);
     expect(screen.getByText('Body 2')).not.toBeVisible();
     fireEvent.click(screen.getByText('Heading 2'));
     expect(screen.getByText('Body 2')).toBeVisible();

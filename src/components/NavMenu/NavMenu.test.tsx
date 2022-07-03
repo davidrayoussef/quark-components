@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { NavMenu } from './';
 import { withMobileMenu } from './withMobileMenu';
@@ -17,22 +17,18 @@ const data = [
 ];
 
 describe('NavMenu', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(<NavMenu data={data} menuTitle="NavMenu Title" />);
+    render(<NavMenu data={data} menuTitle="NavMenu Title" />);
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
-  });
-  test('renders uppercase title', () => {
-    expect(wrapper.find('h2').text()).toEqual('NAVMENU TITLE');
+    expect(screen.getByText('NAVMENU TITLE')).toBeInTheDocument();
   });
   test('renders 3 anchor tags', () => {
-    expect(wrapper.find('a').length).toEqual(3);
+    expect(screen.getAllByRole('link')).toHaveLength(3);
   });
   test('renders svg (hamburger icon) if withMobileMenu HOC is used', () => {
     const NavMenuWithMobileMenu = withMobileMenu(NavMenu);
-    const wrapper = mount(<NavMenuWithMobileMenu data={data} />);
-    expect(wrapper.find('svg').length).toEqual(1);
+    const { container } = render(<NavMenuWithMobileMenu data={data} />);
+    expect(container.querySelector('svg')).toBeDefined();
   });
 });

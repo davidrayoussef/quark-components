@@ -29,7 +29,6 @@ export const Accordion: React.FC<AccordionProps> = ({
     }
   }
 
-  console.log(activeIndex);
   return (
     <dl className={style.accordion}>
       {data.map(({ heading, body }, index) => {

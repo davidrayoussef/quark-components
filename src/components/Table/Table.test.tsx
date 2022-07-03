@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Table } from './';
 
 describe('Table', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <Table
         tableHeads={['Company', 'Contact', 'Country']}
         tableData={[
@@ -25,6 +24,6 @@ describe('Table', () => {
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('table')).toBeInTheDocument();
   });
 });

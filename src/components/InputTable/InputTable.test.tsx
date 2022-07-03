@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { InputTable } from './';
 
 describe('InputTable', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <InputTable
         rowCount={10}
         title="Purchased Orders"
@@ -34,6 +33,6 @@ describe('InputTable', () => {
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('table')).toBeInTheDocument();
   });
 });

@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Menu } from './';
 
 describe('Menu', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders', () => {
+    render(
       <Menu onMenuItemClick={jest.fn()}>
         <Menu.Item menuItem="Markets">
           <Menu.SubMenu>
@@ -16,8 +15,6 @@ describe('Menu', () => {
         </Menu.Item>
       </Menu>
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
 });

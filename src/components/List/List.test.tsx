@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { List } from './';
 
 describe('List', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <List
         title="List Title"
         data={['list item 1', 'list item 2', 'list item 3']}
@@ -14,12 +13,12 @@ describe('List', () => {
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
   test('renders title', () => {
-    expect(wrapper.find('.title').text()).toEqual('List Title');
+    expect(screen.getByText('List Title')).toBeInTheDocument();
   });
   test('renders 3 list items', () => {
-    expect(wrapper.find('li').length).toEqual(3);
+    expect(screen.getAllByRole('listitem')).toHaveLength(3);
   });
 });

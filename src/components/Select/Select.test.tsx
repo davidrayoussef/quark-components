@@ -1,16 +1,18 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Select } from './';
 
 describe('Select', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
-      <Select name="gender" options={['male', 'female', 'nonbinary']} />
+    render(
+      <Select
+        name="gender"
+        options={['male', 'female', 'nonbinary', 'other']}
+      />
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getAllByRole('option')).toHaveLength(5);
   });
 });

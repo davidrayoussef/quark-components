@@ -1,20 +1,17 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Grid } from './';
 
 describe('Grid', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders', () => {
+    const { container } = render(
       <Grid>
         <div></div>
         <div></div>
         <div></div>
       </Grid>
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(container.querySelector('.grid')).toBeInTheDocument();
   });
 });

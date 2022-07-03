@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Swiper } from './';
 
 describe('Swiper', () => {
-  let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    render(
       <Swiper>
         <img src="images/image-1.jpg" alt="Image 1" />
         <img src="images/image-2.jpg" alt="Image 2" />
@@ -14,6 +13,6 @@ describe('Swiper', () => {
     );
   });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getAllByRole('img')).toHaveLength(2);
   });
 });

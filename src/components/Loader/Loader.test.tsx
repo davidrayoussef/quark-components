@@ -1,14 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Loader } from './';
 
 describe('Loader', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Loader />);
-  });
   test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    const { container } = render(<Loader />);
+    expect(container.querySelector('.loader')).toBeInTheDocument();
   });
 });

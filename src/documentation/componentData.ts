@@ -19,7 +19,7 @@ export const componentData = [
       {
         propName: 'defaultExpanded',
         propType: PropType.Number,
-        propDefault: 0,
+        propDefault: '0',
         propDescription:
           'The initial accordion item index to have expanded on load.'
       },

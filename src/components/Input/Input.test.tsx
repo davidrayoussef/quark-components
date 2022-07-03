@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { Input } from './';
 
 describe('Input', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders', () => {
+    render(
       <Input
         name="username"
         label="USERNAME"
@@ -18,8 +17,6 @@ describe('Input', () => {
         onBlur={jest.fn()}
       />
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getByRole('textbox')).toBeInTheDocument();
   });
 });

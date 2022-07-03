@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 import { CheckBox } from './';
 
 describe('CheckBox', () => {
-  let wrapper: ShallowWrapper;
-  beforeEach(() => {
-    wrapper = shallow(
+  test('renders', () => {
+    render(
       <CheckBox
         name="favorites"
         label="FAVORITE FRAMEWORKS"
@@ -14,8 +13,6 @@ describe('CheckBox', () => {
         onChange={jest.fn()}
       />
     );
-  });
-  test('renders', () => {
-    expect(wrapper.exists()).toBe(true);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(3);
   });
 });
