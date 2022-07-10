@@ -42,3 +42,5 @@ export * from './componentExamples/SwiperExample/SwiperExample';
 export * from './componentExamples/SwiperExample/SwiperCode';
 export * from './componentExamples/TableExample/TableExample';
 export * from './componentExamples/TableExample/TableCode';
+export * from './componentExamples/TabsExample/TabsExample';
+export * from './componentExamples/TabsExample/TabsCode';

@@ -1,0 +1,20 @@
+.main {
+  position: relative;
+  & section {
+    position: absolute;
+    visibility: hidden;
+    &.show {
+      visibility: visible;
+    }
+  }
+}
+
+.tabsContainer {
+  display: flex;
+  grid-gap: 0.5rem;
+  & span {
+    cursor: pointer;
+    width: 4rem;
+    background: rgba(0, 0, 0, 0.05);
+  }
+}

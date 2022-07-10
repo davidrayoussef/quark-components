@@ -1,7 +1,5 @@
 FilterSearch
-Tabs
 Gallery
-Accordion
 Form.Radio
 Form.TextArea
 Form.Uploader

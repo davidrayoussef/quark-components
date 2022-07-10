@@ -15,3 +15,4 @@ export { NavMenu } from '@/components/NavMenu';
 export { Share } from '@/components/Share';
 export { Swiper } from '@/components/Swiper';
 export { Table } from '@/components/Table';
+export { Tabs, Tab } from '@/components/Tabs';

@@ -638,5 +638,12 @@ export const componentData = [
           'An array of objects, with each object representing a row containing cell data.'
       }
     ]
+  },
+  {
+    name: 'Tabs',
+    description: 'To be filled',
+    component: Modules.TabsExample,
+    code: Modules.TabsCode,
+    propDetails: []
   }
 ];

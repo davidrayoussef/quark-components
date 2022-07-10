@@ -293,6 +293,15 @@ export interface TableProps {
   tableData: { [key: string]: any }[]; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
+export interface TabsProps {
+  children: React.ReactElement[];
+}
+
+export interface TabProps {
+  label: string;
+  children: string;
+}
+
 export interface TooltipProps {
   message: string;
 }
