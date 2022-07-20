@@ -1,3 +1,7 @@
+:root {
+  --light-gray: rgba(0, 0, 0, 0.15);
+}
+
 .main {
   position: relative;
   & section {
@@ -10,11 +14,28 @@
 }
 
 .tabsContainer {
-  display: flex;
-  grid-gap: 0.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--light-gray);
   & span {
     cursor: pointer;
-    width: 4rem;
-    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: -1px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    transition: border 0.2s, background-color 0.2s;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    &.active {
+      border-color: var(--light-gray) var(--light-gray) #fff;
+    }
   }
 }

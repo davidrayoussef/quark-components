@@ -641,9 +641,25 @@ export const componentData = [
   },
   {
     name: 'Tabs',
-    description: 'To be filled',
+    description:
+      'Allows access to content separated into different panes on a page, with each pane viewable individually.',
     component: Modules.TabsExample,
     code: Modules.TabsCode,
-    propDetails: []
+    propDetails: [
+      {
+        propName: 'label',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription:
+          'The text label for the tab, passed as a prop to each Tab component.'
+      },
+      {
+        propName: 'children',
+        propType: PropType.Node,
+        propDefault: undefined,
+        propDescription:
+          'The content associated with the tab, placed inside each set of Tab tags.'
+      }
+    ]
   }
 ];

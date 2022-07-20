@@ -15,7 +15,6 @@ export const Tabs: React.FC<TabsProps> = ({ children }: TabsProps) => {
     setActiveIndex(index);
   }
 
-  console.log(children);
   return (
     <React.Fragment>
       <nav className={style.tabsContainer}>
@@ -23,6 +22,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }: TabsProps) => {
           <span
             key={tab.props.label}
             onClick={handleTabClick.bind(undefined, index)}
+            className={index === activeIndex ? style.active : ''}
           >
             {tab.props.label}
           </span>
