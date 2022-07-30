@@ -4,8 +4,8 @@ import { TabsProps, TabProps } from '@/shared';
 
 import style from './Tabs.scss';
 
-export const Tab: React.FC<TabProps> = ({ label }: TabProps) => {
-  return <span>{label}</span>;
+export const Tab: React.FC<TabProps> = ({}: TabProps) => {
+  return <span />;
 };
 
 export const Tabs: React.FC<TabsProps> = ({ children }: TabsProps) => {
@@ -19,13 +19,17 @@ export const Tabs: React.FC<TabsProps> = ({ children }: TabsProps) => {
     <React.Fragment>
       <nav className={style.tabsContainer}>
         {children.map((tab: React.ReactElement, index: number) => (
-          <span
+          <button
             key={tab.props.label}
             onClick={handleTabClick.bind(undefined, index)}
-            className={index === activeIndex ? style.active : ''}
+            className={`
+              ${index === activeIndex ? style.active : ''} 
+              ${tab.props.disabled ? style.disabled : ''}
+            `}
+            disabled={tab.props.disabled}
           >
             {tab.props.label}
-          </span>
+          </button>
         ))}
       </nav>
       <main className={style.main}>{children[activeIndex].props.children}</main>

@@ -298,8 +298,9 @@ export interface TabsProps {
 }
 
 export interface TabProps {
-  label: string;
   children: string;
+  disabled?: boolean;
+  label: string;
 }
 
 export interface TooltipProps {

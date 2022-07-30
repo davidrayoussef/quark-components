@@ -19,14 +19,15 @@
   grid-auto-columns: max-content;
   margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--light-gray);
-  & span {
-    cursor: pointer;
+  & button {
     display: flex;
     justify-content: center;
+    cursor: pointer;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     margin-bottom: -1px;
     color: rgba(0, 0, 0, 0.8);
+    background: none;
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
@@ -36,6 +37,10 @@
     }
     &.active {
       border-color: var(--light-gray) var(--light-gray) #fff;
+    }
+    &.disabled {
+      pointer-events: none;
+      color: rgba(0, 0, 0, 0.4);
     }
   }
 }

@@ -330,47 +330,6 @@ export const componentData = [
     ]
   },
   {
-    name: 'Image',
-    description:
-      'A replacement for the img tag, used to fallback to a default image to handle broken images.',
-    component: Modules.ImageExample,
-    code: Modules.ImageCode,
-    propDetails: [
-      {
-        propName: 'src',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The source url for the image.'
-      },
-      {
-        propName: 'defaultSrc',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription:
-          "The source url for a default image to use in the event that the original image doesn't load."
-      },
-      {
-        propName: 'alt',
-        propType: PropType.String,
-        propDefault: undefined,
-        propDescription: 'The alternative text description for the image.'
-      },
-      {
-        propName: 'onLoad',
-        propType: PropType.Function,
-        propDefault: undefined,
-        propDescription: 'A callback to run after an image loads.'
-      },
-      {
-        propName: 'onError',
-        propType: PropType.Function,
-        propDefault: undefined,
-        propDescription:
-          'A callback to run when an error occurs loading the image.'
-      }
-    ]
-  },
-  {
     name: 'Input',
     description: 'A text field that accepts user data.',
     component: Modules.InputExample,
@@ -659,6 +618,12 @@ export const componentData = [
         propDefault: undefined,
         propDescription:
           'The content associated with the tab, placed inside each set of Tab tags.'
+      },
+      {
+        propName: 'disabled',
+        propType: PropType.Boolean,
+        propDefault: 'false',
+        propDescription: 'Passed to Tab component to make it unselectable.'
       }
     ]
   }
