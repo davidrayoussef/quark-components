@@ -6,10 +6,8 @@ import { Docs } from '@/components/Docs';
 import { componentData } from './componentData';
 
 export const App = (): React.ReactElement => {
-  const rootPath =
-    process.env.NODE_ENV === 'production' ? 'quark-components' : '';
   return (
-    <Router basename={rootPath}>
+    <Router>
       <Docs
         data={componentData}
         headerTitle="Quark Components"

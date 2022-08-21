@@ -1,5 +1,6 @@
+import { TooltipTrigger } from './../shared/constants';
 import * as Modules from './modules';
-import { PropType } from '@/shared';
+import { PropType, TooltipPosition } from '@/shared';
 
 export const componentData = [
   {
@@ -624,6 +625,40 @@ export const componentData = [
         propType: PropType.Boolean,
         propDefault: 'false',
         propDescription: 'Passed to Tab component to make it unselectable.'
+      }
+    ]
+  },
+  {
+    name: 'Tooltip',
+    description: 'A small popup that concisely describes an element.',
+    component: Modules.TooltipExample,
+    code: Modules.TooltipCode,
+    propDetails: [
+      {
+        propName: 'message',
+        propType: PropType.String,
+        propDefault: undefined,
+        propDescription: 'The text for the tooltip.'
+      },
+      {
+        propName: 'position',
+        propType: PropType.String,
+        propDefault: TooltipPosition.Right,
+        propDescription:
+          'The placement of the tooltip relative to the content (left, right, top, bottom).'
+      },
+      {
+        propName: 'trigger',
+        propType: PropType.String,
+        propDefault: TooltipTrigger.Hover,
+        propDescription:
+          'The action that displays the tooltip, e.g. hover or click.'
+      },
+      {
+        propName: 'children',
+        propType: PropType.Node,
+        propDefault: undefined,
+        propDescription: 'The element that the tooltip describes.'
       }
     ]
   }

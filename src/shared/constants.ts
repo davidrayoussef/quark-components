@@ -25,3 +25,16 @@ export enum PropType {
   Object = 'object',
   String = 'string'
 }
+
+export enum TooltipPosition {
+  Left = 'left',
+  Right = 'right',
+  Top = 'top',
+  Bottom = 'bottom'
+}
+
+export enum TooltipTrigger {
+  Hover = 'hover',
+  Focus = 'focus',
+  None = 'none'
+}

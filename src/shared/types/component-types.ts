@@ -1,7 +1,12 @@
 import React, { SVGProps } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-import { ButtonSize, ButtonType } from '../constants';
+import {
+  ButtonSize,
+  ButtonType,
+  TooltipPosition,
+  TooltipTrigger
+} from '../constants';
 
 export interface AutoCompleteProps {
   suggestions: string[];
@@ -304,7 +309,10 @@ export interface TabProps {
 }
 
 export interface TooltipProps {
+  children?: React.ReactNode;
   message: string;
+  position?: TooltipPosition;
+  trigger?: TooltipTrigger;
 }
 
 export interface CustomHookReturnType {
