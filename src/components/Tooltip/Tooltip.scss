@@ -1,42 +1,113 @@
-.tooltip-container {
+:root {
   --dark-gray: #444;
-  --left: 0.5rem;
-  display: inline-flex;
-  position: absolute;
+  --margin: 0.3rem;
+  --margin-vertical: 0.9rem;
+  --arrow-size: 4px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  width: min-content;
   & .tooltip {
-    position: relative;
+    position: absolute;
     font-size: 0.6rem;
-    left: var(--left);
-    top: 0;
     padding: 0.25rem;
     background: var(--dark-gray);
     color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     z-index: 9999;
-    animation: fade-in 0.2s;
+    white-space: nowrap;
     display: none;
     &.show {
-      display: block;
+      display: inline-flex;
     }
     &:before {
       content: '';
       position: absolute;
-      right: 100%;
-      top: 10px;
-      transform: translateY(-50%);
-      border: 4px solid var(--dark-gray);
+      border: var(--arrow-size) solid var(--dark-gray);
       border-color: transparent var(--dark-gray) transparent transparent;
+    }
+    &.right {
+      left: calc(100% + var(--margin));
+      animation: fade-in-right 0.2s;
+    }
+    &.right:before {
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.left {
+      right: calc(100% + var(--margin));
+      animation: fade-in-left 0.2s;
+    }
+    &.left:before {
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+    }
+    &.top {
+      top: calc(100% + var(--margin-vertical));
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fade-in-top 0.2s;
+    }
+    &.top:before {
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+    &.bottom {
+      bottom: calc(100% + var(--margin-vertical));
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fade-in-bottom 0.2s;
+    }
+    &.bottom:before {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-90deg);
     }
   }
 }
 
-@keyframes fade-in {
+@keyframes fade-in-right {
   0% {
-    left: calc(var(--left) - 5px);
+    left: calc(100% + var(--margin) - 5px);
     opacity: 0;
   }
   100% {
-    left: var(--left);
+    left: calc(100% + var(--margin));
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    right: calc(100% + var(--margin) - 5px);
+    opacity: 0;
+  }
+  100% {
+    right: calc(100% + var(--margin));
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    top: calc(100% + var(--margin-vertical) - 5px);
+    opacity: 0;
+  }
+  100% {
+    top: calc(100% + var(--margin-vertical));
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    bottom: calc(100% + var(--margin-vertical) - 5px);
+    opacity: 0;
+  }
+  100% {
+    bottom: calc(100% + var(--margin-vertical));
     opacity: 1;
   }
 }

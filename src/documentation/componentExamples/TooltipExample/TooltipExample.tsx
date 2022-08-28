@@ -1,17 +1,23 @@
 import React from 'react';
 
 import { Tooltip } from '@/components/Tooltip';
+import { TooltipPosition } from '@/shared';
+
+import style from './TooltipExample.scss';
 
 export const TooltipExample = (): React.ReactElement => (
-  <Tooltip message="message">
-    <span
-      style={{
-        background: 'rgba(0,0,0,.075)',
-        padding: '0.5rem',
-        fontSize: '.9rem'
-      }}
-    >
-      Hover
-    </span>
-  </Tooltip>
+  <div className={style.container}>
+    <Tooltip message="message">
+      <span className={style.content}>Hover</span>
+    </Tooltip>
+    <Tooltip message="message" position={TooltipPosition.Top}>
+      <span className={style.content}>Hover</span>
+    </Tooltip>
+    <Tooltip message="message" position={TooltipPosition.Bottom}>
+      <span className={style.content}>Hover</span>
+    </Tooltip>
+    <Tooltip message="message" position={TooltipPosition.Left}>
+      <span className={style.content}>Hover</span>
+    </Tooltip>
+  </div>
 );

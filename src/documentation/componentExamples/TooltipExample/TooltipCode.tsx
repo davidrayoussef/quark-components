@@ -4,11 +4,22 @@ import { DocsCodeBlock } from '@/components/Docs';
 
 const code = `
 import React from 'react';
-import { Tooltip } from 'quark-components';
+import { Tooltip, TooltipPosition } from 'quark-components';
 
-<Tooltip message="message">
-  <span>Hover</span>
-</Tooltip>
+<div>
+  <Tooltip message="message">
+    <span>Hover</span>
+  </Tooltip>
+  <Tooltip message="message" position={TooltipPosition.Top}>
+    <span>Hover</span>
+  </Tooltip>
+  <Tooltip message="message" position={TooltipPosition.Bottom}>
+    <span>Hover</span>
+  </Tooltip>
+  <Tooltip message="message" position={TooltipPosition.Left}>
+    <span>Hover</span>
+  </Tooltip>
+</div>
 `;
 
 export const TooltipCode = (): React.ReactElement => (

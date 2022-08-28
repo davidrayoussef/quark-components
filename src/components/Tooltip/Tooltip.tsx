@@ -26,23 +26,21 @@ export const Tooltip: React.FC<TooltipProps> = ({
   }
 
   return (
-    <span className={styles.tooltipContainer}>
-      <span
-        className={`${styles.content}`}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleHover}
-      >
-        {children}
-      </span>
+    <div
+      className={styles.tooltipContainer}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHover}
+    >
+      {children}
       <span
         className={`
-          ${styles.tooltip} 
-          ${positionStyle} 
+          ${styles.tooltip}
+          ${positionStyle}
           ${showTooltip ? styles.show : ''}
         `}
       >
         {message}
       </span>
-    </span>
+    </div>
   );
 };
