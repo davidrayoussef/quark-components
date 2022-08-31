@@ -11,12 +11,8 @@ export const AutoComplete: React.FC<AutoCompleteProps> = ({
   suggestions,
   ...rest
 }: AutoCompleteProps) => {
-  const {
-    filteredSuggestions,
-    value,
-    handleClick,
-    handleChange
-  } = useAutoComplete(suggestions);
+  const { filteredSuggestions, value, handleClick, handleChange } =
+    useAutoComplete(suggestions);
   return (
     <Fragment>
       <Input value={value} onChange={handleChange} {...rest} />

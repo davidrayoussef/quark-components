@@ -9,7 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "allowJs": true,
-    // "baseUrl": "./",
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
@@ -29,9 +28,10 @@
   },
   "include": [
     "./src",
+    "./jest.config.ts",
+    "./test-setup",
     "./webpack.config.dev.ts",
     "./webpack.config.prod.ts",
-    "./jest.config.ts",
-    "./test-setup"
+    "./rollup.config.ts"
   ]
 }
