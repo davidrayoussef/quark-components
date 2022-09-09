@@ -1,5 +1,4 @@
 import React, { SVGProps } from 'react';
-import { RouteComponentProps } from 'react-router-dom';
 
 import {
   ButtonSize,
@@ -27,7 +26,7 @@ export interface ButtonProps {
   onClick?: VoidFunction;
 }
 
-export interface LinkButtonProps extends ButtonProps, RouteComponentProps {
+export interface LinkButtonProps extends ButtonProps {
   to: string;
 }
 
@@ -209,7 +208,7 @@ export interface ListProps {
 }
 
 export interface MenuProps {
-  children: React.ReactNode;
+  children: JSX.Element | JSX.Element[];
   onMenuItemClick: VoidFunction;
 }
 

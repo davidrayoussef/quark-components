@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Routes } from 'react-router-dom';
 
 import { HeaderBar } from '../HeaderBar';
 import { DocsLogo } from './DocsLogo';
@@ -37,7 +37,7 @@ export const Docs: React.FC<DocsProps> = ({
       </HeaderBar>
       <main className={style.main}>
         <NavMenuWithMobile {...rest} />
-        {routes}
+        <Routes>{routes}</Routes>
       </main>
     </div>
   );

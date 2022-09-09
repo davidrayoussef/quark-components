@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Icon } from '../../Icon';
 
-import { MenuContext } from '../Menu';
+import { MenuContext } from '../MenuContext';
 import { MenuItemProps } from '@/shared';
 
 import style from './MenuItem.scss';

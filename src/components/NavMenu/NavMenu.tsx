@@ -25,13 +25,17 @@ export class NavMenu extends Component<NavMenuProps> {
       if (linkType === 'routerLink') {
         return data.map(({ name }) => (
           <NavLink
-            exact
             to={'/' + name.toLowerCase()}
             key={name}
-            style={{ color: linkColor }}
-            activeStyle={{
-              borderColor: linkColor,
-              background: computeActiveColor(linkColor)
+            style={({ isActive }) => {
+              const style = { color: linkColor };
+              return isActive
+                ? {
+                    ...style,
+                    borderColor: linkColor,
+                    background: computeActiveColor(linkColor)
+                  }
+                : style;
             }}
             onClick={this.handleLinkClick}
           >

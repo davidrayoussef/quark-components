@@ -3,14 +3,10 @@ import React from 'react';
 import { MenuItem } from './MenuItem';
 import { SubMenu } from './SubMenu';
 
+import { MenuContext } from './MenuContext';
 import { MenuProps, MenuState } from '@/shared';
 
 import style from './Menu.scss';
-
-export const MenuContext = React.createContext({
-  expanded: undefined,
-  handleMenuItemClick: undefined
-});
 
 export class Menu extends React.Component<MenuProps, MenuState> {
   state: Readonly<MenuState> = {
@@ -20,17 +16,17 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   static Item = MenuItem;
   static SubMenu = SubMenu;
 
-  handleMenuItemClick = (menuItem: string) => (
-    event: React.MouseEvent
-  ): void => {
-    const target = event.target as HTMLElement;
-    this.props.onMenuItemClick(event);
-    if (target.nodeName !== 'A') {
-      this.setState({
-        expanded: this.state.expanded === menuItem ? undefined : menuItem
-      });
-    }
-  };
+  handleMenuItemClick =
+    (menuItem: string) =>
+    (event: React.MouseEvent): void => {
+      const target = event.target as HTMLElement;
+      this.props.onMenuItemClick(event);
+      if (target.nodeName !== 'A') {
+        this.setState({
+          expanded: this.state.expanded === menuItem ? undefined : menuItem
+        });
+      }
+    };
 
   render(): JSX.Element {
     return (

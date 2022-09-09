@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MenuContext } from '../Menu';
+import { MenuContext } from '../MenuContext';
 import { SubMenuProps } from '@/shared';
 
 import style from './SubMenu.scss';
