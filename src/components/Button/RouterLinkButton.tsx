@@ -1,31 +1,26 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from './Button';
 
 import { ButtonSize, LinkButtonProps } from '@/shared';
 
-const LinkButton: React.FC<LinkButtonProps> = ({
-  history,
-  location,
-  match,
-  staticContext,
+export const RouterLinkButton: React.FC<LinkButtonProps> = ({
   to,
   children,
   onClick,
   ...rest
 }: LinkButtonProps) => {
+  const navigate = useNavigate();
   return (
     <Button
       {...rest}
       size={ButtonSize.Small}
       onClick={() => {
-        history.push(to);
+        navigate(to);
       }}
     >
       {children}
     </Button>
   );
 };
-
-export const RouterLinkButton = withRouter(LinkButton);
