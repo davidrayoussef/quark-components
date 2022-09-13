@@ -43,7 +43,6 @@ export default [
         exclude: [
           'node_modules',
           './dist',
-          './src/documentation',
           './jest.config.ts',
           './webpack.config.dev.ts',
           './webpack.config.prod.ts',

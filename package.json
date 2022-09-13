@@ -1,12 +1,12 @@
 {
   "name": "quark-components",
-  "version": "0.9.0",
+  "version": "1.2.2",
   "description": "A library of React reusable UI components.",
   "main": "src/index.tsx",
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.ts --mode development --open",
     "build": "webpack --config webpack.config.prod.ts --mode production --progress",
-    "build:library": "npm run clean:dist-library && rollup --config && cp package.json dist-library/package.json",
+    "build:library": "npm run clean:dist-library && rollup --config && cp package-library.json dist-library/package.json && cp README.md dist-library/ && rimraf dist-library/src",
     "clean:dist": "rimraf dist",
     "clean:dist-library": "rimraf dist-library",
     "prepublishOnly": "npm run build:library",
