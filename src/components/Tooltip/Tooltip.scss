@@ -1,11 +1,8 @@
-:root {
+.tooltip-container {
   --dark-gray: #444;
   --margin: 0.3rem;
   --margin-vertical: 0.9rem;
   --arrow-size: 4px;
-}
-
-.tooltip-container {
   position: relative;
   display: inline-block;
   width: min-content;

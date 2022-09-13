@@ -20,3 +20,5 @@ export { Share } from '@/components/Share';
 export { Swiper } from '@/components/Swiper';
 export { Table } from '@/components/Table';
 export { Tabs, Tab } from '@/components/Tabs';
+export { Tooltip } from '@/components/Tooltip';
+export * from '@/shared/constants';

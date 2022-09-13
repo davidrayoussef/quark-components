@@ -16,19 +16,20 @@ export default [
       name: 'quark-components'
     },
     plugins: [
+      external(),
       commonjs({
         include: /node_modules/,
         esmExternals: true,
         requireReturnsDefault: 'namespace'
       }),
-      external(),
       resolve(),
       typescript({
         compilerOptions: {
-          module: 'ESNext',
+          module: 'esnext',
           target: 'es5',
           jsx: 'react',
           sourceMap: true,
+          inlineSources: true,
           outDir: 'dist-library',
           moduleResolution: 'node',
           allowSyntheticDefaultImports: true,
@@ -51,18 +52,23 @@ export default [
         ]
       }),
       postcss({
-        modules: true,
+        modules: {
+          localsConvention: 'dashesOnly',
+          generateScopedName: '[name]__[local]___[hash:base64:5]'
+        },
+        autoModules: false,
         sourceMap: true,
         extract: 'quark-components.css',
         minimize: true
       }),
       terser()
-    ]
+    ],
+    external: ['react', 'react-dom']
   },
   {
     input: './src/index.ts',
     output: [{ file: 'dist-library/index.d.ts', format: 'esm' }],
     external: [/\.scss$/],
-    plugins: [dts()]
+    plugins: [typescript(), dts()]
   }
 ];

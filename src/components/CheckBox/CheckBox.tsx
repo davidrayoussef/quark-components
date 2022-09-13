@@ -4,7 +4,7 @@ import { CheckBoxProps } from '@/shared';
 
 import style from './CheckBox.scss';
 
-export const CheckBox: React.VFC<CheckBoxProps> = ({
+export const CheckBox: React.FC<CheckBoxProps> = ({
   name,
   label,
   options,
@@ -26,7 +26,7 @@ export const CheckBox: React.VFC<CheckBoxProps> = ({
               checked={checkedOptions?.includes(option)}
               onChange={onChange}
             />
-            {option}
+            <span>{option}</span>
           </label>
         ))}
       </div>

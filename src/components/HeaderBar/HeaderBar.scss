@@ -1,4 +1,6 @@
 .header {
+  --primary: #282938;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -6,7 +8,7 @@
   padding: 15px;
   color: #eee;
   background: var(--primary);
-  z-index: 1;
+  z-index: 2;
 }
 
 .header h1 {

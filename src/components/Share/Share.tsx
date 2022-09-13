@@ -6,7 +6,7 @@ import { ShareProps } from '@/shared';
 
 import style from './Share.scss';
 
-export const Share: React.VFC<ShareProps> = ({
+export const Share: React.FC<ShareProps> = ({
   shares,
   url,
   title,

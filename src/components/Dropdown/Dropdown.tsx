@@ -7,7 +7,7 @@ import { useDropdown } from './hooks';
 
 import style from './Dropdown.scss';
 
-export const Dropdown: React.VFC<DropdownProps> = ({
+export const Dropdown: React.FC<DropdownProps> = ({
   data,
   defaultLabel,
   width = '200px',

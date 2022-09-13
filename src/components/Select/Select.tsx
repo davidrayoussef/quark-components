@@ -6,7 +6,7 @@ import { SelectProps } from '@/shared';
 
 import style from './Select.scss';
 
-export const Select: React.VFC<SelectProps> = ({
+export const Select: React.FC<SelectProps> = ({
   name,
   label,
   options,

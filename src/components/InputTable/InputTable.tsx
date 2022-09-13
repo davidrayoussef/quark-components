@@ -60,7 +60,7 @@ export const InputTable: React.FC<InputTableProps> = ({
   }
 
   return (
-    <React.Fragment>
+    <div>
       <div className={styles.tableContainer}>
         <header>
           <h3>{title}</h3>
@@ -101,6 +101,6 @@ export const InputTable: React.FC<InputTableProps> = ({
           {ButtonText.Submit}
         </Button>
       </div>
-    </React.Fragment>
+    </div>
   );
 };

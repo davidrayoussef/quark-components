@@ -158,7 +158,7 @@ export interface InputProps {
   name?: string;
   placeholder?: string;
   type?: string;
-  onChange?: VoidFunction;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
   onBlur?: VoidFunction;
 }
 

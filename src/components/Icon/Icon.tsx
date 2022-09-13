@@ -3,7 +3,7 @@ import React from 'react';
 import { icons } from './IconModule';
 import { IconProps } from '@/shared';
 
-export const Icon: React.VFC<IconProps> = ({
+export const Icon: React.FC<IconProps> = ({
   value,
   color = '#bfbfbf',
   width = 30,

@@ -4,7 +4,7 @@ import { InputProps } from '@/shared';
 
 import style from './Input.scss';
 
-export const Input: React.VFC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   name,
   label,
   value,

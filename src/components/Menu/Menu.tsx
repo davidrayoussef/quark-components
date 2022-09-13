@@ -36,7 +36,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
           handleMenuItemClick: this.handleMenuItemClick
         }}
       >
-        <nav className={style.navMenu}>{this.props.children}</nav>
+        <nav className={style.menu}>{this.props.children}</nav>
       </MenuContext.Provider>
     );
   }

@@ -4,7 +4,7 @@ import { TableProps } from '@/shared';
 
 import style from './Table.scss';
 
-export const Table: React.VFC<TableProps> = ({
+export const Table: React.FC<TableProps> = ({
   tableHeads,
   tableData
 }: TableProps) => {

@@ -4,7 +4,7 @@ import { DotsProps } from '@/shared';
 
 import style from './Dots.scss';
 
-export const Dots: React.VFC<DotsProps> = ({
+export const Dots: React.FC<DotsProps> = ({
   activeIndex,
   childrenCount,
   handleNavClick
